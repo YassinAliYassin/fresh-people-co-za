@@ -1,27 +1,37 @@
-name: Deploy to DirectAdmin
+name: Deploy React App to fresh-people.co.za
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      
-      - name: Deploy via FTP
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: zada136.webway.host
+          username: fresh@fresh-people.co.za
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: public_html/
+          local-dir: ./dist/
+          server-dir: /public_html/
           exclude: |
-            .git*
-            .github/
-            README.md
-            css-backup/
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

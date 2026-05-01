@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary: #a4c71d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d9e7ad;
+  --color-on-primary-container: #1a1e00;
+  
+  --color-secondary: #0a0a0a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f1f3f4;
+  
+  --color-surface: #fbfbf9;
+  --color-on-surface: #1c1b1f;
+  --color-surface-variant: #e1e2ec;
+  --color-on-surface-variant: #44474e;
+  
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 28px;
+  --radius-2xl: 32px;
+  
+  --shadow-m3-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  --shadow-m3-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-medium text-on-surface tracking-tight leading-tight;
+  }
+}
+
+.btn-m3-filled {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-on-primary rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-m3-2 active:scale-95;
+}
+
+.btn-m3-tonal {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary-container text-on-primary-container rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-m3-1 active:scale-95;
+}
+
+.btn-m3-outlined {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-on-surface-variant text-primary rounded-full text-sm font-semibold transition-all duration-300 hover:bg-primary/5 active:scale-95;
+}
+
+.card-m3-elevated {
+  @apply bg-surface p-8 rounded-xl shadow-m3-1 hover:shadow-m3-2 transition-all duration-300 border border-transparent;
+}
+
+.card-m3-filled {
+  @apply bg-secondary-container p-8 rounded-xl transition-all duration-300 hover:shadow-m3-1;
+}
+
+.card-m3-outlined {
+  @apply border border-on-surface-variant p-8 rounded-xl transition-all duration-300 hover:bg-surface-variant/10;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-6 sm:px-12;
+}

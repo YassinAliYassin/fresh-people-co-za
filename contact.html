@@ -1,199 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Fresh People premier talent agency. Book brand ambassadors, promotional models, and event staff for luxury activations in South Africa.">
-  <title>Contact | Fresh People Premier Talent Agency</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Fresh People Johannesburg</title>
+    <meta name="description" content="Contact Fresh People for professional event staffing in Johannesburg. Call +27 672 961 272">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/fresh-people-logo-vector-01.webp" alt="Fresh People Premier Talent Agency" class="logo-img">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Talent</a></li>
-        <li><a href="services.html#hospitality">Hospitality</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="btn btn-primary">Book Talent</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero" style="padding: 14rem 0 4rem; background: var(--white);">
-    <div class="container" style="text-align: center;">
-      <h1 style="font-size: 3.5rem; font-style: italic;">Get in Touch</h1>
-      <p style="font-size: 1.15rem; color: var(--gray-500); max-width: 600px; margin: 0 auto; font-weight: 300; line-height: 2;">We'd love to hear about your event.</p>
-    </div>
-  </section>
-
-  <!-- MINIMALIST FORM SECTION -->
-  <section class="section" style="padding: 4rem 0 10rem; background: var(--white);">
-    <div class="container" style="max-width: 700px;">
-      
-      <!-- FORM CONTAINER -->
-      <div id="form-container" style="transition: var(--transition);">
-        <form action="https://formspree.io/f/mojrqwzd" method="POST" id="inquiry-form" style="text-align: center;">
-          
-          <!-- FULL NAME -->
-          <div class="input-group" style="margin-bottom: 3rem;">
-            <input type="text" name="name" id="name" required
-                   placeholder="Full Name"
-                   style="width: 100%; border: none; border-bottom: 1px solid var(--gray-200); 
-                          background: transparent; padding: 1rem 0; font-family: var(--font-sans); 
-                          font-size: 1.1rem; font-weight: 300; color: var(--dark); 
-                          transition: var(--transition); outline: none;"
-                   onfocus="this.style.borderBottomColor='var(--dark)'; this.style.paddingBottom='1.25rem';"
-                   onblur="this.style.borderBottomColor='var(--gray-200)'; this.style.paddingBottom='1rem';">
-          </div>
-
-          <!-- EMAIL -->
-          <div class="input-group" style="margin-bottom: 3rem;">
-            <input type="email" name="email" id="email" required
-                   placeholder="Email Address"
-                   style="width: 100%; border: none; border-bottom: 1px solid var(--gray-200); 
-                          background: transparent; padding: 1rem 0; font-family: var(--font-sans); 
-                          font-size: 1.1rem; font-weight: 300; color: var(--dark); 
-                          transition: var(--transition); outline: none;"
-                   onfocus="this.style.borderBottomColor='var(--dark)'; this.style.paddingBottom='1.25rem';"
-                   onblur="this.style.borderBottomColor='var(--gray-200)'; this.style.paddingBottom='1rem';">
-          </div>
-
-          <!-- EVENT DATE & TYPE -->
-          <div class="input-group" style="margin-bottom: 3rem;">
-            <input type="text" name="event" id="event" required
-                   placeholder="Event Date & Type (e.g., Dec 15 - Product Launch)"
-                   style="width: 100%; border: none; border-bottom: 1px solid var(--gray-200); 
-                          background: transparent; padding: 1rem 0; font-family: var(--font-sans); 
-                          font-size: 1.1rem; font-weight: 300; color: var(--dark); 
-                          transition: var(--transition); outline: none;"
-                   onfocus="this.style.borderBottomColor='var(--dark)'; this.style.paddingBottom='1.25rem';"
-                   onblur="this.style.borderBottomColor='var(--gray-200)'; this.style.paddingBottom='1rem';">
-          </div>
-
-          <!-- MESSAGE -->
-          <div class="input-group" style="margin-bottom: 4rem;">
-            <textarea name="message" id="message" rows="4" required
-                      placeholder="How can we help?"
-                      style="width: 100%; border: none; border-bottom: 1px solid var(--gray-200); 
-                             background: transparent; padding: 1rem 0; font-family: var(--font-sans); 
-                             font-size: 1.1rem; font-weight: 300; color: var(--dark); 
-                             transition: var(--transition); outline: none; resize: none;
-                             line-height: 1.8;"
-                      onfocus="this.style.borderBottomColor='var(--dark)'; this.style.paddingBottom='1.25rem';"
-                      onblur="this.style.borderBottomColor='var(--gray-200)'; this.style.paddingBottom='1rem';"></textarea>
-          </div>
-
-          <!-- SUBMIT BUTTON -->
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <button type="submit" class="btn btn-primary" 
-                    style="border-radius: 50px; padding: 1.25rem 4rem; font-size: 0.9rem; width: auto;">
-              Send Inquiry <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
-            </button>
-          </div>
-
-          <!-- DEPOSIT NOTICE -->
-          <div style="text-align: center;">
-            <p style="font-size: 0.85rem; color: var(--gray-400); font-weight: 300; letter-spacing: 0.05em;">
-              Note: A 75% deposit is required to secure all bookings.
-            </p>
-          </div>
-
-        </form>
-      </div>
-
-      <!-- SUCCESS MESSAGE (HIDDEN INITIALLY) -->
-      <div id="success-message" style="display: none; text-align: center; padding: 4rem 0; transition: var(--transition); opacity: 0; transform: translateY(20px);">
-        <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--brand-green); margin-bottom: 2rem; display: block;"></i>
-        <h3 style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; margin-bottom: 1.5rem; color: var(--dark);">Thank you.</h3>
-        <p style="font-size: 1.1rem; color: var(--gray-500); font-weight: 300; line-height: 2;">We'll be in touch shortly.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img src="images/fresh-people-logo-vector-01.webp" alt="Fresh People Logo" class="footer-logo">
-          <p>South Africa's premier talent agency. Providing professional brand ambassadors and event staff for luxury activations.</p>
+    <header class="sticky-top">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/fresh-people-logo-vector-01.webp" alt="Fresh People">
+                <span>Fresh People</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <a href="tel:+27672961272" class="btn-primary">+27 672 961 272</a>
         </div>
-        <div>
-          <h4>Contact</h4>
-          <p><i class="fas fa-phone"></i> <a href="tel:+27672961272">+27 672 961 272</a></p>
-          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27672961272">WhatsApp</a></p>
-        </div>
-        <div>
-          <h4>Talent</h4>
-          <ul class="footer-links">
-            <li><a href="services.html">Brand Ambassadors</a></li>
-            <li><a href="services.html">Promotional Models</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Legal</h4>
-          <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Fresh People. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-  <!-- FORM SUCCESS HANDLER -->
-  <script>
-    document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const form = this;
-      const formContainer = document.getElementById('form-container');
-      const successMessage = document.getElementById('success-message');
-      
-      // Fade out form
-      formContainer.style.opacity = '0';
-      formContainer.style.transform = 'translateY(-20px)';
-      
-      setTimeout(function() {
-        formContainer.style.display = 'none';
-        successMessage.style.display = 'block';
-        // Fade in success
-        setTimeout(function() {
-          successMessage.style.opacity = '1';
-          successMessage.style.transform = 'translateY(0)';
-        }, 50);
-      }, 600);
-      
-      // Actual form submission to Formspree
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          console.log('Form submitted successfully');
-        }
-      }).catch(function(error) {
-        console.log('Form submission error:', error);
-      });
-    });
+    <section class="section">
+        <div class="container">
+            <h1 class="text-center">Contact Us</h1>
+            
+            <div class="grid-2">
+                <!-- Contact Info -->
+                <div>
+                    <h2>Get in Touch</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <a href="tel:+27672961272">+27 672 961 272</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:[email protected]">[email protected]</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p>Johannesburg, South Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/27672961272" class="btn-primary w-full text-center">WhatsApp Us →</a>
+                </div>
 
-    // Initialize success message styles
-    document.getElementById('success-message').style.opacity = '0';
-    document.getElementById('success-message').style.transform = 'translateY(20px)';
-    document.getElementById('success-message').style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-  </script>
+                <!-- Contact Form -->
+                <div class="card">
+                    <h3>Book Staff Now</h3>
+                    <form action="https://formspree.io/f/mojrqwzd" method="POST">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select name="service">
+                                <option>Bartenders</option>
+                                <option>Brand Ambassadors</option>
+                                <option>Hostesses/Hosts</option>
+                                <option>Full Event Staffing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Fresh People</h3>
+                    <p>Johannesburg's most reliable event staffing agency.</p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Phone: +27 672 961 272</p>
+                    <p>Email: [email protected]</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="https://wa.me/27672961272">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 Fresh People. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

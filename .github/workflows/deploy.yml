@@ -5,24 +5,12 @@ on:
     branches: [main]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm install
-      
-      - name: Build React app
-        run: npm run build
       
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -30,15 +18,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
+          local-dir: ./
           server-dir: public_html/
           exclude: |
             .git*
             .github/
             README.md
-            src/
-            node_modules/
-            package.json
-            package-lock.json
-            vite.config.js
-            .gitignore
+            css-backup/

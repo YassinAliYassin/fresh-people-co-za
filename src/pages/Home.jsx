@@ -38,7 +38,7 @@ export default function Home() {
               <span className="text-primary italic font-medium">Hospitality.</span>
             </h1>
             <p className="text-base md:text-xl md:text-2xl text-on-surface-variant max-w-2xl font-normal leading-relaxed">
-              Architectural staffing for brands that define the age. Fresh People provides the human interface for high-stakes excellence.
+              Johannesburg's premier events staffing agency. From Sandton corporate galas to Randburg weddings, Fourways festivals to Rosebank product launches — we staff every major event in Gauteng.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4">
               <Link to="/contact" className="btn-m3-filled text-center justify-center sm:justify-start text-sm md:text-base">
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="md:col-span-8 bg-white rounded-2xl md:rounded-3xl p-6 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
             <div className="space-y-4 md:space-y-6 relative z-10">
               <h2 className="text-2xl md:text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Services.</span></h2>
-              <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg's most prestigious corporate and luxury events.</p>
+              <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg's events industry. Staffing corporate events in Sandton, weddings in Randburg, festivals in Fourways, launches in Rosebank, conferences in Midrand — every event, everywhere in Gauteng.</p>
             </div>
             <div className="flex flex-wrap gap-4 md:gap-12 pt-8 md:pt-20 grayscale opacity-30">
                {['MYS Agency', 'Fresh Yumm', 'ETV', 'Green Dot'].map(b => (
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="py-16 md:py-32 section-container">
         <div className="text-center mb-8 md:mb-16 space-y-3 md:space-y-4">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter text-secondary">Why Choose <span className="text-primary">Fresh People?</span></h2>
-          <p className="text-on-surface-variant text-base md:text-xl max-w-2xl mx-auto">The standard for premium event staffing in South Africa.</p>
+          <p className="text-on-surface-variant text-base md:text-xl max-w-2xl mx-auto">The standard for premium event staffing across Johannesburg — from Sandton boardrooms to Randburg warehouses, Soweto celebrations to Pretoria conferences.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {whyChoose.map((item, i) => (
@@ -122,6 +122,21 @@ export default function Home() {
       </section>
 
       <StatsCounter />
+
+      {/* Johannesburg Coverage Section */}
+      <section className="py-16 md:py-32 section-container">
+        <div className="text-center mb-8 md:mb-16 space-y-3 md:space-y-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter text-secondary">Every Corner of <span className="text-primary">Johannesburg.</span></h2>
+          <p className="text-on-surface-variant text-base md:text-xl max-w-2xl mx-auto">From corporate hubs to township celebrations — we staff every event across Gauteng.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+          {['Sandton', 'Randburg', 'Rosebank', 'Fourways', 'Midrand', 'Pretoria', 'Soweto', 'Bedfordview', 'Centurion', 'Kempton Park', 'Alberton', 'Roodepoort'].map((area) => (
+            <div key={area} className="bg-white p-4 md:p-6 rounded-2xl border border-gray-100 text-center hover:bg-primary-container/20 transition-all duration-300">
+              <p className="text-sm md:text-base font-display font-bold text-secondary">{area}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <FAQ />
 

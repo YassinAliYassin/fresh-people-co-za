@@ -61,13 +61,7 @@ export default function Services() {
   return (
     <div className="bg-surface min-h-screen">
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
-        <div className="absolute inset-0 z-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3?w=1600&q=80" 
-            alt="Professional audio equipment and lighting setup for events" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

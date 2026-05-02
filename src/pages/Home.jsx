@@ -23,13 +23,7 @@ export default function Home() {
     <div className="bg-surface min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 md:pt-64 pb-16 md:pb-24 px-4 sm:px-6 md:px-12 overflow-hidden bg-primary/5">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1544148103-0773bf10b918?w=1600&q=80" 
-            alt="Elegant event venue setup with glassware and ambient lighting" 
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

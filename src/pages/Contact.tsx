@@ -35,13 +35,7 @@ export default function Contact() {
     <div className="bg-surface min-h-screen">
       {/* Header */}
       <section className="pt-32 md:pt-64 pb-16 md:pb-24 section-container relative">
-        <div className="absolute inset-0 z-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1588200906321-cc95e12c4de4?w=1600&q=80" 
-            alt="Elegant reception desk with telephone and guest book" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}

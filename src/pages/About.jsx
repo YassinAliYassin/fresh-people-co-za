@@ -13,13 +13,7 @@ export default function About() {
   return (
     <div className="bg-surface min-h-screen">
       <section className="pt-64 pb-24 section-container relative">
-        <div className="absolute inset-0 z-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&q=80" 
-            alt="Elegant table setting with fine china and cutlery" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
@@ -46,13 +40,7 @@ export default function About() {
            ))}
 
           <div className="md:col-span-4 bg-secondary-container rounded-3xl p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
-          <div className="absolute inset-0 z-0 opacity-10">
-            <img 
-              src="https://images.unsplash.com/photo-154057546996-7a2f12d36f3?w=800&q=80" 
-              alt="Event planning documents and clipboard on elegant table" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+
           <div className="lg:col-span-7 space-y-8 relative z-10">
                  <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">The Selection Protocol.</h2>
                  <p className="text-on-surface-variant text-lg font-normal leading-loose">

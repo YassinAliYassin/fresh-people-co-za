@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Star, Coffee, Wine, Settings, ClipboardList, ChevronRight, CheckCircle2, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
+import StatsCounter from '../components/StatsCounter';
 
 export default function Home() {
   const categories = [
@@ -119,6 +120,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <StatsCounter />
 
       <Testimonials />
 

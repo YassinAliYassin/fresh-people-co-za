@@ -153,7 +153,7 @@ export default function Contact() {
                    </div>
                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Email Office</p>
-                      <p className="text-base md:text-lg font-bold text-secondary truncate">hello@freshpeople.agency</p>
+                      <p className="text-base md:text-lg font-bold text-secondary truncate">contact@brand.co.za</p>
                    </div>
                 </div>
                 <div className="flex items-center gap-4 md:gap-6 group">

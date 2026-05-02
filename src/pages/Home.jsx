@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Star, Coffee, Wine, Settings, ClipboardList, ChevronRight, CheckCircle2, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Testimonials from '../components/Testimonials';
 import StatsCounter from '../components/StatsCounter';
 import FAQ from '../components/FAQ';
 
@@ -59,7 +58,7 @@ export default function Home() {
           <div className="md:col-span-8 bg-white rounded-2xl md:rounded-3xl p-6 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
             <div className="space-y-4 md:space-y-6 relative z-10">
               <h2 className="text-2xl md:text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Services.</span></h2>
-              <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg and Cape Town's most prestigious corporate and luxury events.</p>
+              <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg's most prestigious corporate and luxury events.</p>
             </div>
             <div className="flex flex-wrap gap-4 md:gap-12 pt-8 md:pt-20 grayscale opacity-30">
                {['MYS Agency', 'Fresh Yumm', 'ETV', 'Green Dot'].map(b => (
@@ -125,8 +124,6 @@ export default function Home() {
       <StatsCounter />
 
       <FAQ />
-
-      <Testimonials />
 
       {/* Final CTA */}
       <section className="py-32 md:py-60 section-container text-center space-y-8 md:space-y-16">

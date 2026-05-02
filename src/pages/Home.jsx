@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Star, Coffee, Wine, Settings, ClipboardList, ChevronRight, CheckCircle2, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Testimonials from '../components/Testimonials';
 
 export default function Home() {
   const categories = [
@@ -118,6 +119,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <Testimonials />
 
       {/* Final CTA */}
       <section className="py-32 md:py-60 section-container text-center space-y-8 md:space-y-16">

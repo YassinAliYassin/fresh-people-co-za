@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="space-y-8 text-[#999999] font-medium text-sm">
               <li className="flex flex-col gap-2">
                  <span className="text-[9px] uppercase font-bold text-[#666666] tracking-widest">Office Hub</span>
-                 <p className="text-lg font-display font-medium text-[#cccccc]">Johannesburg</p>
+                 <p className="text-lg font-display font-medium text-[#cccccc]">Randburg</p>
               </li>
               <li className="flex flex-col gap-2">
                  <span className="text-[9px] uppercase font-bold text-[#666666] tracking-widest">Inquiries</span>

@@ -3,6 +3,7 @@ import { ArrowRight, Star, Coffee, Wine, Settings, ClipboardList, ChevronRight, 
 import { Link } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import StatsCounter from '../components/StatsCounter';
+import FAQ from '../components/FAQ';
 
 export default function Home() {
   const categories = [
@@ -122,6 +123,8 @@ export default function Home() {
       </section>
 
       <StatsCounter />
+
+      <FAQ />
 
       <Testimonials />
 

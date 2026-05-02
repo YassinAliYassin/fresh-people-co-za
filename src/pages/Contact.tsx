@@ -200,7 +200,7 @@ export default function Contact() {
                         </div>
                         <div className="space-y-0.5">
                            <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">HQ Hub</p>
-                           <p className="text-base md:text-lg font-bold text-secondary">Randburg, Johannesburg</p>
+                           <p className="text-base md:text-lg font-bold text-secondary">Randburg</p>
                         </div>
                      </div>
                   </div>

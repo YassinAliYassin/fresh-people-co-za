@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "How does billing work?",
-    answer: "We charge R40/hour per staff member. Billing is done weekly or per event, depending on your preference. We provide detailed invoices and can integrate with your procurement system."
+    answer: "Billing is done weekly or per event, depending on your preference. We provide detailed invoices and can integrate with your procurement system."
   },
   {
     question: "Can I request specific staff members?",

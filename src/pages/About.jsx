@@ -12,11 +12,18 @@ export default function About() {
 
   return (
     <div className="bg-surface min-h-screen">
-      <section className="pt-64 pb-24 section-container">
+      <section className="pt-64 pb-24 section-container relative">
+        <div className="absolute inset-0 z-0 opacity-15">
+          <img 
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600&q=80" 
+            alt="Elegant table setting with fine china and cutlery" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
-           className="max-w-4xl space-y-12"
+           className="max-w-4xl space-y-12 relative z-10"
         >
           <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Our Heritage</span>
           <h1 className="text-[12vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9]">
@@ -38,8 +45,15 @@ export default function About() {
              </div>
            ))}
 
-           <div className="md:col-span-4 bg-secondary-container rounded-3xl p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
-              <div className="lg:col-span-7 space-y-8 relative z-10">
+          <div className="md:col-span-4 bg-secondary-container rounded-3xl p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
+          <div className="absolute inset-0 z-0 opacity-10">
+            <img 
+              src="https://images.unsplash.com/photo-154057546996-7a2f12d36f3?w=800&q=80" 
+              alt="Event planning documents and clipboard on elegant table" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="lg:col-span-7 space-y-8 relative z-10">
                  <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">The Selection Protocol.</h2>
                  <p className="text-on-surface-variant text-lg font-normal leading-loose">
                     We don't just hire staff; we select ambassadors. Every member of our network 

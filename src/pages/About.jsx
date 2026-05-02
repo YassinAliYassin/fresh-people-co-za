@@ -15,7 +15,7 @@ export default function About() {
       <section className="pt-64 pb-24 section-container relative">
         <div className="absolute inset-0 z-0 opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600&q=80" 
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&q=80" 
             alt="Elegant table setting with fine china and cutlery" 
             className="w-full h-full object-cover"
           />

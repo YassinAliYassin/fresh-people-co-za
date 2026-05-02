@@ -63,7 +63,7 @@ export default function Services() {
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
         <div className="absolute inset-0 z-0 opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1477233530534-b8f36f1aef3?w=1600&q=80" 
+            src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3?w=1600&q=80" 
             alt="Professional audio equipment and lighting setup for events" 
             className="w-full h-full object-cover"
           />

@@ -4,10 +4,31 @@ import { ArrowRight, CheckCircle2, Star, Mail, Phone, MapPin } from 'lucide-reac
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mojrqwzd', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -37,7 +58,7 @@ export default function Contact() {
               {!submitted ? (
                 <motion.form 
                   key="form"
-                  onSubmit={handleSubmit} 
+                  onSubmit={handleSubmit}
                   className="space-y-8 md:space-y-12"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -49,6 +70,7 @@ export default function Contact() {
                       <label htmlFor="full-name" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Full Identity</label>
                       <input
                         id="full-name"
+                        name="name"
                         type="text"
                         required
                         placeholder="Organization or Name"
@@ -60,9 +82,10 @@ export default function Contact() {
                       <label htmlFor="email-address" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Email Coordinates</label>
                       <input
                         id="email-address"
+                        name="email"
                         type="email"
                         required
-                        placeholder="contact@brand.com"
+                        placeholder="contact@brand.co.za"
                         aria-required="true"
                         className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all placeholder:text-on-surface-variant/50 text-base md:text-lg"
                       />
@@ -70,28 +93,30 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-3 md:space-y-4">
-                     <label htmlFor="placement-scope" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Service Required</label>
-                     <div className="relative">
-                        <select 
-                          id="placement-scope"
-                          className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all appearance-none cursor-pointer text-base md:text-lg"
-                        >
-                           <option>Staffing</option>
-                           <option>Equipment & Supply</option>
-                           <option>Logistics & Setup</option>
-                           <option>Management</option>
-                           <option>Full-Service Package</option>
-                        </select>
-                        <div className="absolute right-6 md:right-8 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
-                           <ArrowRight size={16} className="rotate-90" />
-                        </div>
-                     </div>
+                    <label htmlFor="placement-scope" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Service Required</label>
+                    <div className="relative">
+                       <select 
+                         id="placement-scope"
+                         name="service"
+                         className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all appearance-none cursor-pointer text-base md:text-lg"
+                       >
+                          <option>Staffing</option>
+                          <option>Equipment & Supply</option>
+                          <option>Logistics & Setup</option>
+                          <option>Management</option>
+                          <option>Full-Service Package</option>
+                       </select>
+                       <div className="absolute right-6 md:right-8 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
+                          <ArrowRight size={16} className="rotate-90" />
+                       </div>
+                    </div>
                   </div>
 
                   <div className="space-y-3 md:space-y-4">
                      <label htmlFor="project-brief" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Project Brief</label>
                      <textarea
                         id="project-brief"
+                        name="message"
                         required
                         rows={3}
                         placeholder="Describe your event parameters..."
@@ -101,11 +126,12 @@ export default function Contact() {
                   </div>
 
                   <button 
-                    type="submit" 
-                    className="btn-m3-filled !w-full !py-5 md:!py-6 !text-base md:!text-lg !justify-between px-8 md:px-12 focus-visible:ring-4 focus-visible:ring-primary/20"
+                    type="submit"
+                    disabled={loading}
+                    className="btn-m3-filled !w-full !py-5 md:!py-6 !text-base md:!text-lg !justify-between px-8 md:px-12 focus-visible:ring-4 focus-visible:ring-primary/20 disabled:opacity-50"
                     aria-label="Submit inquiry protocol"
                   >
-                     Commence Inquiry <ArrowRight size={20} aria-hidden="true" />
+                     {loading ? 'Transmitting...' : 'Commence Inquiry'} <ArrowRight size={20} aria-hidden="true" />
                   </button>
                 </motion.form>
               ) : (
@@ -147,32 +173,37 @@ export default function Contact() {
              </div>
 
              <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[40px] space-y-6 md:space-y-10 shadow-sm">
-                <div className="flex items-center gap-4 md:gap-6 group">
-                   <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
-                      <Mail size={18}  />
-                   </div>
-                   <div className="space-y-0.5 min-w-0">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Email Office</p>
-                      <p className="text-base md:text-lg font-bold text-secondary truncate">contact@brand.co.za</p>
-                   </div>
-                </div>
-                <div className="flex items-center gap-4 md:gap-6 group">
-                   <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
-                      <Phone size={18}  />
-                   </div>
-                   <div className="space-y-0.5 min-w-0">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Direct Voice</p>
-                      <p className="text-base md:text-lg font-bold text-secondary">+27 67 296 1272</p>
-                   </div>
-                </div>
-                <div className="flex items-center gap-4 md:gap-6 group">
-                   <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
-                      <MapPin size={18}  />
-                   </div>
-                   <div className="space-y-0.5">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">HQ Hub</p>
-                      <p className="text-base md:text-lg font-bold text-secondary">Randburg, Johannesburg</p>
-                   </div>
+                <div className="space-y-4 md:space-y-6">
+                  <h4 className="text-lg md:text-xl font-display font-bold text-secondary">Direct Channel</h4>
+                  <div className="flex flex-col gap-6 md:gap-8">
+                     <div className="flex items-center gap-4 md:gap-6 group">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                           <Mail size={18}  />
+                        </div>
+                        <div className="space-y-0.5 min-w-0">
+                           <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Email Office</p>
+                           <p className="text-base md:text-lg font-bold text-secondary truncate">info@fresh-people.co.za</p>
+                        </div>
+                     </div>
+                     <div className="flex items-center gap-4 md:gap-6 group">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                           <Phone size={18}  />
+                        </div>
+                        <div className="space-y-0.5 min-w-0">
+                           <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Direct Voice</p>
+                           <p className="text-base md:text-lg font-bold text-secondary">+27 67 296 1272</p>
+                        </div>
+                     </div>
+                     <div className="flex items-center gap-4 md:gap-6 group">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                           <MapPin size={18}  />
+                        </div>
+                        <div className="space-y-0.5">
+                           <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">HQ Hub</p>
+                           <p className="text-base md:text-lg font-bold text-secondary">Randburg, Johannesburg</p>
+                        </div>
+                     </div>
+                  </div>
                 </div>
              </div>
           </div>

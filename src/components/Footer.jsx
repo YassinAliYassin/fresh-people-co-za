@@ -65,16 +65,19 @@ export default function Footer() {
              <div className="p-8 border border-on-surface-variant/10 rounded-[32px] space-y-6 bg-[#121212]">
                 <Star className="text-primary mx-auto md:mx-0" size={32} />
                 <h4 className="text-xl font-display font-medium text-[#a1a1a1]">Join the Sequence</h4>
-                <div className="flex gap-2">
+                <form action="https://formspree.io/f/mojrqwzd" method="POST" className="flex gap-2">
                    <input 
                      type="email" 
+                     name="email"
                      placeholder="Digital Mail" 
+                     required
                      className="bg-[#1a1a1a] border-none rounded-xl px-4 py-3 text-sm flex-grow focus:ring-1 focus:ring-primary outline-none text-[#cccccc] placeholder-[#666666]"
                    />
-                   <button className="p-3 bg-primary text-secondary rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all">
+                   <input type="hidden" name="_subject" value="Newsletter Signup" />
+                   <button type="submit" className="p-3 bg-primary text-secondary rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all">
                       <ChevronRight size={20} />
                    </button>
-                </div>
+                </form>
              </div>
           </div>
         </div>

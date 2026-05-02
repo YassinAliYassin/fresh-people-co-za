@@ -61,7 +61,7 @@ export default function Home() {
               <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg's events industry. Staffing corporate events in Sandton, weddings in Randburg, festivals in Fourways, launches in Rosebank, conferences in Midrand — every event, everywhere in Gauteng.</p>
             </div>
             <div className="flex flex-wrap gap-4 md:gap-12 pt-8 md:pt-20 grayscale opacity-30">
-               {['MYS Agency', 'Fresh Yumm', 'ETV', 'Green Dot'].map(b => (
+               {['Trusted across South Africa', 'Premier Events', 'Gauteng Wide', 'Excellence Since 2014'].map(b => (
                  <span key={b} className="text-lg md:text-2xl font-bold tracking-tighter">{b}</span>
                ))}
             </div>

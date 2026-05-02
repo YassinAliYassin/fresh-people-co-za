@@ -32,7 +32,7 @@ export default function Navbar() {
         scrolled ? "bg-white/90 backdrop-blur-xl border border-gray-100 px-8 py-3 shadow-md translate-y-2" : "px-4"
       )}>
         <Link to="/" className="group flex items-center gap-3">
-          <span className="text-xl font-display font-bold tracking-tight text-secondary">
+          <span className="text-xl font-display font-bold tracking-tight text-gray-600">
             Fresh<span className="text-primary">People</span>
           </span>
           <div className="w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(164,199,29,0.5)]" />

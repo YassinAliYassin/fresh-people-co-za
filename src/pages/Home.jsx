@@ -1,161 +1,171 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Star, Coffee, Wine, Settings, ClipboardList, ChevronRight, CheckCircle2, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StatsCounter from '../components/StatsCounter';
 import FAQ from '../components/FAQ';
+import Testimonials from '../components/Testimonials';
 
 export default function Home() {
-  const categories = [
-    { name: 'Staffing', icon: <Coffee size={24} />, desc: 'Waiters, Bartenders, Baristas, Marshals, and Commis Chefs.' },
-    { name: 'Equipment & Supply', icon: <Wine size={24} />, desc: 'Bar stock, Glassware, Bar tools, and Coffee station supplies.' },
-    { name: 'Logistics & Setup', icon: <Settings size={24} />, desc: 'Table settings and décor support.' },
-    { name: 'Management', icon: <ClipboardList size={24} />, desc: 'Full event planning and end-to-end coordination.' },
+  const talentCategories = [
+    { name: 'Brand Ambassadors', icon: 'fas fa-crown', desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
+    { name: 'Models & Hosts', icon: 'fas fa-user-tie', desc: 'Professional models and VIP hosts for front-of-house presence at corporate galas, weddings, and high-profile events.' },
+    { name: 'Hospitality Staff', icon: 'fas fa-cocktail', desc: 'RSA-certified bartenders, waiters, baristas, and marshals. Full back-of-house support for every event.' },
+    { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
   ];
 
   const whyChoose = [
-    { title: 'Vetted Professionals', desc: 'Every team member screened & trained' },
-    { title: 'Rapid Deployment', desc: 'Quick turnaround for urgent events' },
-    { title: '10+ Years Excellence', desc: 'Proven track record in South Africa' },
-    { title: 'End-to-End Service', desc: 'From equipment to staff, every detail' }
+    { title: 'Premium Vetted Talent', desc: 'Every team member screened, trained, and experienced in luxury events' },
+    { title: 'Rapid Deployment', desc: 'Quick turnaround for urgent events across Johannesburg' },
+    { title: '10+ Years Excellence', desc: 'Proven track record with 200+ event planners in Gauteng' },
+    { title: 'End-to-End Service', desc: 'From talent to equipment, every detail handled professionally' }
+  ];
+
+  const howItWorks = [
+    { step: 1, title: 'Request Quote', desc: 'Tell us your event details, talent needs, and dates via our quick form' },
+    { step: 2, title: 'Get Matched', desc: 'We select the perfect vetted talent from our premium pool' },
+    { step: 3, title: 'Event Ready', desc: 'Your team arrives on time, fully prepped and ready to deliver excellence' }
   ];
 
   return (
     <div className="bg-surface min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-32 md:pt-64 pb-16 md:pb-24 px-4 sm:px-6 md:px-12 overflow-hidden bg-primary/5">
-
+      {/* Hero Section - Talent First */}
+      <section className="relative hero-padding px-4 sm:px-6 md:px-12 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="space-y-6 md:space-y-10"
+            className="space-y-8 md:space-y-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 md:px-6 py-1.5 md:py-2 rounded-full bg-primary-container text-on-primary-container text-[10px] md:text-xs font-semibold uppercase tracking-wider">
-               State of The Presence
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-none bg-primary-container text-on-primary-container text-xs font-semibold uppercase tracking-wider">
+               Premier Talent Agency
             </div>
-            <h1 className="text-[10vw] sm:text-[8vw] md:text-[7vw] font-display font-bold tracking-tighter leading-[1.1] text-secondary">
-              Professional <br /> 
-              <span className="text-primary italic font-medium">Hospitality.</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold tracking-tighter leading-[1.05] text-secondary italic">
+              Elevate Your Brand With <br /> 
+              <span className="text-primary not-italic">South Africa's Premier Talent.</span>
             </h1>
-            <p className="text-base md:text-xl md:text-2xl text-on-surface-variant max-w-2xl font-normal leading-relaxed">
-              Johannesburg's premier events staffing agency. From Sandton corporate galas to Randburg weddings, Fourways festivals to Rosebank product launches — we staff every major event in Gauteng.
+            <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+              From luxury activations in Sandton to weddings in Randburg, festivals in Fourways to launches in Rosebank — we provide charismatic talent for every major event in Gauteng.
             </p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4">
-              <Link to="/contact" className="btn-m3-filled text-center justify-center sm:justify-start text-sm md:text-base">
-                Secure Talent <ArrowRight size={16} md:size={20} />
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <Link to="/contact" className="btn-m3-filled text-center justify-center text-base">
+                Book Talent <i className="fas fa-arrow-right ml-2"></i>
               </Link>
-              <Link to="/services" className="btn-m3-tonal text-center justify-center sm:justify-start text-sm md:text-base">
-                Our Services <ChevronRight size={16} md:size={20} />
+              <Link to="/services" className="btn-m3-tonal text-center justify-center text-base">
+                Our Talent <i className="fas fa-chevron-right ml-2"></i>
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 md:py-32 section-container">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-4">
-          <div className="md:col-span-8 bg-white rounded-2xl md:rounded-3xl p-6 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
-            <div className="space-y-4 md:space-y-6 relative z-10">
-              <h2 className="text-2xl md:text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Services.</span></h2>
-              <p className="text-on-surface-variant text-sm md:text-lg max-w-md">The heartbeat of Johannesburg's events industry. Staffing corporate events in Sandton, weddings in Randburg, festivals in Fourways, launches in Rosebank, conferences in Midrand — every event, everywhere in Gauteng.</p>
+      {/* Services Grid - Talent First */}
+      <section className="section-padding section-container">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="md:col-span-8 bg-white rounded-none p-8 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
+            <div className="space-y-6 relative z-10">
+              <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Talent.</span></h2>
+              <p className="text-on-surface-variant text-lg max-w-md leading-relaxed">The heartbeat of Johannesburg's events industry. Leading with front-of-house talent, backed by full-service hospitality support.</p>
             </div>
-            <div className="flex flex-wrap gap-4 md:gap-12 pt-8 md:pt-20 grayscale opacity-30">
-               {['Trusted across South Africa', 'Premier Events', 'Gauteng Wide', 'Excellence Since 2014'].map(b => (
-                 <span key={b} className="text-lg md:text-2xl font-bold tracking-tighter">{b}</span>
+            <div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
+               {['Trusted Across Gauteng', 'Premier Talent', 'Excellence Since 2014', '200+ Clients'].map(b => (
+                 <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
                ))}
             </div>
           </div>
 
-          <div className="md:col-span-4 bg-secondary text-white rounded-2xl md:rounded-3xl p-6 md:p-12 flex flex-col justify-between items-start">
-             <div className="p-3 md:p-4 bg-primary rounded-xl md:rounded-2xl text-on-primary shadow-lg shadow-primary/20">
-                <Star fill="currentColor" size={24} md:size={32} />
+          <div className="md:col-span-4 bg-secondary text-white rounded-none p-8 md:p-12 flex flex-col justify-between items-start">
+             <div className="p-4 bg-primary rounded-none text-on-primary shadow-lg shadow-primary/20">
+                <i className="fas fa-star text-2xl"></i>
              </div>
-             <div className="space-y-1 md:space-y-2">
-                <div className="text-5xl md:text-7xl font-display font-bold">10+</div>
-                <p className="text-white/40 uppercase tracking-widest text-[8px] md:text-[10px] font-bold">Years of excellence</p>
+             <div className="space-y-2">
+                <div className="text-7xl font-display font-bold">10+</div>
+                <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">Years of excellence</p>
              </div>
           </div>
 
-          {categories.map((cat, i) => (
-            <div key={i} className="md:col-span-3 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 hover:bg-primary-container/20 transition-all duration-500 group">
-              <div className="w-10 h-10 md:w-14 md:h-14 bg-secondary-container rounded-xl md:rounded-2xl flex items-center justify-center text-primary mb-4 md:mb-8 group-hover:scale-110 transition-transform">
-                {cat.icon}
+          {talentCategories.map((cat, i) => (
+            <div key={i} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
+              <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+                <i className={`${cat.icon} text-2xl`}></i>
               </div>
-              <h3 className="text-lg md:text-xl font-display font-bold text-secondary mb-1 md:mb-2">{cat.name}</h3>
-              <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">{cat.desc}</p>
+              <h3 className="text-xl font-display font-bold text-secondary mb-2">{cat.name}</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">{cat.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Quote Section */}
-      <section className="py-16 md:py-40 bg-secondary text-white rounded-[32px] md:rounded-[40px] mx-4 sm:mx-6 md:mx-12 mb-8 md:mb-12 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[50%] h-full bg-primary/5 -skew-x-12 translate-x-1/2" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8 md:space-y-12">
-           <div className="w-12 h-12 md:w-16 md:h-16 border border-primary/30 rounded-full mx-auto flex items-center justify-center text-primary">
-              <Zap size={20} md:size={24} />
-           </div>
-           <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight text-[#cccccc]">"Where every placement is a performance in professionalism."</h2>
-           <div className="space-y-3 md:space-y-4">
-              <p className="text-primary font-display font-bold uppercase tracking-widest text-[10px] md:text-xs">The African Standard</p>
-              <p className="text-[#999999] text-sm md:text-base max-w-2xl mx-auto">From the boardroom to the ballroom, we ensure your brand message is delivered with precision and grace.</p>
-           </div>
+      {/* How It Works */}
+      <section className="section-padding bg-secondary text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 space-y-4"
+          >
+            <h2 className="text-4xl md:text-6xl font-display font-bold italic">How It Works</h2>
+            <p className="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">Get premium talent for your event in 3 simple steps</p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {howItWorks.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 p-8 rounded-none border border-white/10 text-center"
+              >
+                <div className="w-16 h-16 bg-primary rounded-none flex items-center justify-center text-on-primary text-2xl font-bold mx-auto mb-6">
+                  {step.step}
+                </div>
+                <h3 className="text-2xl font-display font-bold mb-4">{step.title}</h3>
+                <p className="text-white/70 leading-relaxed">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="py-16 md:py-32 section-container">
-        <div className="text-center mb-8 md:mb-16 space-y-3 md:space-y-4">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter text-secondary">Why Choose <span className="text-primary">Fresh People?</span></h2>
-          <p className="text-on-surface-variant text-base md:text-xl max-w-2xl mx-auto">The standard for premium event staffing across Johannesburg — from Sandton boardrooms to Randburg warehouses, Soweto celebrations to Pretoria conferences.</p>
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Why Choose Us */}
+      <section className="section-padding section-container">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-6xl font-display font-bold italic">Why Choose Fresh People</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">Trusted by South Africa's top event planners for over a decade</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {whyChoose.map((item, i) => (
-            <div key={i} className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border border-gray-100 hover:border-primary hover:shadow-m3-1 transition-all duration-300">
-              <CheckCircle2 className="text-primary mb-3 md:mb-4" size={24} md:size={32} />
-              <h3 className="text-lg md:text-xl font-display font-bold text-secondary mb-1 md:mb-2">{item.title}</h3>
-              <p className="text-on-surface-variant text-xs md:text-sm">{item.desc}</p>
+            <div key={i} className="card-m3-elevated text-center">
+              <div className="w-12 h-12 bg-primary-container rounded-none flex items-center justify-center text-primary mx-auto mb-6">
+                <i className="fas fa-check text-xl"></i>
+              </div>
+              <h3 className="text-xl font-display font-bold text-secondary mb-2">{item.title}</h3>
+              <p className="text-on-surface-variant text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <StatsCounter />
-
-      {/* Johannesburg Coverage Section */}
-      <section className="py-16 md:py-32 section-container">
-        <div className="text-center mb-8 md:mb-16 space-y-3 md:space-y-4">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold tracking-tighter text-secondary">Every Corner of <span className="text-primary">Johannesburg.</span></h2>
-          <p className="text-on-surface-variant text-base md:text-xl max-w-2xl mx-auto">From corporate hubs to township celebrations — we staff every event across Gauteng.</p>
+      {/* CTA Section */}
+      <section className="py-24 bg-primary/5">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
+          <h2 className="text-4xl md:text-6xl font-display font-bold italic text-secondary">Ready to Elevate Your Event?</h2>
+          <p className="text-xl text-on-surface-variant leading-relaxed">Get in touch today for a custom quote tailored to your event needs</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link to="/contact" className="btn-m3-filled text-lg px-10 py-5">
+              Book Talent Now <i className="fas fa-arrow-right ml-2"></i>
+            </Link>
+            <a href="tel:+27672961272" className="btn-m3-outlined text-lg px-10 py-5">
+              <i className="fas fa-phone mr-2"></i> +27 67 296 1272
+            </a>
+          </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
-          {['Sandton', 'Randburg', 'Rosebank', 'Fourways', 'Midrand', 'Pretoria', 'Soweto', 'Bedfordview', 'Centurion', 'Kempton Park', 'Alberton', 'Roodepoort'].map((area) => (
-            <div key={area} className="bg-white p-4 md:p-6 rounded-2xl border border-gray-100 text-center hover:bg-primary-container/20 transition-all duration-300">
-              <p className="text-sm md:text-base font-display font-bold text-secondary">{area}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <FAQ />
-
-      {/* Final CTA */}
-      <section className="py-32 md:py-60 section-container text-center space-y-8 md:space-y-16">
-         <motion.div
-           initial={{ opacity: 0, scale: 0.9 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           viewport={{ once: true }}
-           className="space-y-6 md:space-y-8"
-         >
-           <h2 className="text-4xl md:text-6xl lg:text-[8vw] font-display font-bold tracking-tighter text-secondary">Ready to <span className="text-primary">Integrate?</span></h2>
-           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
-              <Link to="/contact" className="btn-m3-filled !px-8 md:!px-12 !py-4 md:!py-5 text-sm md:text-base">
-                 Start Protocol <ArrowRight size={16} md:size={20} />
-              </Link>
-           </div>
-         </motion.div>
       </section>
     </div>
   );

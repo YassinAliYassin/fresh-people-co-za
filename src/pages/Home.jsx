@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="w-16 h-16 bg-primary rounded-none flex items-center justify-center text-on-primary text-2xl font-bold mx-auto mb-6">
                   {step.step}
                 </div>
-                <h3 className="text-2xl font-display font-bold mb-4">{step.title}</h3>
+                <h3 className="text-2xl font-display font-bold mb-4 text-white">{step.title}</h3>
                 <p className="text-white/70 leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}

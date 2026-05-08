@@ -168,7 +168,7 @@ export default function Contact() {
                    <Star size={36}  />
                 </div>
                 <div className="space-y-3 md:space-y-4">
-                  <h4 className="text-xl md:text-2xl font-display font-bold">Vetting Standards</h4>
+                  <h4 className="text-xl md:text-2xl font-display font-bold text-white">Vetting Standards</h4>
                   <p className="text-white/40 text-sm md:text-base leading-relaxed">Behavioral checks and etiquette evaluation are performed for every inquiry before talent allocation.</p>
                 </div>
              </div>

@@ -68,10 +68,10 @@ export default function Home() {
               <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Talent.</span></h2>
               <p className="text-on-surface-variant text-lg max-w-md leading-relaxed">The heartbeat of Johannesburg's events industry. Leading with front-of-house talent, backed by full-service hospitality support.</p>
             </div>
-            <div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
-               {['Trusted Across Gauteng', 'Premier Talent', 'Excellence Since 2014', '200+ Clients'].map(b => (
-                 <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
-               ))}
+<div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
+   {['Trusted Across Gauteng', 'Excellence Since 2014', 'Premier Talent', '200+ Clients'].map(b => (
+     <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
+   ))}
             </div>
           </div>
 

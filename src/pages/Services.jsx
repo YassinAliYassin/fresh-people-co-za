@@ -83,7 +83,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
             {/* Large featured image */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
-              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 20%' }} />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
@@ -95,7 +95,7 @@ export default function Services() {
 
             {/* Top right */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 20%' }} />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>

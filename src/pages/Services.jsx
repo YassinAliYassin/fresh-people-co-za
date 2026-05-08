@@ -77,32 +77,79 @@ export default function Services() {
         </motion.div>
       </section>
 
-      {/* Brand Images */}
+      {/* Brand Gallery */}
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/page-image-new1.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-          </div>
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/page-image-new2.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-          </div>
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/extra1.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-          </div>
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/extra2.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-          </div>
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/extra3.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-          </div>
-          <div className="relative overflow-hidden rounded-none">
-            <img src="/images/extra4.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
+            {/* Large featured image */}
+            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
+              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                <div>
+                  <p className="text-white text-2xl font-display font-bold mb-2">Premier Talent</p>
+                  <p className="text-white/80 text-sm">South Africa's finest event staff</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Top right */}
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                <div>
+                  <p className="text-white text-xl font-display font-bold">Hospitality</p>
+                  <p className="text-white/80 text-xs mt-1">RSA-certified bartenders & waiters</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Extra images */}
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                <div>
+                  <p className="text-white text-xl font-display font-bold">Equipment</p>
+                  <p className="text-white/80 text-xs mt-1">Bar stock, glassware & setup</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                <div>
+                  <p className="text-white text-xl font-display font-bold">Logistics</p>
+                  <p className="text-white/80 text-xs mt-1">End-to-end event coordination</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Wide image bottom */}
+            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
+              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                <div>
+                  <p className="text-white text-2xl font-display font-bold mb-2">Excellence Delivered</p>
+                  <p className="text-white/80 text-sm">10+ years of premium events</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/extra4.jpg" alt="Your Event Partner" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                <div>
+                  <p className="text-white text-xl font-display font-bold">Your Partner</p>
+                  <p className="text-white/80 text-xs mt-1">Ready for your next event</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -79,13 +79,25 @@ export default function Services() {
 
       {/* Brand Images */}
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative overflow-hidden rounded-none">
             <img src="/images/page-image-new1.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
           </div>
           <div className="relative overflow-hidden rounded-none">
             <img src="/images/page-image-new2.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/extra1.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/extra2.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/extra3.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
           </div>
         </div>

@@ -58,6 +58,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brand Image */}
+      <section className="section-padding">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/page-image-1.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid - Talent First */}
       <section className="section-padding section-container">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">

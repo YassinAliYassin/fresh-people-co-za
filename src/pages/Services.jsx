@@ -77,6 +77,16 @@ export default function Services() {
         </motion.div>
       </section>
 
+      {/* Brand Image */}
+      <section className="section-padding">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/page-image-2.jpg" alt="Fresh People Services" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 section-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
            {services.map((s, i) => (

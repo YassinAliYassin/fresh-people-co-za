@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import StatsCounter from '../components/StatsCounter';
 import FAQ from '../components/FAQ';
-import Testimonials from '../components/Testimonials';
+
 
 export default function Home() {
   const talentCategories = [
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <Testimonials />
+
 
       {/* Why Choose Us */}
       <section className="section-padding section-container">

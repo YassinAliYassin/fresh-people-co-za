@@ -100,6 +100,10 @@ export default function Services() {
             <img src="/images/extra3.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
           </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/extra4.jpg" alt="Fresh People" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
         </div>
       </section>
 

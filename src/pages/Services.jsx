@@ -77,11 +77,19 @@ export default function Services() {
         </motion.div>
       </section>
 
-      {/* Brand Image */}
+      {/* Brand Images */}
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="relative overflow-hidden rounded-none">
-            <img src="/images/page-image-2.jpg" alt="Fresh People Services" className="w-full h-auto object-cover" />
+            <img src="/images/page-image-1.jpg" alt="Fresh People 1" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/page-image-2.jpg" alt="Fresh People 2" className="w-full h-auto object-cover" />
+            <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-none">
+            <img src="/images/page-image-3.jpg" alt="Fresh People 3" className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
           </div>
         </div>

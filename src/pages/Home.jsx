@@ -107,7 +107,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16 space-y-4"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-bold italic">How It Works</h2>
+            <h2 className="text-4xl md:text-6xl font-display font-bold italic text-white">How It Works</h2>
             <p className="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">Get premium talent for your event in 3 simple steps</p>
           </motion.div>
           

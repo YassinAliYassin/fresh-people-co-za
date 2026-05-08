@@ -10,7 +10,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-secondary border-t border-on-surface-variant/20 pt-32 pb-12 px-6 sm:px-12 rounded-t-[40px] mt-12 text-[#a1a1a1]">
+    <footer className="bg-secondary border-t border-on-surface-variant/20 pt-32 pb-12 px-6 sm:px-12 rounded-none mt-12 text-[#a1a1a1]">
       <div className="max-w-7xl mx-auto space-y-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-4 space-y-10">
@@ -29,7 +29,7 @@ export default function Footer() {
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-[#999999] hover:bg-primary hover:text-secondary transition-all duration-300"
+                  className="w-12 h-12 bg-[#1a1a1a] rounded-none flex items-center justify-center text-[#999999] hover:bg-primary hover:text-secondary transition-all duration-300"
                 >
                   <social.icon size={20} strokeWidth={1} />
                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3 space-y-10 text-center md:text-left">
-             <div className="p-8 border border-on-surface-variant/10 rounded-[32px] space-y-6 bg-[#121212]">
+             <div className="p-8 border border-on-surface-variant/10 rounded-none space-y-6 bg-[#121212]">
                 <Star className="text-primary mx-auto md:mx-0" size={32} />
                 <h4 className="text-xl font-display font-medium text-[#a1a1a1]">Join the Sequence</h4>
                 <form action="https://formspree.io/f/mojrqwzd" method="POST" className="flex gap-2">
@@ -71,10 +71,10 @@ export default function Footer() {
                      name="email"
                      placeholder="Digital Mail" 
                      required
-                     className="bg-[#1a1a1a] border-none rounded-xl px-4 py-3 text-sm flex-grow focus:ring-1 focus:ring-primary outline-none text-[#cccccc] placeholder-[#666666]"
+                     className="bg-[#1a1a1a] border-none rounded-none px-4 py-3 text-sm flex-grow focus:ring-1 focus:ring-primary outline-none text-[#cccccc] placeholder-[#666666]"
                    />
                    <input type="hidden" name="_subject" value="Newsletter Signup" />
-                   <button type="submit" className="p-3 bg-primary text-secondary rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all">
+                   <button type="submit" className="p-3 bg-primary text-secondary rounded-none hover:shadow-lg hover:shadow-primary/20 transition-all">
                       <ChevronRight size={20} />
                    </button>
                 </form>
@@ -85,7 +85,7 @@ export default function Footer() {
         <div className="pt-12 border-t border-on-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-bold text-[#666666] uppercase tracking-[0.3em]">
           <p className="whitespace-nowrap">&copy; {currentYear} FRESH PEOPLE STAFFING SOLUTIONS</p>
           <div className="flex items-center gap-2">
-             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+             <div className="w-2 h-2 bg-primary rounded-none animate-pulse" />
              <span className="text-[#666666]">Brand Standard Portfolio</span>
           </div>
         </div>

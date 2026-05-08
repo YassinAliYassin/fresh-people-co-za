@@ -54,7 +54,7 @@ export default function Contact() {
       {/* Form Section */}
       <section className="py-16 md:py-24 section-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
-          <div className="lg:col-span-8 bg-white border border-gray-100 rounded-[32px] md:rounded-[40px] p-8 md:p-12 lg:p-20 shadow-m3-1" aria-live="polite">
+          <div className="lg:col-span-8 bg-white border border-gray-100 rounded-none md:rounded-none p-8 md:p-12 lg:p-20 shadow-m3-1" aria-live="polite">
             <AnimatePresence mode="wait">
               {!submitted ? (
                 <motion.form 
@@ -76,7 +76,7 @@ export default function Contact() {
                         required
                         placeholder="Organization or Name"
                         aria-required="true"
-                        className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all placeholder:text-on-surface-variant/50 text-base md:text-lg"
+                        className="w-full bg-secondary-container rounded-none md:rounded-none px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all placeholder:text-on-surface-variant/50 text-base md:text-lg"
                       />
                     </div>
                     <div className="space-y-3 md:space-y-4">
@@ -88,7 +88,7 @@ export default function Contact() {
                         required
                         placeholder="contact@brand.co.za"
                         aria-required="true"
-                        className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all placeholder:text-on-surface-variant/50 text-base md:text-lg"
+                        className="w-full bg-secondary-container rounded-none md:rounded-none px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all placeholder:text-on-surface-variant/50 text-base md:text-lg"
                       />
                     </div>
                   </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                        <select 
                          id="placement-scope"
                          name="service"
-                         className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all appearance-none cursor-pointer text-base md:text-lg"
+                         className="w-full bg-secondary-container rounded-none md:rounded-none px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all appearance-none cursor-pointer text-base md:text-lg"
                        >
                           <option>Staffing</option>
                           <option>Equipment & Supply</option>
@@ -122,7 +122,7 @@ export default function Contact() {
                         rows={3}
                         placeholder="Describe your event parameters..."
                         aria-required="true"
-                        className="w-full bg-secondary-container rounded-2xl md:rounded-3xl px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all resize-none placeholder:text-on-surface-variant/50 text-base md:text-lg"
+                        className="w-full bg-secondary-container rounded-none md:rounded-none px-6 md:px-8 py-4 md:py-5 text-secondary font-medium focus:ring-2 focus:ring-primary focus:bg-white outline-none transition-all resize-none placeholder:text-on-surface-variant/50 text-base md:text-lg"
                      />
                   </div>
 
@@ -143,7 +143,7 @@ export default function Contact() {
                   className="text-center py-16 md:py-20 space-y-6 md:space-y-8"
                   role="status"
                 >
-                   <div className="w-20 h-20 md:w-24 md:h-24 bg-primary/10 rounded-full mx-auto flex items-center justify-center text-primary">
+                   <div className="w-20 h-20 md:w-24 md:h-24 bg-primary/10 rounded-none mx-auto flex items-center justify-center text-primary">
                       <CheckCircle2 size={48} strokeWidth={1} aria-hidden="true" />
                    </div>
                    <div className="space-y-2">
@@ -163,7 +163,7 @@ export default function Contact() {
 
           {/* Sidebar */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-             <div className="bg-secondary text-white p-8 md:p-12 rounded-[32px] md:rounded-[40px] space-y-8 md:space-y-12">
+             <div className="bg-secondary text-white p-8 md:p-12 rounded-none md:rounded-none space-y-8 md:space-y-12">
                 <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-primary">
                    <Star size={36}  />
                 </div>
@@ -173,12 +173,12 @@ export default function Contact() {
                 </div>
              </div>
 
-             <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-[32px] md:rounded-[40px] space-y-6 md:space-y-10 shadow-sm">
+             <div className="bg-white border border-gray-100 p-8 md:p-12 rounded-none md:rounded-none space-y-6 md:space-y-10 shadow-sm">
                 <div className="space-y-4 md:space-y-6">
                   <h4 className="text-lg md:text-xl font-display font-bold text-secondary">Direct Channel</h4>
                   <div className="flex flex-col gap-6 md:gap-8">
                      <div className="flex items-center gap-4 md:gap-6 group">
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-none md:rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
                            <Mail size={18}  />
                         </div>
                         <div className="space-y-0.5 min-w-0">
@@ -187,7 +187,7 @@ export default function Contact() {
                         </div>
                      </div>
                      <div className="flex items-center gap-4 md:gap-6 group">
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-none md:rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
                            <Phone size={18}  />
                         </div>
                         <div className="space-y-0.5 min-w-0">
@@ -196,7 +196,7 @@ export default function Contact() {
                         </div>
                      </div>
                      <div className="flex items-center gap-4 md:gap-6 group">
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl md:rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-none md:rounded-none flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shrink-0">
                            <MapPin size={18}  />
                         </div>
                         <div className="space-y-0.5">

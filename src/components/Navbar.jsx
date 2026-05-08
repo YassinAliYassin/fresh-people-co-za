@@ -28,14 +28,14 @@ export default function Navbar() {
       )}
     >
       <div className={cn(
-        "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-full",
+        "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-none",
         scrolled ? "bg-white/90 backdrop-blur-xl border border-gray-100 px-8 py-3 shadow-md translate-y-2" : "px-4"
       )}>
         <Link to="/" className="group flex items-center gap-3">
           <span className="text-xl font-medium tracking-[0.08em] text-gray-600" style={{fontFamily: 'Montserrat, sans-serif'}}>
             Fresh<span className="text-primary">People</span>
           </span>
-          <div className="w-1.5 h-1.5 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(164,199,29,0.5)]" />
+          <div className="w-1.5 h-1.5 bg-primary rounded-none opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(164,199,29,0.5)]" />
         </Link>
 
         <div className="hidden md:flex items-center gap-12">
@@ -50,7 +50,7 @@ export default function Navbar() {
                 to={item.path}
                 aria-current={location.pathname === item.path ? 'page' : undefined}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-sm',
+                  'text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-none',
                   location.pathname === item.path ? 'text-primary' : 'text-on-surface/60'
                 )}
               >
@@ -64,7 +64,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-lg p-2"
+          className="md:hidden text-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-none p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}

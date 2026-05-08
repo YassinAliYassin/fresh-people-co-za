@@ -80,11 +80,11 @@ export default function Services() {
       <section className="py-24 section-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
            {services.map((s, i) => (
-             <div key={i} className={`rounded-[32px] overflow-hidden p-8 md:p-12 flex flex-col justify-between border border-gray-100 bg-white group hover:border-primary transition-all duration-500 shadow-sm ${i === 0 ? 'lg:col-span-12' : 'lg:col-span-6'}`}>
+             <div key={i} className={`rounded-none overflow-hidden p-8 md:p-12 flex flex-col justify-between border border-gray-100 bg-white group hover:border-primary transition-all duration-500 shadow-sm ${i === 0 ? 'lg:col-span-12' : 'lg:col-span-6'}`}>
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
                    <div className="space-y-6 md:space-y-8 flex-grow">
                       <div className="flex items-center gap-4 md:gap-6">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 text-primary rounded-none flex items-center justify-center">
                            {s.icon}
                         </div>
                         <span className="text-xs font-bold text-[#9a9a9a] uppercase tracking-widest">{s.id}</span>
@@ -98,7 +98,7 @@ export default function Services() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-6 md:pt-8">
                          {s.features.map((f, j) => (
                            <div key={j} className="flex items-center gap-2 md:gap-3 text-secondary font-medium text-sm md:text-base">
-                              <div className="w-5 h-5 md:w-6 md:h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary shrink-0">
+                              <div className="w-5 h-5 md:w-6 md:h-6 bg-primary/20 rounded-none flex items-center justify-center text-primary shrink-0">
                                  <Check size={10} md:size={14} strokeWidth={3} />
                               </div>
                               <span>{f}</span>
@@ -108,7 +108,7 @@ export default function Services() {
                    </div>
                    
                    {i === 0 && (
-                     <div className="w-full md:w-[300px] aspect-square bg-secondary-container rounded-[32px] md:rounded-[40px] flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity shrink-0">
+                     <div className="w-full md:w-[300px] aspect-square bg-secondary-container rounded-none md:rounded-none flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity shrink-0">
                         <Coffee size={80} className="text-primary" strokeWidth={1} />
                      </div>
                    )}
@@ -129,7 +129,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us Section - Replaces Client Section */}
-      <section className="py-24 md:py-40 bg-secondary text-white rounded-[32px] md:rounded-[40px] mx-4 sm:mx-6 md:mx-12 mb-12">
+      <section className="py-24 md:py-40 bg-secondary text-white rounded-none md:rounded-none mx-4 sm:mx-6 md:mx-12 mb-12">
         <div className="section-container">
           <div className="mb-12 md:mb-20 space-y-4 md:space-y-6">
              <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-[#cccccc]">Why Fresh People?</h2>
@@ -145,8 +145,8 @@ export default function Services() {
                { title: 'Custom Solutions', desc: 'Tailored staffing plans for your unique requirements.' },
                { title: '24/7 Support', desc: 'Round-the-clock coordination and emergency support.' }
              ].map((item, i) => (
-               <div key={i} className="bg-white/5 border border-white/5 rounded-2xl md:rounded-3xl p-6 md:p-10 space-y-4 md:space-y-6 hover:bg-primary hover:text-secondary transition-all duration-500 group">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-primary">
+               <div key={i} className="bg-white/5 border border-white/5 rounded-none md:rounded-none p-6 md:p-10 space-y-4 md:space-y-6 hover:bg-primary hover:text-secondary transition-all duration-500 group">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-none flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-primary">
                      <Check size={20} md:size={24} />
                   </div>
                   <div className="space-y-1 md:space-y-2">

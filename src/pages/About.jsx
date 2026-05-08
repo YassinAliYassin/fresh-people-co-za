@@ -33,13 +33,13 @@ export default function About() {
       <section className="py-24 section-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
            {stats.map((s, i) => (
-             <div key={i} className="bg-white border border-gray-100 p-10 rounded-3xl group hover:bg-primary hover:text-on-primary transition-all duration-500 shadow-sm">
+             <div key={i} className="bg-white border border-gray-100 p-10 rounded-none group hover:bg-primary hover:text-on-primary transition-all duration-500 shadow-sm">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-[#9a9a9a] group-hover:text-white/60 mb-2">{s.label}</p>
                 <div className="text-5xl font-display font-bold">{s.value}</div>
              </div>
            ))}
 
-          <div className="md:col-span-4 bg-secondary-container rounded-3xl p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
+          <div className="md:col-span-4 bg-secondary-container rounded-none p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
 
           <div className="lg:col-span-7 space-y-8 relative z-10">
                  <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">The Selection Protocol.</h2>

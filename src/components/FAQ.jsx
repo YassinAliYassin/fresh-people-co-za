@@ -53,7 +53,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="w-16 h-16 bg-[#a4c71d]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 bg-[#a4c71d]/10 rounded-none flex items-center justify-center mx-auto mb-6">
             <HelpCircle size={32} className="text-[#a4c71d]" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -72,7 +72,7 @@ export default function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="bg-white rounded-xl shadow-sm overflow-hidden"
+              className="bg-white rounded-none shadow-sm overflow-hidden"
             >
               <button
                 onClick={() => toggle(index)}
@@ -116,7 +116,7 @@ export default function FAQ() {
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#a4c71d] text-white px-6 py-3 rounded-lg hover:bg-[#8fb018] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#a4c71d] text-white px-6 py-3 rounded-none hover:bg-[#8fb018] transition-colors"
           >
             Contact Our Team
             <ChevronDown size={16} className="rotate-270" />

@@ -56,7 +56,7 @@ export default function StatsCounter() {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 bg-white/20 rounded-2xl flex items-center justify-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 bg-white/20 rounded-none flex items-center justify-center">
                 <stat.icon size={24} className="md:w-8 md:h-8" />
               </div>
               <div className="text-3xl md:text-5xl font-bold mb-2">

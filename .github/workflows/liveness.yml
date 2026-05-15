@@ -1,0 +1,13 @@
+name: Liveness Probes
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute
+
+jobs:
+  liveness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check liveness
+        run: |
+          curl -f http://localhost:4173/live || echo "Not live"

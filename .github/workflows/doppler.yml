@@ -1,0 +1,12 @@
+name: Doppler Integration
+
+on: [push]
+
+jobs:
+  doppler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Doppler integration
+        run: |
+          echo "Doppler integration would go here"
+          # doppler run -- npm start

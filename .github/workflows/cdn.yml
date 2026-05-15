@@ -1,0 +1,13 @@
+name: CDN Config
+
+on: [push]
+
+jobs:
+  cdn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup CDN
+        run: |
+          echo "CDN configs would go here"
+          # Configure Cloudflare/CloudFront

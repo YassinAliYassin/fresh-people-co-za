@@ -1,0 +1,13 @@
+name: Service Mesh Config
+
+on: [push]
+
+jobs:
+  service-mesh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate Istio config
+        run: |
+          echo "Service mesh configs would go here"
+          # kubectl apply -f istio-config.yaml

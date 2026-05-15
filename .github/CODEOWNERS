@@ -1,0 +1,14 @@
+# CODEOWNERS - Auto-assign reviewers
+*       @YassinAliYassin
+
+# Frontend files
+*.js    @YassinAliYassin
+*.ts    @YassinAliYassin
+*.tsx   @YassinAliYassin
+*.css   @YassinAliYassin
+*.html  @YassinAliYassin
+
+# Config files
+*.yml   @YassinAliYassin
+*.yaml  @YassinAliYassin
+*.json  @YassinAliYassin

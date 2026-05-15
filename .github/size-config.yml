@@ -1,0 +1,22 @@
+# PR Size Configuration
+# Automatically label PRs based on lines changed
+
+size:
+  - label: "XS"
+    min: 0
+    max: 10
+  - label: "S"
+    min: 11
+    max: 100
+  - label: "M"
+    min: 101
+    max: 500
+  - label: "L"
+    min: 501
+    max: 1000
+  - label: "XL"
+    min: 1001
+    max: 5000
+  - label: "XXL"
+    min: 5001
+    max: 999999

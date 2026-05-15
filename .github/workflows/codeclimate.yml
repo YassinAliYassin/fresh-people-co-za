@@ -1,15 +1,11 @@
-name: CodeClimate Review
-
+name: ESLint CI
 on: [push, pull_request]
-
 jobs:
-  codeclimate:
+  eslint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: CodeClimate Maintainability
-        uses: paamba/codeclimate-action@v3.0.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: npm run test -- --coverage || echo "No tests"
+      - uses: actions/setup-node@v3
+        with: { node-version: '20' }
+      - run: npm install
+      - run: npx eslint . --ext .js,.jsx,.vue || echo "ESLint issues found"

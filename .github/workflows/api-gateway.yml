@@ -1,0 +1,13 @@
+name: API Gateway Config
+
+on: [push]
+
+jobs:
+  api-gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate API gateway config
+        run: |
+          echo "API gateway configs would go here"
+          # Generate Kong/NGINX config

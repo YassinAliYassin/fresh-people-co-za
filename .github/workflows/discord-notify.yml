@@ -1,5 +1,4 @@
 name: Discord Notifications
-
 on:
   pull_request:
     types: [opened, closed, merged]
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Discord PR Notification
-        if: github.event_name == 'pull_request'
+        if: ${{ secrets.DISCORD_WEBHOOK != '' && github.event_name == 'pull_request' }}
         uses: Ilshidur/action-discord@master
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
@@ -22,7 +21,7 @@ jobs:
             ${{ github.event.pull_request.html_url }}
             
       - name: Discord Issue Notification
-        if: github.event_name == 'issues'
+        if: ${{ secrets.DISCORD_WEBHOOK != '' && github.event_name == 'issues' }}
         uses: Ilshidur/action-discord@master
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
@@ -31,3 +30,7 @@ jobs:
             🐛 Issue #${{ github.event.number }}: ${{ github.event.issue.title }}
             By: ${{ github.actor }} | Action: ${{ github.event.action }}
             ${{ github.event.issue.html_url }}
+            
+      - name: Skip Notification (No Webhook)
+        if: ${{ secrets.DISCORD_WEBHOOK == '' }}
+        run: echo "Discord webhook not configured, skipping notification"

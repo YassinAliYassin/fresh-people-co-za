@@ -1,0 +1,14 @@
+name: Pre-commit Checks
+on: [push, pull_request]
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with: { python-version: '3.10' }
+      - uses: actions/setup-node@v3
+        with: { node-version: '20' }
+      - run: pip install pre-commit --break-system-packages
+      - run: npm install
+      - run: pre-commit run --all-files

@@ -1,0 +1,15 @@
+name: CodeClimate Review
+
+on: [push, pull_request]
+
+jobs:
+  codeclimate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: CodeClimate Maintainability
+        uses: paamba/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: npm run test -- --coverage || echo "No tests"

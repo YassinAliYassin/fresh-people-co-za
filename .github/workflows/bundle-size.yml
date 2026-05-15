@@ -1,0 +1,16 @@
+name: Bundle Size Check
+
+on: [pull_request]
+
+jobs:
+  bundlesize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: { node-version: '20' }
+      - run: npm install && npm run build
+      - name: Check Bundle Size
+        uses: andresz1/bundle-size-comment@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

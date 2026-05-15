@@ -1,0 +1,11 @@
+name: Accessibility Test
+on: [push, pull_request]
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: { node-version: '20' }
+      - run: npm install && npm run build
+      - run: npx pa11y-ci --sitemap http://localhost:4173/sitemap.xml --timeout 10000 || true

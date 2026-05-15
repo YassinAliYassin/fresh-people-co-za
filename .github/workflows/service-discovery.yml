@@ -1,0 +1,12 @@
+name: Service Discovery
+
+on: [push]
+
+jobs:
+  service-discovery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Service discovery
+        run: |
+          echo "Service discovery would go here"
+          # Register with Consul/etcd

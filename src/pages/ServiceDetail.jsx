@@ -19,22 +19,6 @@ const services = {
     ideal: 'Perfect for product launches, retail activations, trade shows, and corporate events where brand image is paramount.',
     gallery: ['/images/page-image-new1.jpg', '/images/extra1.jpg', '/images/extra2.jpg']
   },
-  'models-hosts': {
-    title: 'Models & Hosts',
-    icon: 'fas fa-user-tie',
-    tagline: 'Front-of-House Excellence',
-    description: 'Professional models and VIP hosts for corporate galas, weddings, and high-profile events. Camera-ready talent that elevates your event\'s prestige.',
-    features: [
-      'Corporate gala hosts',
-      'Wedding VIP coordination',
-      'Fashion show models',
-      'Promotional models',
-      'Bilingual hosts available',
-      'Portfolio provided upfront'
-    ],
-    ideal: 'Ideal for corporate events, fashion shows, weddings, and any event requiring sophisticated front-of-house presence.',
-    gallery: ['/images/page-image-new2.jpg', '/images/extra3.jpg', '/images/extra4.jpg']
-  },
   'hospitality-staff': {
     title: 'Hospitality Staff',
     icon: 'fas fa-cocktail',
@@ -87,7 +71,7 @@ const services = {
     title: 'Makeup & Styling',
     icon: 'fas fa-palette',
     tagline: 'Camera-Ready Finishes',
-    description: 'Professional makeup artists and stylists for models, hosts, and corporate events. Ensure your team looks flawless with camera-ready finishes.',
+    description: 'Professional makeup artists and stylists for hosts, corporate events, and weddings. Ensure your team looks flawless with camera-ready finishes.',
     features: [
       'Professional makeup artistry',
       'Hair styling services',

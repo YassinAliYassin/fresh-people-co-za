@@ -8,11 +8,10 @@ import FAQ from '../components/FAQ';
 export default function Home() {
   const talentCategories = [
     { name: 'Brand Ambassadors', icon: 'fas fa-crown', desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
-    { name: 'Models & Hosts', icon: 'fas fa-user-tie', desc: 'Professional models and VIP hosts for front-of-house presence at corporate galas, weddings, and high-profile events.' },
     { name: 'Hospitality Staff', icon: 'fas fa-cocktail', desc: 'RSA-certified bartenders, waiters, baristas, and marshals. Full back-of-house support for every event.' },
     { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
     { name: 'Event Security', icon: 'fas fa-shield-alt', desc: 'Professional security personnel for crowd control, VIP protection, and access management at all event types.' },
-    { name: 'Makeup & Styling', icon: 'fas fa-palette', desc: 'Professional makeup artists and stylists for models, hosts, and corporate events. Camera-ready finishes.' },
+    { name: 'Makeup & Styling', icon: 'fas fa-palette', desc: 'Professional makeup artists and stylists for hosts, corporate events, and weddings. Camera-ready finishes.' },
     { name: 'DJs & Entertainment', icon: 'fas fa-music', desc: 'Professional DJs, live musicians, and entertainers to keep your guests engaged and the energy high.' },
     { name: 'Event Coordinators', icon: 'fas fa-clipboard-check', desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' }
   ];

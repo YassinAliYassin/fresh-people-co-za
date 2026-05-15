@@ -1,0 +1,12 @@
+name: Envkey Integration
+
+on: [push]
+
+jobs:
+  envkey:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Envkey integration
+        run: |
+          echo "Envkey integration would go here"
+          # envkey load

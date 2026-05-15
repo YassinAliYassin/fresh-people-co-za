@@ -1,0 +1,17 @@
+name: Test FTP Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-ftp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+      
+      - name: Test FTP connection
+        run: |
+          lftp -u freshpeo,${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; pwd; ls; quit" ftp://102.208.231.54
+        env:
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}

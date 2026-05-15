@@ -1,0 +1,16 @@
+name: Certificate Renewal
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Monthly
+  workflow_dispatch:
+
+jobs:
+  cert-renewal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Renew certificates
+        run: |
+          echo "Certificate renewal would go here"
+          # certbot renew

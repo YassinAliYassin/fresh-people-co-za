@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 import StatsCounter from '../components/StatsCounter';
 import FAQ from '../components/FAQ';
 
@@ -73,13 +74,16 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {talentCategories.map((cat, i) => (
-            <div key={i} className="bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
+            <Link key={i} to={`/services/${cat.name.toLowerCase().replace(/ & | /g, '-')}`} className="bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group block">
               <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
                 <i className={`${cat.icon} text-2xl`}></i>
               </div>
               <h3 className="text-xl font-display font-bold text-secondary mb-2">{cat.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{cat.desc}</p>
-            </div>
+              <div className="mt-4 text-primary font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                Learn more <ChevronRight size={14} />
+              </div>
+            </Link>
           ))}
         </div>
       </section>

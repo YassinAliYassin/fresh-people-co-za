@@ -191,13 +191,19 @@ export default function Services() {
                    )}
                 </div>
                 
-                <div className="pt-6 md:pt-8 flex justify-end">
+                <div className="pt-6 md:pt-8 flex flex-wrap gap-4 justify-between items-center">
+                   <Link 
+                     to={`/services/${s.title.toLowerCase().replace(/ & | /g, '-')}`}
+                     className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                   >
+                      Learn More <ChevronRight size={16} />
+                   </Link>
                    <Link 
                      to="/contact" 
                      className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
                      aria-label={`Inquire about ${s.title} services`}
                    >
-                      Inquire About {s.title} <ChevronRight size={16} md:size={18} aria-hidden="true" />
+                      Inquire About {s.title} <ChevronRight size={16} aria-hidden="true" />
                    </Link>
                 </div>
              </div>

@@ -9,6 +9,10 @@ jobs:
         with: { node-version: '20' }
       - run: npm install
       - run: npm run build
+      - name: Start preview server
+        run: npm run preview -- --port 4173 &
+      - name: Wait for server
+        run: npx wait-on http://localhost:4173
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:

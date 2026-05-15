@@ -1,0 +1,12 @@
+name: Vault Integration
+
+on: [push]
+
+jobs:
+  vault:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vault integration
+        run: |
+          echo "Vault integration would go here"
+          # vault kv put secret/myapp @credentials.json

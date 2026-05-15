@@ -1,0 +1,13 @@
+name: Rate Limiting
+
+on: [push]
+
+jobs:
+  rate-limit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup rate limiting
+        run: |
+          echo "Rate limiting configs would go here"
+          # kubectl apply -f rate-limit.yaml

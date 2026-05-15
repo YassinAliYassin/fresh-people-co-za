@@ -24,13 +24,13 @@ jobs:
         run: npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          server: zada136.webway.host
-          username: fresh@fresh-people.co.za
+          server: 102.208.231.54
+          username: freshpeo
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: /home/freshpeo/public_html/
           exclude: |
             **/.git*
             **/.git*/**

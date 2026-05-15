@@ -20,84 +20,52 @@ const services = {
     gallery: ['/images/page-image-new1.jpg', '/images/extra1.jpg', '/images/extra2.jpg']
   },
   'hospitality-staff': {
-    title: 'Hospitality Staff',
-    icon: 'fas fa-cocktail',
-    tagline: 'RSA-Certified Professionals',
-    description: 'Full back-of-house support with RSA-certified bartenders, professional waiters, skilled baristas, and event marshals for seamless event execution.',
+    title: 'Waiters, Butlers & Commis Chefs',
+    icon: 'fas fa-utensils',
+    tagline: 'Professional Food Service',
+    description: 'Professional waitstaff, butlers, and commis chefs for seamless food service at weddings, corporate events, and private functions.',
     features: [
-      'RSA-certified bartenders',
       'Professional waitstaff',
-      'Skilled baristas',
-      'Event marshals & security',
+      'Experienced butlers',
       'Commis chefs & kitchen support',
-      'Uniformed & trained staff'
+      'Uniformed & trained staff',
+      'Multi-course service',
+      ' dietary accommodation'
     ],
-    ideal: 'Essential for weddings, corporate events, festivals, and any event requiring food & beverage service.',
+    ideal: 'Essential for weddings, corporate dinners, private functions, and any event requiring professional food service.',
     gallery: ['/images/extra1.jpg', '/images/extra2.jpg', '/images/extra3.jpg']
   },
-  'event-logistics': {
-    title: 'Event Logistics',
-    icon: 'fas fa-truck',
-    tagline: 'End-to-End Coordination',
-    description: 'Complete event logistics including equipment rental, bar stock, glassware, table settings, and comprehensive event coordination from start to finish.',
+  'coffee-baristas': {
+    title: 'Coffee Baristas',
+    icon: 'fas fa-coffee',
+    tagline: 'Specialty Coffee Service',
+    description: 'Professional baristas serving specialty coffee and beverages for corporate events, weddings, and brand activations.',
     features: [
-      'Equipment rental & setup',
-      'Bar stock & glassware',
-      'Table settings & décor',
-      'Venue layout planning',
-      'Setup & breakdown crews',
-      'Timeline management'
+      'Specialty coffee service',
+      'Espresso & cappuccino',
+      'Mobile coffee stations',
+      'Corporate event specialists',
+      'Wedding coffee bars',
+      'Custom menu options'
     ],
-    ideal: 'Perfect for large events, corporate functions, and any occasion requiring comprehensive logistical support.',
-    gallery: ['/images/extra2.jpg', '/images/extra3.jpg', '/images/extra4.jpg']
-  },
-  'event-security': {
-    title: 'Event Security',
-    icon: 'fas fa-shield-alt',
-    tagline: 'Professional Protection Services',
-    description: 'Professional security personnel for crowd control, VIP protection, and access management. Ensure your event runs safely with our vetted security team.',
-    features: [
-      'Crowd control management',
-      'VIP protection services',
-      'Access point management',
-      'Event marshals',
-      'First aid trained staff',
-      'PSIRA registered personnel'
-    ],
-    ideal: 'Critical for large gatherings, VIP events, corporate functions, and any event requiring professional security.',
+    ideal: 'Perfect for corporate events, weddings, brand activations, and any event requiring premium coffee service.',
     gallery: ['/images/extra3.jpg', '/images/extra4.jpg', '/images/page-image-new1.jpg']
   },
-  'makeup-styling': {
-    title: 'Makeup & Styling',
-    icon: 'fas fa-palette',
-    tagline: 'Camera-Ready Finishes',
-    description: 'Professional makeup artists and stylists for hosts, corporate events, and weddings. Ensure your team looks flawless with camera-ready finishes.',
+  'cocktail-bartenders': {
+    title: 'Cocktail Bartenders',
+    icon: 'fas fa-glass-martini-alt',
+    tagline: 'Premium Beverage Service',
+    description: 'RSA-certified bartenders crafting premium cocktails and beverage service for corporate events, weddings, and private functions.',
     features: [
-      'Professional makeup artistry',
-      'Hair styling services',
-      'Male grooming & beard styling',
-      'Wedding & bridal packages',
-      'Corporate headshot ready',
-      'On-site touch-up services'
+      'RSA-certified bartenders',
+      'Craft cocktail menus',
+      'Premium beverage service',
+      'Mobile bar setups',
+      'Corporate event specialists',
+      'Custom drink creation'
     ],
-    ideal: 'Essential for fashion shows, photo shoots, weddings, corporate events, and any camera-facing occasion.',
+    ideal: 'Essential for corporate events, weddings, festivals, and any event requiring professional bar service.',
     gallery: ['/images/extra4.jpg', '/images/page-image-new2.jpg', '/images/extra1.jpg']
-  },
-  'djs-entertainment': {
-    title: 'DJs & Entertainment',
-    icon: 'fas fa-music',
-    tagline: 'Elevate the Energy',
-    description: 'Professional DJs, live musicians, and entertainers to keep your guests engaged and the energy high throughout your event.',
-    features: [
-      'Professional DJ services',
-      'Live musicians & bands',
-      'Event entertainers',
-      'Sound & lighting setup',
-      'MC & hosting services',
-      'Custom playlist curation'
-    ],
-    ideal: 'Perfect for corporate parties, weddings, festivals, product launches, and any event needing entertainment.',
-    gallery: ['/images/extra1.jpg', '/images/extra2.jpg', '/images/extra3.jpg']
   },
   'event-coordinators': {
     title: 'Event Coordinators',

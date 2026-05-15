@@ -1,0 +1,13 @@
+name: Readiness Probes
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute
+
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check readiness
+        run: |
+          curl -f http://localhost:4173/ready || echo "Not ready"

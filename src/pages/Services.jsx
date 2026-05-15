@@ -36,7 +36,6 @@ export default function Services() {
       icon: <Settings size={32} />,
       id: '03',
       features: [
-        'Table Setting & Styling',
         'Décor Coordination',
         'Venue Layout Planning',
         'Setup & Breakdown Crews',

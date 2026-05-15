@@ -22,6 +22,8 @@ jobs:
       
       - name: Build project
         run: npm run build
+        env:
+          VITE_API_URL: https://freshpeople.co.za
       
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -31,4 +33,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /home/freshpeo/public_html/
-          dangerous-clean-slate: true
+          timeout: 300000

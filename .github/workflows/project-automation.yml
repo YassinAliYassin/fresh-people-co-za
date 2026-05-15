@@ -1,0 +1,23 @@
+name: Project Automation
+
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    types: [opened, labeled]
+
+jobs:
+  automate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const isIssue = context.payload.issue;
+            const labels = isIssue ? context.payload.issue.labels : context.payload.pull_request.labels;
+            
+            // Auto-add to project based on label
+            if (labels.some(l => l.name === 'bug')) {
+              console.log('Bug detected - would add to Bug Tracker project');
+            }

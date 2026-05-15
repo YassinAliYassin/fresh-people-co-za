@@ -1,0 +1,14 @@
+name: Push Protection
+
+on: [push, pull_request]
+
+jobs:
+  push-protection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: { fetch-depth: 0 }
+      - name: Check for secrets
+        uses: maxneuvians/push-protection@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}

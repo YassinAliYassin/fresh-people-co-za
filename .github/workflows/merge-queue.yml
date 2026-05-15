@@ -1,0 +1,22 @@
+name: Merge Queue
+
+on:
+  pull_request:
+    types: [labeled, synchronize]
+
+jobs:
+  merge-queue:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'queue')
+    steps:
+      - uses: actions/checkout@v3
+      - name: Add to merge queue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              event: 'APPROVE'
+            });

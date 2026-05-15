@@ -10,6 +10,10 @@ export default function Home() {
     { name: 'Models & Hosts', icon: 'fas fa-user-tie', desc: 'Professional models and VIP hosts for front-of-house presence at corporate galas, weddings, and high-profile events.' },
     { name: 'Hospitality Staff', icon: 'fas fa-cocktail', desc: 'RSA-certified bartenders, waiters, baristas, and marshals. Full back-of-house support for every event.' },
     { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
+    { name: 'Event Security', icon: 'fas fa-shield-alt', desc: 'Professional security personnel for crowd control, VIP protection, and access management at all event types.' },
+    { name: 'Makeup & Styling', icon: 'fas fa-palette', desc: 'Professional makeup artists and stylists for models, hosts, and corporate events. Camera-ready finishes.' },
+    { name: 'DJs & Entertainment', icon: 'fas fa-music', desc: 'Professional DJs, live musicians, and entertainers to keep your guests engaged and the energy high.' },
+    { name: 'Event Coordinators', icon: 'fas fa-clipboard-check', desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' }
   ];
 
   const whyChoose = [
@@ -62,31 +66,14 @@ export default function Home() {
 
       {/* Services Grid - Talent First */}
       <section className="section-padding section-container">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 bg-white rounded-none p-8 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
-            <div className="space-y-6 relative z-10">
-              <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Premium <br /> <span className="text-primary">Talent.</span></h2>
-              <p className="text-on-surface-variant text-lg max-w-md leading-relaxed">The heartbeat of Johannesburg's events industry. Leading with front-of-house talent, backed by full-service hospitality support.</p>
-            </div>
-<div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
-   {['Trusted Across Gauteng', 'Excellence Since 2014', 'Premier Talent', '200+ Clients'].map(b => (
-     <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
-   ))}
-            </div>
-          </div>
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Premium <span className="text-primary">Talent.</span></h2>
+          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">The heartbeat of Johannesburg's events industry. Leading with front-of-house talent, backed by full-service hospitality support.</p>
+        </div>
 
-          <div className="md:col-span-4 bg-secondary text-white rounded-none p-8 md:p-12 flex flex-col justify-between items-start">
-             <div className="p-4 bg-primary rounded-none text-on-primary shadow-lg shadow-primary/20">
-                <i className="fas fa-star text-2xl"></i>
-             </div>
-             <div className="space-y-2">
-                <div className="text-7xl font-display font-bold">10+</div>
-                <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">Years of excellence</p>
-             </div>
-          </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {talentCategories.map((cat, i) => (
-            <div key={i} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
+            <div key={i} className="bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
               <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
                 <i className={`${cat.icon} text-2xl`}></i>
               </div>

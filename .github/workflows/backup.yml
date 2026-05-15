@@ -1,0 +1,20 @@
+name: Backup Automation
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily 2AM
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create backup
+        run: |
+          tar -czf backup-$(date +%Y%m%d).tar.gz .
+      - name: Upload backup
+        uses: actions/upload-artifact@v3
+        with:
+          name: repo-backup
+          path: backup-*.tar.gz

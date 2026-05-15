@@ -1,0 +1,17 @@
+name: Wiki Sync
+
+on:
+  push:
+    branches: [main]
+    paths: ['wiki/**']
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Sync to Wiki
+        uses: Andrew-Chen-Wang/wiki-sync@v4
+        with:
+          wiki: 'YassinAliYassin/fresh-people-co-za.wiki'
+          token: ${{ secrets.GITHUB_TOKEN }}

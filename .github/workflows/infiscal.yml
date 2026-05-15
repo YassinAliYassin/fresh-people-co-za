@@ -1,0 +1,12 @@
+name: Infiscal Integration
+
+on: [push]
+
+jobs:
+  infiscal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Infiscal integration
+        run: |
+          echo "Infiscal integration would go here"
+          # infiscal sync

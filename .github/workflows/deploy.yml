@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: 102.208.231.54
           username: freshpeo

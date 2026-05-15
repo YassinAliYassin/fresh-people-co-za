@@ -1,0 +1,18 @@
+name: Incident Response
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  incident:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'incident')
+    steps:
+      - uses: actions/checkout@v3
+      - name: Trigger incident response
+        uses: actions/github-script@v6
+        with:
+          script: |
+            console.log('Incident response triggered');
+            // Notify team, create war room, etc.

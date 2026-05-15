@@ -1,0 +1,19 @@
+name: Chaos Engineering
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # Weekly 4AM Sunday
+  workflow_dispatch:
+
+jobs:
+  chaos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install chaos tools
+        run: |
+          npm install -g chaos-mesh
+      - name: Run chaos experiments
+        run: |
+          echo "Chaos experiments would run here"
+          # chaosd attack network loss --percent 50

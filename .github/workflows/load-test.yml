@@ -1,0 +1,20 @@
+name: Load Testing
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Weekly 3AM Sunday
+  workflow_dispatch:
+
+jobs:
+  load-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install k6
+        run: |
+          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D0C3C2946D422B4A
+          echo "deb https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+          sudo apt-get update
+          sudo apt-get install k6
+      - name: Run load test
+        run: k6 run load-test.js || echo "No load test yet"

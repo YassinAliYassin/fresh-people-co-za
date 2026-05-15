@@ -29,6 +29,7 @@ jobs:
           server: 102.208.231.54
           username: freshpeo
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./dist/
           server-dir: /home/freshpeo/public_html/
           exclude: |

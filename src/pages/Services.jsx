@@ -13,7 +13,7 @@ export default function Services() {
         'Professional Wait Staff',
         'RSA-Certified Bartenders',
         'Skilled Baristas',
-        'Event Marshals & Security',
+        'Event Marshals',
         'Commis Chefs & Kitchen Support'
       ]
     },

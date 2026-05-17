@@ -1,12 +1,12 @@
-import { Instagram, Facebook, Star, ChevronRight } from 'lucide-react';
+import { Star, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, url: "https://www.instagram.com/we_are_fresh_people?igsh=MWNkcmg4aXduNHNteQ%3D%3D&utm_source=qr" },
-    { icon: Facebook, url: "Https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
+    { iconClass: 'fab fa-instagram', url: "https://www.instagram.com/we_are_fresh_people?igsh=MWNkcmg4aXduNHNteQ%3D%3D&utm_source=qr" },
+    { iconClass: 'fab fa-facebook-f', url: "Https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-[#1a1a1a] rounded-none flex items-center justify-center text-[#999999] hover:bg-primary hover:text-secondary transition-all duration-300"
                 >
-                  <social.icon size={20} strokeWidth={1} />
+                  <i className={`${social.iconClass} text-lg`}></i>
                 </a>
               ))}
             </div>

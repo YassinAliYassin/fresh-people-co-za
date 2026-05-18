@@ -86,7 +86,7 @@ export default function Footer() {
           <p className="whitespace-nowrap">&copy; {currentYear} FRESH PEOPLE STAFFING SOLUTIONS</p>
           <div className="flex items-center gap-2">
              <div className="w-2 h-2 bg-primary rounded-none animate-pulse" />
-             <span className="text-[#666666]">Brand Standard Portfolio</span>
+             <span className="text-primary font-display font-bold">We Love What We Do ✊🏾</span>
           </div>
         </div>
       </div>

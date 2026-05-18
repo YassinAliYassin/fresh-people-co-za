@@ -46,9 +46,6 @@ export default function Home() {
               Elevate Your Brand With <br /> 
               <span className="text-primary not-italic">South Africa's Premier Talent.</span>
             </h1>
-            <div className="text-2xl md:text-3xl text-primary font-display font-bold flex items-center gap-3">
-              We Love What We Do <span className="text-3xl">✊🏾</span>
-            </div>
             <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
               From luxury activations in Sandton to weddings in Randburg, festivals in Fourways to launches in Rosebank — we provide charismatic talent for every major event in Gauteng.
             </p>

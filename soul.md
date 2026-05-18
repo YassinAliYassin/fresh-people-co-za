@@ -1,9 +1,9 @@
 # Fresh People Soul
 
-## Latest Save (Commit: e5772ae)
-• Tagline "We Love What We Do ✊🏾" added to home page hero
+## Latest Save (Commit: e0da268)
+• Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from hero)
 • Replaced "The Portfolio" with "We Love What We Do ✊🏾" in Services page
-• Green overlays replaced with ✊🏾 emoji on gallery image hover
+• ✊🏾 emoji replaces green overlays on gallery hover
 • ServiceDetail pages LIVE with rich content (Staffing, Equipment, Logistics, Management)
 • WhatsApp banner (1080x1080) added to /images/whatsapp-banner.jpg
 • Open Graph tags updated for WhatsApp link previews

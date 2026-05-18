@@ -60,7 +60,6 @@ export default function Services() {
   return (
     <div className="bg-surface min-h-screen">
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,13 +75,13 @@ export default function Services() {
         </motion.div>
       </section>
 
-      {/* Brand Gallery */}
+      {/* Brand Gallery - Telegram Photos */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Large featured image */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
-              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img src="/images/telegram-uploads/photo-1290-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
@@ -94,7 +93,7 @@ export default function Services() {
 
             {/* Top right */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img src="/images/telegram-uploads/photo-1291-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
@@ -106,7 +105,7 @@ export default function Services() {
 
             {/* Extra images */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img src="/images/telegram-uploads/photo-1292-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
@@ -117,7 +116,7 @@ export default function Services() {
             </div>
 
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/telegram-uploads/photo-1293-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
@@ -129,7 +128,7 @@ export default function Services() {
 
             {/* Wide image bottom */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
-              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src="/images/telegram-uploads/photo-1294-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
@@ -138,16 +137,39 @@ export default function Services() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Classic Gallery - Previous Collection */}
+      <section className="section-padding bg-surface-variant">
+        <div className="section-container">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-2">Classic Collection</h2>
+          <div className="w-20 h-1 bg-primary mb-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
+              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-none group cursor-pointer">
+              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
+              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+            </div>
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img src="/images/extra4.jpg" alt="Your Event Partner" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
-                <div>
-                  <p className="text-white text-xl font-display font-bold">Your Partner</p>
-                  <p className="text-white/80 text-xs mt-1">Ready for your next event</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -210,7 +232,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Why Choose Us Section - Replaces Client Section */}
+      {/* Why Choose Us Section */}
       <section className="py-24 md:py-40 bg-secondary text-white rounded-none md:rounded-none mx-4 sm:mx-6 md:mx-12 mb-12">
         <div className="section-container">
           <div className="mb-12 md:mb-20 space-y-4 md:space-y-6">

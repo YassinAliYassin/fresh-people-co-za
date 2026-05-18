@@ -34,6 +34,7 @@
     @apply bg-surface text-on-surface font-sans antialiased;
     line-height: 1.7;
     font-weight: 300;
+    scroll-behavior: smooth;
   }
   
   h1, h2, h3, h4 {

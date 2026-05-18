@@ -1,6 +1,7 @@
 # Fresh People Soul
 
-## Latest Save (Commit: e0da268)
+## Latest Save (Commit: 49b141a)
+• ✊🏾 emoji flickers in footer (removed green square)
 • Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from hero)
 • Replaced "The Portfolio" with "We Love What We Do ✊🏾" in Services page
 • ✊🏾 emoji replaces green overlays on gallery hover

@@ -1,9 +1,8 @@
 # Fresh People Soul
 
-## Latest Save (Commit: 49b141a)
-• ✊🏾 emoji flickers in footer (removed green square)
-• Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from hero)
-• Replaced "The Portfolio" with "We Love What We Do ✊🏾" in Services page
+## Latest Save (Commit: 2eda38b)
+• ✊🏾 emoji flickers in footer GRAY (removed green square)
+• Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from Services hero + Home hero)
 • ✊🏾 emoji replaces green overlays on gallery hover
 • ServiceDetail pages LIVE with rich content (Staffing, Equipment, Logistics, Management)
 • WhatsApp banner (1080x1080) added to /images/whatsapp-banner.jpg

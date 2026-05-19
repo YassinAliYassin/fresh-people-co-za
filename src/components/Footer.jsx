@@ -85,7 +85,7 @@ export default function Footer() {
         <div className="pt-12 border-t border-on-surface-variant/20 flex flex-col md:flex-row justify-between items-center gap-8 text-[11px] font-bold text-[#666666] uppercase tracking-[0.3em]">
           <p className="whitespace-nowrap">&copy; {currentYear} FRESH PEOPLE STAFFING SOLUTIONS</p>
           <div className="flex items-center gap-2">
-             <span className="text-primary font-display font-bold">We Love What We Do <span className="animate-pulse inline-block">✊🏾</span></span>
+             <span className="text-[#666666] font-display font-bold">We Love What We Do <span className="animate-pulse inline-block">✊🏾</span></span>
           </div>
         </div>
       </div>

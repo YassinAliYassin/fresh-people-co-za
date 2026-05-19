@@ -65,7 +65,6 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-12 relative z-10"
         >
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">We Love What We Do ✊🏾</span>
           <h1 className="text-[12vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9] max-w-4xl">
             Precision <br /> <span className="text-primary italic font-medium">Staffing.</span>
           </h1>

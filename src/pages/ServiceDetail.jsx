@@ -220,13 +220,13 @@ export default function ServiceDetail() {
       {/* Why Choose */}
       <section className="py-24 md:py-40 bg-[#0A0A0A] text-white px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-12">Why Choose {service.title}?</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-extrabold mb-12 text-white drop-shadow-lg">Why Choose {service.title}?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.whyChoose.map((item, i) => (
               <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-none hover:bg-[#A4C71D] hover:text-[#0A0A0A] transition-all duration-500 group">
                 <div className="flex items-center gap-3">
                   <Star size={20} className="text-[#A4C71D] group-hover:text-[#0A0A0A]" />
-                  <span className="font-medium">{item}</span>
+                  <span className="font-semibold text-white">{item}</span>
                 </div>
               </div>
             ))}

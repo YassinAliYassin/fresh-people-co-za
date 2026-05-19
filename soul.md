@@ -1,6 +1,7 @@
 # Fresh People Soul
 
-## Latest Save (Commit: 2eda38b)
+## Latest Save (Commit: 0f940e8)
+• "Why Choose" heading + items bolder/brighter on dark background
 • ✊🏾 emoji flickers in footer GRAY (removed green square)
 • Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from Services hero + Home hero)
 • ✊🏾 emoji replaces green overlays on gallery hover

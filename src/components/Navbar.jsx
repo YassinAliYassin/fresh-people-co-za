@@ -44,6 +44,7 @@ export default function Navbar() {
               { name: 'Home', path: '/' },
               { name: 'Talent Scope', path: '/services' },
               { name: 'The Legacy', path: '/about' },
+              { name: 'Blog', path: '/blog' },
             ].map((item) => (
               <Link
                 key={item.name}
@@ -87,6 +88,7 @@ export default function Navbar() {
               { name: 'Home', path: '/' },
               { name: 'Services', path: '/services' },
               { name: 'About', path: '/about' },
+              { name: 'Blog', path: '/blog' },
               { name: 'Contact', path: '/contact' },
             ].map((item) => (
               <Link

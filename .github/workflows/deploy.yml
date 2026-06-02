@@ -1,4 +1,4 @@
-name: Deploy to Production
+name: Deploy React App to fresh-people.co.za
 
 on:
   push:
@@ -7,30 +7,31 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
+          cache: 'npm'
+
       - name: Install dependencies
-        run: npm install
-      
-      - name: Build project
+        run: npm ci
+
+      - name: Build React app
         run: npm run build
-        env:
-          VITE_API_URL: https://freshpeople.co.za
-      
-      - name: Deploy via FTP
+
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: zada136.webway.host
+          username: fresh@fresh-people.co.za
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /home/freshpeo/public_html/
-          timeout: 300000
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

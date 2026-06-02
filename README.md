@@ -1,36 +1,33 @@
-# Fresh People
+# Fresh People | Premier Talent & Events Staffing Johannesburg
 
-![Build](https://github.com/YassinAliYassin/fresh-people-co-za/actions/workflows/deploy.yml/badge.svg)
-![CodeQL](https://github.com/YassinAliYassin/fresh-people-co-za/actions/workflows/codeql.yml/badge.svg)
-![License](https://img.shields.io/github/license/YassinAliYassin/fresh-people-co-za)
-![Version](https://img.shields.io/github/v/release/YassinAliYassin/fresh-people-co-za)
+South Africa's premier talent agency for brand ambassadors, models, hospitality staff, event logistics and coordination.
 
-Modern business website for Fresh People with CI/CD, security scanning, and automated workflows.
+**Live:** https://fresh-people.co.za
 
-## Features
+## Tech
+- React 19 + Vite + Tailwind + TypeScript
+- Deployed via GitHub Actions → FTP to hosting (public_html)
+- SPA routing with .htaccess fallback
 
-• Auto-deployment to production
-• Code quality checks (ESLint, Prettier)
-• Security scanning (CodeQL, Dependabot)
-• Performance monitoring (Lighthouse)
-• Accessibility testing
-• Uptime monitoring
-
-## Quick Start
-
+## Local Dev
 ```bash
 npm install
 npm run dev
 ```
 
-## Contributing
+## Build & Deploy
+```bash
+npm run build
+# Deploy happens automatically on push to main (see .github/workflows/deploy.yml)
+```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## Key Fixes (2026-06)
+- Cleaned 50+ irrelevant GitHub workflow templates
+- Modernized deploy action (v4, npm ci, caching)
+- Added .htaccess for proper SPA client routing + caching
+- UI visibility, heading contrast, gallery image fixes
+- Dep bumps + closed stale dependabot PRs
+- gh-pages branch updated for consistency
 
-## Security
-
-Report vulnerabilities via [SECURITY.md](SECURITY.md).
-
-## License
-
-MIT - see [LICENSE](LICENSE)
+## Contact
++27 67 296 1272 | Randburg, Gauteng

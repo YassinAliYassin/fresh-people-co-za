@@ -41,12 +41,12 @@ export default function Contact() {
           animate={{ opacity: 1, x: 0 }}
           className="space-y-8 md:space-y-12 relative z-10"
         >
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">The Conversation</span>
+          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Get a Quote</span>
           <h1 className="text-[10vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9]">
-            Initialize <br /> <span className="text-primary italic font-medium">Protocol.</span>
+            Tell Us <br /> <span className="text-primary italic font-medium">About Your Event.</span>
           </h1>
           <p className="text-lg md:text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
-            Submit your inquiry to begin the vetting and placement sequence for your event.
+            Share your date, venue, staff count, service needs, and timing. Fresh People will respond with the right staffing and support options.
           </p>
         </motion.div>
       </section>
@@ -68,7 +68,7 @@ export default function Contact() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     <div className="space-y-3 md:space-y-4">
-                      <label htmlFor="full-name" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Full Identity</label>
+                      <label htmlFor="full-name" className="text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant ml-4 block">Name or Company</label>
                       <input
                         id="full-name"
                         name="name"
@@ -191,7 +191,7 @@ export default function Contact() {
                            <Phone size={18}  />
                         </div>
                         <div className="space-y-0.5 min-w-0">
-                           <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Direct Voice</p>
+                           <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/30">Phone / WhatsApp</p>
                            <p className="text-base md:text-lg font-bold text-secondary">+27 67 296 1272</p>
                         </div>
                      </div>

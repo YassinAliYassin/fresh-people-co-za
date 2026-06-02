@@ -21,11 +21,10 @@ export default function About() {
         >
           <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Our Heritage</span>
           <h1 className="text-[12vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9]">
-            Architects Of <br /> <span className="text-primary italic font-medium">Excellence.</span>
+            People Behind <br /> <span className="text-primary italic font-medium">Better Events.</span>
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
-            Founded in the heart of Johannesburg, Fresh People has spent a decade defining the 
-            luxury standard for staffing in South Africa.
+            Fresh People is a Johannesburg-based event staffing and talent partner supplying reliable people for brand activations, hospitality, corporate functions, weddings, launches, festivals, and private events.
           </p>
         </motion.div>
       </section>
@@ -44,11 +43,9 @@ export default function About() {
           <div className="md:col-span-4 bg-secondary-container rounded-none p-12 md:p-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative">
 
           <div className="lg:col-span-7 space-y-8 relative z-10">
-                 <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">The Selection Protocol.</h2>
+                 <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">How We Select Staff.</h2>
                  <p className="text-on-surface-variant text-lg font-normal leading-loose">
-                    We don't just hire staff; we select ambassadors. Every member of our network 
-                    undergoes a rigorous multi-stage vetting process that evaluates poise, 
-                    professional etiquette, and situational Intelligence.
+                    We do not just fill shifts. We match people to the event environment, guest profile, service standard, and brand expectation. Teams are briefed on call time, uniform, role, guest interaction, and on-site conduct before arrival.
                  </p>
                  <div className="flex flex-wrap gap-6 pt-6">
                     <div className="flex items-center gap-3 text-secondary font-bold">
@@ -70,7 +67,7 @@ export default function About() {
       </section>
 
       <section className="py-60 section-container text-center space-y-16">
-         <h2 className="text-6xl md:text-[8vw] font-display font-bold tracking-tighter text-secondary">The <span className="text-primary">Next</span> Decade.</h2>
+         <h2 className="text-6xl md:text-[8vw] font-display font-bold tracking-tighter text-secondary">Let Us <span className="text-primary">Staff</span> It.</h2>
          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link to="/contact" className="btn-m3-filled !px-16 !py-6">
               Partner With Us

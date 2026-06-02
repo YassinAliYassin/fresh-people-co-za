@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom';
 export default function Services() {
   const services = [
     {
-      title: 'Staffing',
-      description: 'Waiters, Bartenders, Baristas, Marshals, and Commis Chefs.',
+      title: 'Event Staffing',
+      description: 'Waiters, bartenders, baristas, runners, marshals, ushers, hosts, and kitchen support.',
       icon: <Coffee size={32} />,
       id: '01',
       features: [
         'Professional Wait Staff',
         'RSA-Certified Bartenders',
         'Skilled Baristas',
-        'Event Marshals',
+        'Event Marshals & Ushers',
         'Commis Chefs & Kitchen Support'
       ]
     },
     {
       title: 'Equipment & Supply',
-      description: 'Bar stock, Glassware, Bar tools, and Coffee station supplies.',
+      description: 'Bar stock, glassware, bar tools, and coffee station supplies.',
       icon: <Wine size={32} />,
       id: '02',
       features: [
@@ -32,10 +32,11 @@ export default function Services() {
     },
     {
       title: 'Logistics & Setup',
-      description: 'Table settings and décor support.',
+      description: 'Call-time planning, table settings, venue setup, breakdown crews, and décor support.',
       icon: <Settings size={32} />,
       id: '03',
       features: [
+        'Table Setting & Styling',
         'Décor Coordination',
         'Venue Layout Planning',
         'Setup & Breakdown Crews',
@@ -43,8 +44,8 @@ export default function Services() {
       ]
     },
     {
-      title: 'Management',
-      description: 'Full event planning and end-to-end coordination.',
+      title: 'Event Management',
+      description: 'On-site coordination and full event support from briefing to close-out.',
       icon: <ClipboardList size={32} />,
       id: '04',
       features: [
@@ -60,40 +61,42 @@ export default function Services() {
   return (
     <div className="bg-surface min-h-screen">
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           className="space-y-12 relative z-10"
         >
+          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">The Portfolio</span>
           <h1 className="text-[12vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9] max-w-4xl">
-            Precision <br /> <span className="text-primary italic font-medium">Staffing.</span>
+            What We <br /> <span className="text-primary italic font-medium">Offer.</span>
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant max-w-3xl leading-relaxed">
-            From high-end retail activations to elite private hospitality, our talent network is engineered for clinical precision.
+            Fresh People supplies the people, hospitality support, equipment, setup crews, and coordination needed to run polished events across Johannesburg and Gauteng.
           </p>
         </motion.div>
       </section>
 
-      {/* Brand Gallery - Telegram Photos */}
+      {/* Brand Gallery */}
       <section className="section-padding">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
             {/* Large featured image */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
-              <img src="/images/telegram-uploads/photo-1290-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
-                  <p className="text-white text-2xl font-display font-bold mb-2">Premier Talent</p>
-                  <p className="text-white/80 text-sm">South Africa's finest event staff</p>
+                  <p className="text-white text-2xl font-display font-bold mb-2">Brand Ambassadors</p>
+                  <p className="text-white/80 text-sm">Activation teams for launches, promotions, exhibitions, and campaigns</p>
                 </div>
               </div>
             </div>
 
             {/* Top right */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/telegram-uploads/photo-1291-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
                   <p className="text-white text-xl font-display font-bold">Hospitality</p>
@@ -104,8 +107,8 @@ export default function Services() {
 
             {/* Extra images */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/telegram-uploads/photo-1292-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
                   <p className="text-white text-xl font-display font-bold">Equipment</p>
@@ -115,8 +118,8 @@ export default function Services() {
             </div>
 
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/telegram-uploads/photo-1293-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
                   <p className="text-white text-xl font-display font-bold">Logistics</p>
@@ -127,48 +130,25 @@ export default function Services() {
 
             {/* Wide image bottom */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
-              <img src="/images/telegram-uploads/photo-1294-original.jpg" alt="Fresh People Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
-                  <p className="text-white text-2xl font-display font-bold mb-2">Excellence Delivered</p>
-                  <p className="text-white/80 text-sm">10+ years of premium events</p>
+                  <p className="text-white text-2xl font-display font-bold mb-2">Events Delivered</p>
+                  <p className="text-white/80 text-sm">Corporate, wedding, festival, launch, and private event support</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Classic Gallery - Previous Collection */}
-      <section className="section-padding bg-surface-variant">
-        <div className="section-container">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-2">Classic Collection</h2>
-          <div className="w-20 h-1 bg-primary mb-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
-              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
-            </div>
-            <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
-            </div>
-            <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
-            </div>
-            <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
-            </div>
-            <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
-              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
-            </div>
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img src="/images/extra4.jpg" alt="Your Event Partner" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply flex items-center justify-center text-6xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">✊🏾</div>
+              <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                <div>
+                  <p className="text-white text-xl font-display font-bold">Your Partner</p>
+                  <p className="text-white/80 text-xs mt-1">Ready for your next event</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -211,19 +191,13 @@ export default function Services() {
                    )}
                 </div>
                 
-                <div className="pt-6 md:pt-8 flex flex-wrap gap-4 justify-between items-center">
-                   <Link 
-                     to={`/services/${s.title.toLowerCase().replace(/ & | /g, '-')}`}
-                     className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                   >
-                      Learn More <ChevronRight size={16} />
-                   </Link>
+                <div className="pt-6 md:pt-8 flex justify-end">
                    <Link 
                      to="/contact" 
                      className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
                      aria-label={`Inquire about ${s.title} services`}
                    >
-                      Inquire About {s.title} <ChevronRight size={16} aria-hidden="true" />
+                      Inquire About {s.title} <ChevronRight size={16} md:size={18} aria-hidden="true" />
                    </Link>
                 </div>
              </div>
@@ -231,22 +205,22 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section - Replaces Client Section */}
       <section className="py-24 md:py-40 bg-secondary text-white rounded-none md:rounded-none mx-4 sm:mx-6 md:mx-12 mb-12">
         <div className="section-container">
           <div className="mb-12 md:mb-20 space-y-4 md:space-y-6">
-             <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-[#cccccc]">Why Fresh People?</h2>
-             <p className="text-[#999999] text-lg md:text-xl font-light">The standard for premium event staffing and management in South Africa.</p>
+             <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-[#cccccc]">Built For Real Event Pressure.</h2>
+             <p className="text-[#999999] text-lg md:text-xl font-light">We focus on the details that affect event day: confirmation, punctuality, presentation, communication, and guest experience.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
              {[
-               { title: 'Vetted Professionals', desc: 'Every team member undergoes rigorous screening and training.' },
-               { title: 'End-to-End Service', desc: 'From equipment to staff, we handle every detail.' },
-               { title: 'Proven Track Record', desc: '10+ years of excellence in the industry.' },
-               { title: 'Rapid Deployment', desc: 'Quick turnaround for urgent events and activations.' },
-               { title: 'Custom Solutions', desc: 'Tailored staffing plans for your unique requirements.' },
-               { title: '24/7 Support', desc: 'Round-the-clock coordination and emergency support.' }
+               { title: 'Clear Briefing', desc: 'Staff arrive briefed on venue, call time, uniform, role, and reporting line.' },
+               { title: 'Flexible Team Mix', desc: 'Scale from a small private event team to larger activation and festival crews.' },
+               { title: 'Hospitality Ready', desc: 'Bartenders, waiters, baristas, runners, and support teams for guest-facing service.' },
+               { title: 'Brand-Facing Talent', desc: 'Ambassadors, hosts, models, and promoters for polished public interactions.' },
+               { title: 'Setup Support', desc: 'Equipment, bar tools, glassware, table settings, setup, and breakdown support.' },
+               { title: 'Gauteng Coverage', desc: 'Coverage across Johannesburg, Randburg, Sandton, Fourways, Midrand, Pretoria, and surrounds.' }
              ].map((item, i) => (
                <div key={i} className="bg-white/5 border border-white/5 rounded-none md:rounded-none p-6 md:p-10 space-y-4 md:space-y-6 hover:bg-primary hover:text-secondary transition-all duration-500 group">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-none flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-primary">
@@ -265,10 +239,10 @@ export default function Services() {
       {/* Final CTA */}
       <section className="py-40 md:py-60 section-container text-center">
          <h2 className="text-4xl md:text-6xl lg:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-none mb-8 md:mb-12">
-           Ready to <span className="text-primary">Elevate?</span>
+           Ready to <span className="text-primary">Book?</span>
          </h2>
          <Link to="/contact" className="btn-m3-filled !px-12 md:!px-20 !py-5 md:!py-6 text-base md:text-xl focus-visible:ring-4 focus-visible:ring-primary/20">
-            Start Your Event
+            Request a Quote
          </Link>
       </section>
     </div>

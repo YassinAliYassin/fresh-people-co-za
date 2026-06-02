@@ -1,31 +1,28 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
 import StatsCounter from '../components/StatsCounter';
 import FAQ from '../components/FAQ';
 
 
 export default function Home() {
   const talentCategories = [
-    { name: 'Brand Ambassadors', icon: 'fas fa-crown', desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
-    { name: 'Waiters, Butlers & Commis Chefs', icon: 'fas fa-utensils', desc: 'Professional waitstaff, butlers, and commis chefs for seamless food service at events.' },
-    { name: 'Coffee Baristas', icon: 'fas fa-coffee', desc: 'Specialty coffee service with skilled baristas for corporate events, weddings, and activations.' },
-    { name: 'Cocktail Bartenders', icon: 'fas fa-glass-martini-alt', desc: 'RSA-certified bartenders crafting premium cocktails and beverage service for all events.' },
-    { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
-    { name: 'Event Coordinators', icon: 'fas fa-clipboard-check', desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' }
+    { name: 'Brand Ambassadors', icon: 'fas fa-crown', desc: 'Activation teams for product launches, mall campaigns, tastings, exhibitions, store openings, and premium brand moments.' },
+    { name: 'Models & Hosts', icon: 'fas fa-user-tie', desc: 'Front-of-house models, ushers, VIP hosts, and guest-facing talent for corporate and private events.' },
+    { name: 'Hospitality Staff', icon: 'fas fa-cocktail', desc: 'Bartenders, waiters, baristas, runners, marshals, and kitchen support for polished service delivery.' },
+    { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Bar stock, glassware, coffee stations, table settings, setup crews, and breakdown support.' },
   ];
 
   const whyChoose = [
-    { title: 'Premium Vetted Talent', desc: 'Every team member screened, trained, and experienced in luxury events' },
-    { title: 'Rapid Deployment', desc: 'Quick turnaround for urgent events across Johannesburg' },
-    { title: '10+ Years Excellence', desc: 'Proven track record with 200+ event planners in Gauteng' },
-    { title: 'End-to-End Service', desc: 'From talent to equipment, every detail handled professionally' }
+    { title: 'Vetted People', desc: 'Staff selected for presentation, communication, reliability, and event experience' },
+    { title: 'Gauteng Coverage', desc: 'Coverage across Randburg, Sandton, Rosebank, Fourways, Midrand, Pretoria, and Johannesburg' },
+    { title: 'Built For Events', desc: 'Support for activations, weddings, launches, conferences, festivals, and private functions' },
+    { title: 'One Booking', desc: 'Staffing, supplies, setup, confirmations, and on-site coordination handled together' }
   ];
 
   const howItWorks = [
-    { step: 1, title: 'Request Quote', desc: 'Tell us your event details, talent needs, and dates via our quick form' },
-    { step: 2, title: 'Get Matched', desc: 'We select the perfect vetted talent from our premium pool' },
-    { step: 3, title: 'Event Ready', desc: 'Your team arrives on time, fully prepped and ready to deliver excellence' }
+    { step: 1, title: 'Send Event Details', desc: 'Share the date, venue, staff count, service type, and any equipment needs.' },
+    { step: 2, title: 'Receive a Plan', desc: 'We confirm the right team mix, availability, and pricing for your brief.' },
+    { step: 3, title: 'Run the Event', desc: 'Fresh People handles arrival, briefing, service delivery, and close-out.' }
   ];
 
   return (
@@ -40,21 +37,21 @@ export default function Home() {
             className="space-y-8 md:space-y-12"
           >
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-none bg-primary-container text-on-primary-container text-xs font-semibold uppercase tracking-wider">
-               Premier Talent Agency
+               Johannesburg Event Staffing
             </div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold tracking-tighter leading-[1.05] text-secondary italic">
-              Elevate Your Brand With <br /> 
-              <span className="text-primary not-italic">South Africa's Premier Talent.</span>
+              Staff Your Event With <br /> 
+              <span className="text-primary not-italic">Fresh, Reliable People.</span>
             </h1>
             <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
-              From luxury activations in Sandton to weddings in Randburg, festivals in Fourways to launches in Rosebank — we provide charismatic talent for every major event in Gauteng.
+              Fresh People supplies brand ambassadors, hosts, models, bartenders, waiters, baristas, marshals, event crews, and equipment support across Johannesburg and Gauteng.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link to="/contact" className="btn-m3-filled text-center justify-center text-base">
-                Book Talent <i className="fas fa-arrow-right ml-2"></i>
+                Get a Quote <i className="fas fa-arrow-right ml-2"></i>
               </Link>
               <Link to="/services" className="btn-m3-tonal text-center justify-center text-base">
-                Our Talent <i className="fas fa-chevron-right ml-2"></i>
+                View Services <i className="fas fa-chevron-right ml-2"></i>
               </Link>
             </div>
           </motion.div>
@@ -65,23 +62,37 @@ export default function Home() {
 
       {/* Services Grid - Talent First */}
       <section className="section-padding section-container">
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Premium <span className="text-primary">Talent.</span></h2>
-          <p className="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">The heartbeat of Johannesburg's events industry. Leading with front-of-house talent, backed by full-service hospitality support.</p>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="md:col-span-8 bg-white rounded-none p-8 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
+            <div className="space-y-6 relative z-10">
+              <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Staffing, <br /> <span className="text-primary">Hospitality & Events.</span></h2>
+              <p className="text-on-surface-variant text-lg max-w-md leading-relaxed">A practical partner for activations, weddings, corporate events, launches, conferences, exhibitions, festivals, and private functions.</p>
+            </div>
+<div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
+   {['Brand Ambassadors', 'Hospitality Staff', 'Event Logistics', 'Gauteng Coverage'].map(b => (
+     <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
+   ))}
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="md:col-span-4 bg-secondary text-white rounded-none p-8 md:p-12 flex flex-col justify-between items-start">
+             <div className="p-4 bg-primary rounded-none text-on-primary shadow-lg shadow-primary/20">
+                <i className="fas fa-star text-2xl"></i>
+             </div>
+             <div className="space-y-2">
+                <div className="text-7xl font-display font-bold">10+</div>
+                <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">Years of excellence</p>
+             </div>
+          </div>
+
           {talentCategories.map((cat, i) => (
-            <Link key={i} to={`/services/${cat.name.toLowerCase().replace(/ & | /g, '-')}`} className="bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group block">
+            <div key={i} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
               <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
                 <i className={`${cat.icon} text-2xl`}></i>
               </div>
               <h3 className="text-xl font-display font-bold text-secondary mb-2">{cat.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{cat.desc}</p>
-              <div className="mt-4 text-primary font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                Learn more <ChevronRight size={14} />
-              </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
@@ -97,7 +108,7 @@ export default function Home() {
             className="text-center mb-16 space-y-4"
           >
             <h2 className="text-4xl md:text-6xl font-display font-bold italic text-white">How It Works</h2>
-            <p className="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">Get premium talent for your event in 3 simple steps</p>
+            <p className="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed">A simple booking flow for event planners, agencies, venues, couples, and corporate teams.</p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -128,7 +139,7 @@ export default function Home() {
       <section className="section-padding section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-display font-bold italic">Why Choose Fresh People</h2>
-          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">Trusted by South Africa's top event planners for over a decade</p>
+          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">A dependable partner when presentation, timing, guest experience, and service standards matter.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {whyChoose.map((item, i) => (
@@ -147,10 +158,10 @@ export default function Home() {
       <section className="py-24 bg-primary/5">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-display font-bold italic text-secondary">Ready to Elevate Your Event?</h2>
-          <p className="text-xl text-on-surface-variant leading-relaxed">Get in touch today for a custom quote tailored to your event needs</p>
+          <p className="text-xl text-on-surface-variant leading-relaxed">Send the event details and we will come back with a tailored staffing and support quote.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/contact" className="btn-m3-filled text-lg px-10 py-5">
-              Book Talent Now <i className="fas fa-arrow-right ml-2"></i>
+              Request a Quote <i className="fas fa-arrow-right ml-2"></i>
             </Link>
             <a href="tel:+27672961272" className="btn-m3-outlined text-lg px-10 py-5">
               <i className="fas fa-phone mr-2"></i> +27 67 296 1272

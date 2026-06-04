@@ -1,17 +1,13 @@
 # Fresh People Soul
 
-## Latest Save (Commit: 0f940e8)
-• "Why Choose" heading + items bolder/brighter on dark background
-• ✊🏾 emoji flickers in footer GRAY (removed green square)
-• Tagline "We Love What We Do ✊🏾" ONLY in footer (removed from Services hero + Home hero)
-• ✊🏾 emoji replaces green overlays on gallery hover
-• ServiceDetail pages LIVE with rich content (Staffing, Equipment, Logistics, Management)
-• WhatsApp banner (1080x1080) added to /images/whatsapp-banner.jpg
-• Open Graph tags updated for WhatsApp link previews
-• Classic Gallery added (old pics: page-image-new1.jpg, page-image-new2.jpg, extra1-4.jpg)
-• Squashed images fixed, closed-eye photo 1295 removed
-• All "Learn More" buttons link to functional content pages
-• "Why Choose" sections added to all ServiceDetail pages
+## Latest Save (Commit: pending publish via hermes)
+• 6 specific cards on Home (Brand Ambassadors, Coffee Baristas, Cocktail Bartenders, Hospitality Staff, Event Logistics, Event Coordinators) now link to /services/slug detail pages
+• Full rich content (4 sections + highlights + whyChoose lists) added to detail pages for coffee-baristas, cocktail-bartenders, event-logistics (and others)
+• .htaccess added for SPA fallback (clean URLs /services/coffee-baristas etc now resolve instead of 404 blank)
+• Legacy aliases kept for old links
+• Rebuilt dist/
+• Sent publish task to hermes (paste_..._fix-cards.txt) for FTP deploy + Cloudflare purge + verify + soul update + push
+• "Learn more" now works for the 3 mentioned cards with proper populated content sections
 
 ## GitHub Status
 • Repo: https://github.com/YassinAliYassin/fresh-people-co-za

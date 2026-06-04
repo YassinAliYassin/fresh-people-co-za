@@ -2,6 +2,212 @@ import { useParams, Link } from 'react-router-dom';
 import { Coffee, Wine, Settings, ClipboardList, ArrowLeft, Check, Star, Users, Clock, Shield } from 'lucide-react';
 
 const serviceData = {
+  'brand-ambassadors': {
+    title: 'Brand Ambassadors',
+    subtitle: 'Elevate Your Brand Experience',
+    icon: <Coffee size={48} />,
+    color: '#A4C71D',
+    hero: 'Charismatic, professional talent for luxury activations, product launches, VIP events, mall campaigns, and premium brand moments across Gauteng.',
+    sections: [
+      {
+        title: 'Luxury Activations',
+        desc: 'Trained ambassadors who embody your brand values with poise and enthusiasm at high-end retail and experiential activations.',
+        highlights: ['Brand messaging mastery', 'Engaging interactions', 'Social media ready', 'Luxury presentation']
+      },
+      {
+        title: 'Product Launches',
+        desc: 'Specialists who create buzz, demo products, and convert interest into memorable brand experiences.',
+        highlights: ['Product knowledge', 'Sampling experts', 'Lead capture', 'Launch energy']
+      },
+      {
+        title: 'VIP & Corporate Events',
+        desc: 'Polished hosts for VIP lounges, gala entrances, and corporate hospitality who make every guest feel valued.',
+        highlights: ['VIP etiquette', 'Multilingual', 'Photo & media handling', 'Seamless guest flow']
+      },
+      {
+        title: 'Promotional Campaigns',
+        desc: 'Energetic teams for mall activations, roadshows, exhibitions, store openings, and field marketing.',
+        highlights: ['High footfall handling', 'Consistent messaging', 'Data collection', 'Branded attire']
+      }
+    ],
+    whyChoose: [
+      'Rigorous vetting & brand training',
+      'Professional appearance & communication',
+      'Flexible for half-day or full activations',
+      'Photo/video content capture included',
+      'Gauteng-wide deployment'
+    ]
+  },
+  'hospitality-staff': {
+    title: 'Hospitality Staff',
+    subtitle: 'Flawless Service, Every Time',
+    icon: <Coffee size={48} />,
+    color: '#A4C71D',
+    hero: 'RSA-certified bartenders, waiters, baristas, commis chefs, and support staff for weddings, corporate, and high-profile events.',
+    sections: [
+      {
+        title: 'Waiters, Butlers & Commis Chefs',
+        desc: 'Professional waitstaff, butlers, and kitchen support for seamless plated service and back-of-house excellence.',
+        highlights: ['Fine dining etiquette', 'Multi-course service', 'Dietary specialists', 'Uniformed presentation']
+      },
+      {
+        title: 'Cocktail Bartenders',
+        desc: 'RSA-certified mixologists crafting premium cocktails, signature drinks, and full bar service with style.',
+        highlights: ['Craft cocktails', 'High-volume service', 'Inventory & stock mgmt', 'Flair optional']
+      },
+      {
+        title: 'Coffee Baristas',
+        desc: 'Specialty coffee professionals running espresso stations, latte art, and full coffee bars for events.',
+        highlights: ['Espresso mastery', 'Mobile stations', 'Premium beans', 'Wedding & corporate']
+      },
+      {
+        title: 'Event Marshals & Runners',
+        desc: 'Front-of-house support, ushering, crowd guidance, and runner services to keep events flowing.',
+        highlights: ['Guest direction', 'Queue management', 'VIP escort', 'On-call support']
+      }
+    ],
+    whyChoose: [
+      'All hospitality staff RSA certified',
+      'Full uniforms & grooming standards',
+      'Rapid replacements on-site',
+      '10+ years JHB event experience',
+      'One team for FOH + BOH'
+    ]
+  },
+  'coffee-baristas': {
+    title: 'Coffee Baristas',
+    subtitle: 'Specialty Coffee, Elevated',
+    icon: <Coffee size={48} />,
+    color: '#A4C71D',
+    hero: 'Third-wave baristas and complete mobile coffee stations for corporate events, weddings, launches, and festivals.',
+    sections: [
+      {
+        title: 'Full Coffee Station Setup',
+        desc: 'We bring the machines, beans, cups, syrups, and everything needed for a premium café experience on site.',
+        highlights: ['Commercial espresso', 'Grinder & accessories', 'Branded disposables', 'Power & water included']
+      },
+      {
+        title: 'Latte Art & Signature Drinks',
+        desc: 'Skilled baristas creating beautiful latte art and custom coffee cocktails for your guests.',
+        highlights: ['Latte art trained', 'Custom menus', 'Alternative milks', 'Iced & hot options']
+      },
+      {
+        title: 'Corporate & Wedding Service',
+        desc: 'Professional, uniformed baristas who handle high-volume service with grace for any guest list size.',
+        highlights: ['Uniformed pros', 'High volume capable', 'Guest interaction', 'Custom branding']
+      },
+      {
+        title: 'Mobile & Event Ready',
+        desc: 'Fully self-contained stations that arrive, set up, serve, and break down cleanly.',
+        highlights: ['Quick deploy', 'All supplies included', 'Cleanup included', 'Flexible packages']
+      }
+    ],
+    whyChoose: [
+      'Professional baristas only',
+      'Own high-end equipment',
+      'Setup, service, breakdown',
+      'Perfect for weddings & conferences',
+      'Add to any package'
+    ]
+  },
+  'cocktail-bartenders': {
+    title: 'Cocktail Bartenders',
+    subtitle: 'Craft Bars That Impress',
+    icon: <Wine size={48} />,
+    color: '#A4C71D',
+    hero: 'RSA-certified cocktail specialists delivering premium beverage service, mobile bars, and unforgettable drink experiences.',
+    sections: [
+      {
+        title: 'Craft Cocktail Service',
+        desc: 'Classics and signature creations using premium spirits, fresh ingredients, and pro technique.',
+        highlights: ['RSA certified', 'Premium spirits', 'Fresh ingredients', 'Presentation focused']
+      },
+      {
+        title: 'Mobile Bar Setups',
+        desc: 'Portable bars, back bars, ice, glassware, and full service delivered and installed.',
+        highlights: ['Full bar builds', 'Ice & chilling', 'Glassware packages', 'Stock provision']
+      },
+      {
+        title: 'Premium Beverage Curation',
+        desc: 'We help design custom menus that match your event theme, brand, or guest preferences.',
+        highlights: ['Signature drinks', 'Menu consultation', 'Themed options', 'Dietary friendly']
+      },
+      {
+        title: 'High-Volume & Flair',
+        desc: 'Speed service for large events or stylish flair performances for intimate gatherings.',
+        highlights: ['Fast service', 'Entertainment option', 'Stock management', 'Professional garnish']
+      }
+    ],
+    whyChoose: [
+      'RSA-certified professionals',
+      'Flair + serious skill',
+      'Custom menu development',
+      'Full bar + staffing packages',
+      'High-volume experts'
+    ]
+  },
+  'event-logistics': {
+    title: 'Event Logistics',
+    subtitle: 'Everything But The Guests',
+    icon: <Settings size={48} />,
+    color: '#A4C71D',
+    hero: 'Bar stock, glassware, equipment rental, setup crews, and full logistics so your event runs without a hitch.',
+    sections: [
+      {
+        title: 'Equipment & Bar Stock',
+        desc: 'Premium bar stock, crystal glassware, bar tools, coffee stations, and all the gear you need.',
+        highlights: ['Curated beverages', 'Crystal & glass', 'Pro bar tools', 'Delivery included']
+      },
+      {
+        title: 'Setup & Breakdown Crews',
+        desc: 'Experienced teams that handle layout, styling, install, and full strike — on time, every time.',
+        highlights: ['Early arrival crews', 'Fast efficient work', 'Waste & removal', 'Post-event clean']
+      },
+      {
+        title: 'Venue Layout & Planning',
+        desc: 'CAD-level floor plans, traffic flow, capacity, and spatial optimization for your venue.',
+        highlights: ['Floor plan design', 'Traffic analysis', 'Capacity optimization', 'Accessibility']
+      },
+      {
+        title: 'Full Coordination',
+        desc: 'Timeline management, vendor sync, and real-time adjustments from load-in to load-out.',
+        highlights: ['Minute-by-minute plans', 'Vendor liaison', 'On-site problem solving', 'Post-event report']
+      }
+    ],
+    whyChoose: [
+      'End-to-end coordination',
+      'Backup gear always ready',
+      'One invoice for everything',
+      '10+ years logistics',
+      'Insured & reliable'
+    ]
+  },
+  'event-coordinators': {
+    title: 'Event Coordinators',
+    subtitle: 'Command & Control',
+    icon: <ClipboardList size={48} />,
+    color: '#A4C71D',
+    hero: 'Dedicated on-site coordinators, full planning support, vendor management, and flawless execution from brief to breakdown.',
+    sections: [
+      {
+        title: 'On-Site Coordination',
+        desc: 'A professional manager who owns the timeline, directs vendors, solves problems, and keeps everything on track.',
+        highlights: ['Dedicated lead', 'Real-time decisions', 'Guest experience focus', 'Crisis handling']
+      },
+      {
+        title: 'Planning & Vendor Mgmt',
+        desc: 'Budgeting, vendor selection, contracts, and day-of execution so you can enjoy your event.',
+        highlights: ['Full planning support', 'Vendor negotiations', 'Timeline creation', 'Post-event report']
+      }
+    ],
+    whyChoose: [
+      'Single point of accountability',
+      'Experienced event pros',
+      'Vendor network of 100+',
+      'Budget & timeline experts',
+      'Stress-free delivery'
+    ]
+  },
   'staffing': {
     title: 'Staffing',
     subtitle: 'Your Event, Perfectly Staffed',
@@ -150,7 +356,10 @@ const serviceData = {
       'Vendor network (100+)',
       'ROI tracking & reporting'
     ]
-  }
+  },
+  // Aliases for legacy / direct links from previous deploys (brand ambassador etc)
+  'models-hosts': { title: 'Models & Hosts', subtitle: 'Front-of-House Excellence', icon: <Coffee size={48} />, color: '#A4C71D', hero: 'Professional models, ushers and VIP hosts for high-profile events.', sections: [{title: 'VIP Hosting', desc: 'Elegant, engaging hosts for galas, weddings and corporate.', highlights: ['Poised presentation', 'Guest greeting', 'Photo coordination']}], whyChoose: ['Vetted talent', 'Event ready'] },
+  'waiters-butlers-commis-chefs': { title: 'Waiters, Butlers & Commis Chefs', subtitle: 'Precision Hospitality', icon: <Coffee size={48} />, color: '#A4C71D', hero: 'Trained service staff for seamless dining and kitchen support.', sections: [{title: 'Service Staff', desc: 'Full service teams for plated events and back of house.', highlights: ['Etiquette trained', 'Uniformed', 'Dietary aware']}], whyChoose: ['RSA standards', 'Reliable'] }
 };
 
 export default function ServiceDetail() {

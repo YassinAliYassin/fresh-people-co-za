@@ -6,6 +6,7 @@ export default function Services() {
   const services = [
     {
       title: 'Event Staffing',
+      slug: 'hospitality-staff',
       description: 'Waiters, bartenders, baristas, runners, marshals, ushers, hosts, and kitchen support.',
       icon: <Coffee size={32} />,
       id: '01',
@@ -19,6 +20,7 @@ export default function Services() {
     },
     {
       title: 'Equipment & Supply',
+      slug: 'event-logistics',
       description: 'Bar stock, glassware, bar tools, and coffee station supplies.',
       icon: <Wine size={32} />,
       id: '02',
@@ -32,6 +34,7 @@ export default function Services() {
     },
     {
       title: 'Logistics & Setup',
+      slug: 'event-logistics',
       description: 'Call-time planning, table settings, venue setup, breakdown crews, and décor support.',
       icon: <Settings size={32} />,
       id: '03',
@@ -45,6 +48,7 @@ export default function Services() {
     },
     {
       title: 'Event Management',
+      slug: 'event-coordinators',
       description: 'On-site coordination and full event support from briefing to close-out.',
       icon: <ClipboardList size={32} />,
       id: '04',
@@ -191,13 +195,20 @@ export default function Services() {
                    )}
                 </div>
                 
-                <div className="pt-6 md:pt-8 flex justify-end">
+                <div className="pt-6 md:pt-8 flex justify-end gap-3">
+                   <Link 
+                     to={`/services/${s.slug}`}
+                     className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
+                     aria-label={`Learn more about ${s.title}`}
+                   >
+                      Details <ChevronRight size={16} md:size={18} aria-hidden="true" />
+                   </Link>
                    <Link 
                      to="/contact" 
-                     className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
+                     className="btn-m3-filled text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
                      aria-label={`Inquire about ${s.title} services`}
                    >
-                      Inquire About {s.title} <ChevronRight size={16} md:size={18} aria-hidden="true" />
+                      Inquire <ChevronRight size={16} md:size={18} aria-hidden="true" />
                    </Link>
                 </div>
              </div>

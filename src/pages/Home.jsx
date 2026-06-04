@@ -6,10 +6,12 @@ import FAQ from '../components/FAQ';
 
 export default function Home() {
   const talentCategories = [
-    { name: 'Brand Ambassadors', icon: 'fas fa-crown', desc: 'Activation teams for product launches, mall campaigns, tastings, exhibitions, store openings, and premium brand moments.' },
-    { name: 'Models & Hosts', icon: 'fas fa-user-tie', desc: 'Front-of-house models, ushers, VIP hosts, and guest-facing talent for corporate and private events.' },
-    { name: 'Hospitality Staff', icon: 'fas fa-cocktail', desc: 'Bartenders, waiters, baristas, runners, marshals, and kitchen support for polished service delivery.' },
-    { name: 'Event Logistics', icon: 'fas fa-truck', desc: 'Bar stock, glassware, coffee stations, table settings, setup crews, and breakdown support.' },
+    { name: 'Brand Ambassadors', slug: 'brand-ambassadors', icon: 'fas fa-crown', desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
+    { name: 'Coffee Baristas', slug: 'coffee-baristas', icon: 'fas fa-coffee', desc: 'Specialty coffee service with skilled baristas for corporate events, weddings, and activations.' },
+    { name: 'Cocktail Bartenders', slug: 'cocktail-bartenders', icon: 'fas fa-glass-martini-alt', desc: 'RSA-certified bartenders crafting premium cocktails and beverage service for all events.' },
+    { name: 'Hospitality Staff', slug: 'hospitality-staff', icon: 'fas fa-utensils', desc: 'Professional waitstaff, butlers, and commis chefs for seamless food service at events.' },
+    { name: 'Event Logistics', slug: 'event-logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
+    { name: 'Event Coordinators', slug: 'event-coordinators', icon: 'fas fa-clipboard-check', desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' },
   ];
 
   const whyChoose = [
@@ -86,13 +88,16 @@ export default function Home() {
           </div>
 
           {talentCategories.map((cat, i) => (
-            <div key={i} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group">
+            <Link key={i} to={`/services/${cat.slug}`} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group block">
               <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
                 <i className={`${cat.icon} text-2xl`}></i>
               </div>
               <h3 className="text-xl font-display font-bold text-secondary mb-2">{cat.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{cat.desc}</p>
-            </div>
+              <div className="mt-4 text-primary font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                Learn more <i className="fas fa-arrow-right text-xs"></i>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -133,7 +138,6 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-
 
       {/* Why Choose Us */}
       <section className="section-padding section-container">

@@ -33,7 +33,7 @@ const posts = [
     date: '2026-05-05',
     excerpt: 'How we staffed and executed a 500-guest corporate gala with our signature all-black team.',
     category: 'Case Study',
-    image: 'https://images.unsplash.com/photo-1540575469963-83ee6c357c37?w=400&h=250&fit=crop',
+    image: '/images/extra1.jpg',
   },
   {
     id: 5,

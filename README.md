@@ -2,7 +2,7 @@
 
 South Africa's premier talent agency for brand ambassadors, models, hospitality staff, event logistics and coordination.
 
-**Live:** https://fresh-people.co.za
+**Live:** https://fresh-people.co.za/
 
 ## Tech
 - React 19 + Vite + Tailwind + TypeScript

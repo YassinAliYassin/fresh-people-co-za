@@ -9,7 +9,7 @@ const posts = [
     date: '2026-05-20',
     excerpt: 'Everything you need to know about our signature all-black event dress code, including approved footwear and accessories.',
     category: 'Staff Tips',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop',
+    image: '/images/page-image-1.jpg',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const posts = [
     date: '2026-05-15',
     excerpt: 'Welcome to our team! Here\'s how we assign event roles, arrival times, and what to expect on your first event.',
     category: 'Operations',
-    image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=250&fit=crop',
+    image: '/images/page-image-2.jpg',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const posts = [
     date: '2026-05-10',
     excerpt: 'We now auto-generate .ics calendar files for all confirmed events, compatible with iPhone, Outlook, and Gmail.',
     category: 'Tech Updates',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=250&fit=crop',
+    image: '/images/page-image-3.jpg',
   },
   {
     id: 4,
@@ -41,15 +41,15 @@ const posts = [
     date: '2026-04-28',
     excerpt: 'Best practices for managing event staffing when demand exceeds available team members.',
     category: 'Operations',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop',
+    image: '/images/extra2.jpg',
   },
   {
     id: 6,
-    title: 'The Fresh People Legacy: 5 Years Strong',
+    title: 'The Fresh People Legacy: 12 Years Strong',
     date: '2026-04-15',
-    excerpt: 'Celebrating five years of delivering premium event staffing across South Africa.',
+    excerpt: 'Celebrating twelve years of delivering premium event staffing across South Africa.',
     category: 'Company News',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=250&fit=crop',
+    image: '/images/extra3.jpg',
   },
 ];
 

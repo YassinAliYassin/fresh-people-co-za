@@ -1,7 +1,5 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import StatsCounter from '../components/StatsCounter';
-import FAQ from '../components/FAQ';
 
 
 export default function Home() {

@@ -42,8 +42,8 @@ export default function Navbar() {
           <div className="flex items-center gap-8">
             {[
               { name: 'Home', path: '/' },
-              { name: 'Talent Scope', path: '/services' },
-              { name: 'The Legacy', path: '/about' },
+              { name: 'Services', path: '/services' },
+              { name: 'About', path: '/about' },
               { name: 'Blog', path: '/blog' },
             ].map((item) => (
               <Link

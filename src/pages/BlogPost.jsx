@@ -55,10 +55,10 @@ const posts = [
   },
   {
     id: 6,
-    title: 'The Fresh People Legacy: 5 Years Strong',
+    title: 'The Fresh People Legacy: 12 Years Strong',
     date: '2026-04-15',
-    excerpt: 'Celebrating five years of delivering premium event staffing across South Africa.',
-    content: '2026 marks 5 years of Fresh People! What started as a small Johannesburg staffing agency has grown into the region\'s premier event staffing partner.\n\n## Our Journey\n\n**2021** - Founded with 10 staff members\n**2022** - First major corporate client (MTN Group)\n**2023** - Expanded to 100+ vetted staff\n**2024** - Launched equipment & logistics division\n**2025** - 1,000+ events staffed\n**2026** - 500+ active staff, 1,500+ events completed\n\n## What Sets Us Apart\n\n- **Vetting** - Every staff member is identity-verified and behaviorally assessed\n- **Training** - RSA certification, etiquette training, and role-specific skills\n- **Reliability** - 99% on-time rate, 2-hour replacement guarantee\n- **Coverage** - Johannesburg, Sandton, Randburg, Pretoria, and surrounds\n\n## Thank You\n\nTo our clients, staff, and partners - thank you for 5 incredible years. Here\'s to the next 5!\n\nInterested in joining our team? Contact us today.',
+    excerpt: 'Celebrating twelve years of delivering premium event staffing across South Africa.',
+    content: '2026 marks 12 years of Fresh People! What started as a small Johannesburg staffing agency has grown into the region\'s premier event staffing partner.\n\n## Our Journey\n\n**2014** - Founded with 10 staff members\n**2016** - Expanded to 50+ vetted staff\n**2018** - First major corporate clients\n**2020** - Launched equipment & logistics division\n**2023** - 1,000+ events staffed\n**2026** - 500+ active staff, 1,500+ events completed\n\n## What Sets Us Apart\n\n- **Vetting** - Every staff member is identity-verified and behaviorally assessed\n- **Training** - RSA certification, etiquette training, and role-specific skills\n- **Reliability** - 99% on-time rate, 2-hour replacement guarantee\n- **Coverage** - Johannesburg, Sandton, Randburg, Pretoria, and surrounds\n\n## Thank You\n\nTo our clients, staff, and partners - thank you for 12 incredible years. Here\'s to the next chapter!\n\nInterested in joining our team? Contact us today.',
     category: 'Company News',
     image: '/images/extra3.jpg',
     readTime: '8 min read'

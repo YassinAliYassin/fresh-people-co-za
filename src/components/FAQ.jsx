@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "What areas do you service?",
-    answer: "We primarily service Johannesburg (with headquarters in Randburg) and Cape Town. We also handle events in surrounding areas. Contact us for specific location availability."
+    answer: "We primarily service Johannesburg with headquarters in Randburg. We also handle events in surrounding areas including Sandton, Fourways, Midrand, Pretoria, and Gauteng. Contact us for specific location availability."
   },
   {
     question: "Are your staff trained and vetted?",

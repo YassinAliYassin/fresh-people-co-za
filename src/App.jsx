@@ -7,6 +7,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<BlogPost />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Router>

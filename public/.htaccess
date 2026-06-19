@@ -6,14 +6,26 @@
   # Don't rewrite files or directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  # Don't rewrite assets or specific files
+  # Don't rewrite assets, images, or specific static files
   RewriteCond %{REQUEST_URI} !^/assets/
   RewriteCond %{REQUEST_URI} !^/images/
-  RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot|map)$ [NC]
+  RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot|map|xml|txt)$ [NC]
   RewriteRule ^ index.html [L]
+</IfModule>
+
+# Ensure proper content types for static files
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType text/plain .txt
+  AddType image/svg+xml .svg
 </IfModule>
 
 # Cache control for SPA (no cache html)
 <FilesMatch "\.(html)$">
   Header set Cache-Control "no-cache, no-store, must-revalidate"
+</FilesMatch>
+
+# Cache static assets
+<FilesMatch "\.(xml|txt|svg|ico|png|jpg|jpeg|gif|webp|woff|woff2|ttf|eot)$">
+  Header set Cache-Control "public, max-age=86400"
 </FilesMatch>

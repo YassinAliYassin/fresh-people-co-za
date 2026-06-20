@@ -35,9 +35,9 @@ export default function About() {
 
   const team = [
     {
-      name: 'Yassin Al-Yassin',
-      role: 'Founder & Lead Coordinator',
-      desc: '10+ years in event management across Johannesburg. Founded Fresh People to bridge the gap between quality staffing and seamless event execution.'
+      name: 'Fresh People',
+      role: 'Collective Leadership',
+      desc: 'A dedicated team of event staffing professionals with 10+ years of combined experience across Johannesburg. United by a shared mission: bridging the gap between quality staffing and seamless event execution.'
     },
     {
       name: 'Operations Team',

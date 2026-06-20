@@ -38,7 +38,7 @@ const posts = [
     title: 'Client Success: Corporate Gala 2026',
     date: '2026-05-05',
     excerpt: 'How we staffed and executed a 500-guest corporate gala with our signature all-black team.',
-    content: 'In May 2026, Fresh People was proud to staff the annual corporate gala for a leading Johannesburg company. Here\'s how we delivered excellence for 500 VIP guests.\n\n## The Brief\n\n- 500 corporate guests\n- Black-tie dress code\n- 3-course plated dinner\n- Cocktail reception before dinner\n- After-dinner entertainment\n\n## Our Team\n\nWe deployed:\n- 25 waiters (all-black uniform)\n- 8 RSA-certified bartenders\n- 4 event coordinators\n- 6 kitchen support staff\n- 2 coffee baristas for after-dinner service\n\n## Execution\n\nThe event ran flawlessly. Our team arrived 3 hours early for setup, briefing, and uniform checks. Service was timed to perfection, with all 500 guests served within 45 minutes.\n\n## Client Feedback\n\n"The Fresh People team was exceptional. Professional, attentive, and truly elevated our event." - Procurement Manager, MTN Group\n\nWe\'re proud to be the trusted staffing partner for Johannesburg\'s corporate events.',
+    content: 'In May 2026, Fresh People was proud to staff the annual corporate gala for a leading Johannesburg company. Here\'s how we delivered excellence for 500 VIP guests.\n\n## The Brief\n\n- 500 corporate guests\n- Black-tie dress code\n- 3-course plated dinner\n- Cocktail reception before dinner\n- After-dinner entertainment\n\n## Our Team\n\nWe deployed:\n- 25 waiters (all-black uniform)\n- 8 RSA-certified bartenders\n- 4 event coordinators\n- 6 kitchen support staff\n- 2 coffee baristas for after-dinner service\n\n## Execution\n\nThe event ran flawlessly. Our team arrived 3 hours early for setup, briefing, and uniform checks. Service was timed to perfection, with all 500 guests served within 45 minutes.\n\n## Client Feedback\n\n"The Fresh People team was exceptional. Professional, attentive, and truly elevated our event." - Client, Corporate Gala 2026\n\nWe\'re proud to be the trusted staffing partner for Johannesburg\'s corporate events.',
     category: 'Case Study',
     image: '/images/extra1.jpg',
     readTime: '6 min read'
@@ -68,6 +68,40 @@ const posts = [
 export default function BlogPost() {
   const { id } = useParams();
   const post = posts.find(p => p.id === Number(id));
+
+  // Inject Article structured data
+  useEffect(() => {
+    if (!post) return;
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": post.date,
+      "dateModified": post.date,
+      "author": {
+        "@type": "Organization",
+        "name": "Fresh People"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fresh People",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://fresh-people.co.za/images/fresh-people-logo-vector-01.webp"
+        }
+      },
+      "image": `https://fresh-people.co.za${post.image}`,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://fresh-people.co.za/blog/${post.id}`
+      }
+    });
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, [post]);
 
   if (!post) {
     return (
@@ -131,6 +165,8 @@ export default function BlogPost() {
             src={post.image}
             alt={post.title}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 

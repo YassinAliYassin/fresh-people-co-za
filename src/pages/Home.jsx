@@ -166,7 +166,7 @@ export default function Home() {
               Request a Quote <i className="fas fa-arrow-right ml-2"></i>
             </Link>
             <a href="tel:+27672961272" className="btn-m3-outlined text-lg px-10 py-5">
-              <i className="fas fa-phone mr-2"></i> +27 67 296 1272
+              <i className="fas fa-phone mr-2" aria-hidden="true"></i> +27 67 296 1272
             </a>
           </div>
         </div>

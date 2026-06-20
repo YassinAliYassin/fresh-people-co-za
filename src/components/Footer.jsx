@@ -29,9 +29,10 @@ export default function Footer() {
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label={social.iconClass.includes('instagram') ? 'Follow Fresh People on Instagram' : 'Follow Fresh People on Facebook'}
                   className="w-12 h-12 bg-[#1a1a1a] rounded-none flex items-center justify-center text-[#999999] hover:bg-primary hover:text-secondary transition-all duration-300"
                 >
-                  <i className={`${social.iconClass} text-lg`}></i>
+                  <i className={`${social.iconClass} text-lg`} aria-hidden="true"></i>
                 </a>
               ))}
             </div>

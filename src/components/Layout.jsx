@@ -6,8 +6,11 @@ import { motion } from 'motion/react';
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-primary focus:text-secondary focus:px-4 focus:py-2 focus:rounded-none focus:text-sm focus:font-bold">
+        Skip to main content
+      </a>
       <Navbar />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow" tabIndex={-1}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

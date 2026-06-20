@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Coffee, Wine, Settings, ClipboardList, ArrowLeft, Check, Star, Users, Clock, Shield } from 'lucide-react';
 
 const serviceData = {
@@ -365,6 +366,35 @@ const serviceData = {
 export default function ServiceDetail() {
   const { serviceId } = useParams();
   const service = serviceData[serviceId];
+
+  // Inject Service structured data
+  useEffect(() => {
+    if (!service) return;
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": service.title,
+      "description": service.hero,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Fresh People",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Randburg",
+          "addressRegion": "Gauteng",
+          "addressCountry": "ZA"
+        },
+        "telephone": "+27 67 296 1272",
+        "url": "https://fresh-people.co.za"
+      },
+      "areaServed": ["Johannesburg", "Randburg", "Sandton", "Pretoria", "Gauteng"],
+      "url": `https://fresh-people.co.za/services/${serviceId}`
+    });
+    document.head.appendChild(script);
+    return () => { document.head.removeChild(script); };
+  }, [service, serviceId]);
 
   if (!service) {
     return (

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 
 const posts = [
   {
@@ -61,6 +62,7 @@ export default function Blog() {
       transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
       className="pt-32 pb-20"
     >
+      <SEO title="Blog | Fresh People | Event Staffing Tips & News" description="Event tips, staff updates, company news, and industry insights from the Fresh People team. Learn about event staffing, hospitality, and talent management." />
       <div className="max-w-7xl mx-auto px-6 sm:px-12">
         {/* Header */}
         <div className="mb-16 text-center">

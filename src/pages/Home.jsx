@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-
+import SEO from '../components/SEO';
 
 export default function Home() {
   const talentCategories = [
@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <SEO title="Fresh People | Premier Talent & Events Staffing Johannesburg" description="Elevate your brand with South Africa's premier talent agency. Brand ambassadors, bartenders, hospitality staff, event logistics. Based in Randburg, serving all Johannesburg events." />
       {/* Hero Section - Talent First */}
       <section className="relative hero-padding px-4 sm:px-6 md:px-12 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-center relative z-10">

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Coffee, Wine, Settings, ClipboardList, ArrowLeft, Check, Star, Users, Clock, Shield } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const serviceData = {
   'brand-ambassadors': {
@@ -411,6 +412,7 @@ export default function ServiceDetail() {
 
   return (
     <div className="bg-[#FBFBF9] min-h-screen">
+      <SEO title={`${service.title} | Fresh People | Johannesburg Event Staffing`} description={service.hero} />
       {/* Hero */}
       <section className="pt-40 md:pt-64 pb-24 px-6">
         <div className="max-w-7xl mx-auto">

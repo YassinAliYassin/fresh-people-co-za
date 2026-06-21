@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 
 const posts = [
   {
@@ -106,6 +107,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <div className="min-h-screen bg-[#FBFBF9] flex items-center justify-center">
+        <SEO title="Post Not Found | Fresh People Blog" />
         <div className="text-center space-y-6">
           <h1 className="text-4xl font-display font-bold text-[#0a0a0a]">Post Not Found</h1>
           <Link to="/blog" className="text-[#A4C71D] hover:underline inline-flex items-center gap-2">
@@ -126,6 +128,7 @@ export default function BlogPost() {
       transition={{ duration: 0.8 }}
       className="pt-32 pb-20 bg-[#FBFBF9]"
     >
+      <SEO title={`${post.title} | Fresh People Blog`} description={post.excerpt} />
       <div className="max-w-4xl mx-auto px-6 sm:px-12">
         {/* Back Link */}
         <Link to="/blog" className="inline-flex items-center gap-2 text-[#A4C71D] hover:underline mb-8">

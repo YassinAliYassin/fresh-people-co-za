@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, CheckCircle2, Star, Mail, Phone, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -33,6 +34,7 @@ export default function Contact() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <SEO title="Contact Us | Fresh People | Get an Event Quote" description="Contact Fresh People for event staffing quotes. Email info@fresh-people.co.za or call +27 67 296 1272. Based in Randburg, serving Johannesburg and Gauteng." />
       {/* Header */}
       <section className="pt-32 md:pt-64 pb-16 md:pb-24 section-container relative">
 

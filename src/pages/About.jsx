@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ShieldCheck, UserCheck, Star, Award, Users, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function About() {
   const stats = [
@@ -53,6 +54,7 @@ export default function About() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <SEO title="About Us | Fresh People | 12 Years of Event Staffing Excellence" description="Fresh People is Johannesburg's premier event staffing agency since 2014. 500+ vetted staff, 1,500+ events delivered. Based in Randburg, serving all of Gauteng." />
       {/* Hero Section */}
       <section className="pt-64 pb-24 section-container relative">
         <motion.div

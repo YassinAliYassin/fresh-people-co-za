@@ -1,6 +1,7 @@
 import { Coffee, Wine, Settings, ClipboardList, ChevronRight, Check } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Services() {
   const services = [
@@ -64,6 +65,7 @@ export default function Services() {
 
   return (
     <div className="bg-surface min-h-screen">
+      <SEO title="Services | Fresh People | Event Staffing & Talent Solutions" description="Fresh People offers brand ambassadors, hospitality staff, bartenders, event coordinators, equipment rental, and full event management across Johannesburg and Gauteng." />
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
 
         <motion.div

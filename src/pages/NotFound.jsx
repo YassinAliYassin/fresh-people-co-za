@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Home, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function NotFound() {
   return (
     <div className="bg-surface min-h-screen flex items-center justify-center px-6">
+      <SEO title="Page Not Found | Fresh People" />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

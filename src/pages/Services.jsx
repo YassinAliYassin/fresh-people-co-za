@@ -1,84 +1,103 @@
-import { Coffee, Wine, Settings, ClipboardList, ChevronRight, Check } from 'lucide-react';
-import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import {
+  Coffee,
+  Wine,
+  Settings,
+  ClipboardList,
+  ChevronRight,
+  Check,
+} from "lucide-react";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
+import { assetUrl } from "../lib/utils";
 
 export default function Services() {
   const services = [
     {
-      title: 'Event Staffing',
-      slug: 'hospitality-staff',
-      description: 'Waiters, bartenders, baristas, runners, marshals, ushers, hosts, and kitchen support.',
+      title: "Event Staffing",
+      slug: "hospitality-staff",
+      description:
+        "Waiters, bartenders, baristas, runners, marshals, ushers, hosts, and kitchen support.",
       icon: <Coffee size={32} />,
-      id: '01',
+      id: "01",
       features: [
-        'Professional Wait Staff',
-        'RSA-Certified Bartenders',
-        'Skilled Baristas',
-        'Event Marshals & Ushers',
-        'Commis Chefs & Kitchen Support'
-      ]
+        "Professional Wait Staff",
+        "RSA-Certified Bartenders",
+        "Skilled Baristas",
+        "Event Marshals & Ushers",
+        "Commis Chefs & Kitchen Support",
+      ],
     },
     {
-      title: 'Equipment & Supply',
-      slug: 'event-logistics',
-      description: 'Bar stock, glassware, bar tools, and coffee station supplies.',
+      title: "Equipment & Supply",
+      slug: "event-logistics",
+      description:
+        "Bar stock, glassware, bar tools, and coffee station supplies.",
       icon: <Wine size={32} />,
-      id: '02',
+      id: "02",
       features: [
-        'Premium Bar Stock',
-        'Crystal & Glassware',
-        'Professional Bar Tools',
-        'Coffee Station Setup',
-        'Equipment Delivery & Pickup'
-      ]
+        "Premium Bar Stock",
+        "Crystal & Glassware",
+        "Professional Bar Tools",
+        "Coffee Station Setup",
+        "Equipment Delivery & Pickup",
+      ],
     },
     {
-      title: 'Logistics & Setup',
-      slug: 'event-logistics',
-      description: 'Call-time planning, table settings, venue setup, breakdown crews, and décor support.',
+      title: "Logistics & Setup",
+      slug: "event-logistics",
+      description:
+        "Call-time planning, table settings, venue setup, breakdown crews, and décor support.",
       icon: <Settings size={32} />,
-      id: '03',
+      id: "03",
       features: [
-        'Table Setting & Styling',
-        'Décor Coordination',
-        'Venue Layout Planning',
-        'Setup & Breakdown Crews',
-        'Timeline Management'
-      ]
+        "Table Setting & Styling",
+        "Décor Coordination",
+        "Venue Layout Planning",
+        "Setup & Breakdown Crews",
+        "Timeline Management",
+      ],
     },
     {
-      title: 'Event Management',
-      slug: 'event-coordinators',
-      description: 'On-site coordination and full event support from briefing to close-out.',
+      title: "Event Management",
+      slug: "event-coordinators",
+      description:
+        "On-site coordination and full event support from briefing to close-out.",
       icon: <ClipboardList size={32} />,
-      id: '04',
+      id: "04",
       features: [
-        'End-to-End Event Planning',
-        'On-Site Coordination',
-        'Vendor Management',
-        'Budget Planning',
-        'Post-Event Reporting'
-      ]
-    }
+        "End-to-End Event Planning",
+        "On-Site Coordination",
+        "Vendor Management",
+        "Budget Planning",
+        "Post-Event Reporting",
+      ],
+    },
   ];
 
   return (
     <div className="bg-surface min-h-screen">
-      <SEO title="Services | Fresh People | Event Staffing & Talent Solutions" description="Fresh People offers brand ambassadors, hospitality staff, bartenders, event coordinators, equipment rental, and full event management across Johannesburg and Gauteng." />
+      <SEO
+        title="Services | Fresh People | Event Staffing & Talent Solutions"
+        description="Fresh People offers brand ambassadors, hospitality staff, bartenders, event coordinators, equipment rental, and full event management across Johannesburg and Gauteng."
+      />
       <section className="pt-40 md:pt-64 pb-24 section-container relative">
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           className="space-y-12 relative z-10"
         >
-          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">The Portfolio</span>
+          <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">
+            The Portfolio
+          </span>
           <h1 className="text-[12vw] md:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-[0.9] max-w-4xl">
-            What We <br /> <span className="text-primary italic font-medium">Offer.</span>
+            What We <br />{" "}
+            <span className="text-primary italic font-medium">Offer.</span>
           </h1>
           <p className="text-xl md:text-2xl text-on-surface-variant max-w-3xl leading-relaxed">
-            Fresh People supplies the people, hospitality support, equipment, setup crews, and coordination needed to run polished events across Johannesburg and Gauteng.
+            Fresh People supplies the people, hospitality support, equipment,
+            setup crews, and coordination needed to run polished events across
+            Johannesburg and Gauteng.
           </p>
         </motion.div>
       </section>
@@ -89,70 +108,123 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
             {/* Large featured image */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2 md:row-span-2">
-              <img src="/images/page-image-new1.jpg" alt="Premier Talent" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img
+                src={assetUrl("/images/page-image-new1.jpg")}
+                alt="Premier Talent"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                style={{ objectPosition: "center 10%" }}
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
-                  <p className="text-white text-2xl font-display font-bold mb-2">Brand Ambassadors</p>
-                  <p className="text-white/80 text-sm">Activation teams for launches, promotions, exhibitions, and campaigns</p>
+                  <p className="text-white text-2xl font-display font-bold mb-2">
+                    Brand Ambassadors
+                  </p>
+                  <p className="text-white/80 text-sm">
+                    Activation teams for launches, promotions, exhibitions, and
+                    campaigns
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Top right */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/page-image-new2.jpg" alt="Hospitality Staff" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img
+                src={assetUrl("/images/page-image-new2.jpg")}
+                alt="Hospitality Staff"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                style={{ objectPosition: "center 10%" }}
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
-                  <p className="text-white text-xl font-display font-bold">Hospitality</p>
-                  <p className="text-white/80 text-xs mt-1">RSA-certified bartenders & waiters</p>
+                  <p className="text-white text-xl font-display font-bold">
+                    Hospitality
+                  </p>
+                  <p className="text-white/80 text-xs mt-1">
+                    RSA-certified bartenders & waiters
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Extra images */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra1.jpg" alt="Event Equipment" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" style={{ objectPosition: 'center 10%' }} />
+              <img
+                src={assetUrl("/images/extra1.jpg")}
+                alt="Event Equipment"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                style={{ objectPosition: "center 10%" }}
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
-                  <p className="text-white text-xl font-display font-bold">Equipment</p>
-                  <p className="text-white/80 text-xs mt-1">Bar stock, glassware & setup</p>
+                  <p className="text-white text-xl font-display font-bold">
+                    Equipment
+                  </p>
+                  <p className="text-white/80 text-xs mt-1">
+                    Bar stock, glassware & setup
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra2.jpg" alt="Event Logistics" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img
+                src={assetUrl("/images/extra2.jpg")}
+                alt="Event Logistics"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
-                  <p className="text-white text-xl font-display font-bold">Logistics</p>
-                  <p className="text-white/80 text-xs mt-1">End-to-end event coordination</p>
+                  <p className="text-white text-xl font-display font-bold">
+                    Logistics
+                  </p>
+                  <p className="text-white/80 text-xs mt-1">
+                    End-to-end event coordination
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Wide image bottom */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer md:col-span-2">
-              <img src="/images/extra3.jpg" alt="Excellence Delivered" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img
+                src={assetUrl("/images/extra3.jpg")}
+                alt="Excellence Delivered"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
                 <div>
-                  <p className="text-white text-2xl font-display font-bold mb-2">Events Delivered</p>
-                  <p className="text-white/80 text-sm">Corporate, wedding, festival, launch, and private event support</p>
+                  <p className="text-white text-2xl font-display font-bold mb-2">
+                    Events Delivered
+                  </p>
+                  <p className="text-white/80 text-sm">
+                    Corporate, wedding, festival, launch, and private event
+                    support
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
-              <img src="/images/extra4.jpg" alt="Your Event Partner" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img
+                src={assetUrl("/images/extra4.jpg")}
+                alt="Your Event Partner"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
-                  <p className="text-white text-xl font-display font-bold">Your Partner</p>
-                  <p className="text-white/80 text-xs mt-1">Ready for your next event</p>
+                  <p className="text-white text-xl font-display font-bold">
+                    Your Partner
+                  </p>
+                  <p className="text-white/80 text-xs mt-1">
+                    Ready for your next event
+                  </p>
                 </div>
               </div>
             </div>
@@ -162,59 +234,85 @@ export default function Services() {
 
       <section className="py-24 section-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-           {services.map((s, i) => (
-             <div key={i} className={`rounded-none overflow-hidden p-8 md:p-12 flex flex-col justify-between border border-gray-100 bg-white group hover:border-primary transition-all duration-500 shadow-sm ${i === 0 ? 'lg:col-span-12' : 'lg:col-span-6'}`}>
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
-                   <div className="space-y-6 md:space-y-8 flex-grow">
-                      <div className="flex items-center gap-4 md:gap-6">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 text-primary rounded-none flex items-center justify-center">
-                           {s.icon}
-                        </div>
-                        <span className="text-xs font-bold text-[#9a9a9a] uppercase tracking-widest">{s.id}</span>
-                      </div>
-                      
-                      <div className="space-y-3 md:space-y-4">
-                        <h3 className={`font-display font-bold text-secondary tracking-tight ${i === 0 ? 'text-3xl md:text-4xl lg:text-6xl' : 'text-2xl md:text-3xl lg:text-5xl'}`}>{s.title}</h3>
-                        <p className="text-on-surface-variant text-base md:text-lg font-normal max-w-xl">{s.description}</p>
-                      </div>
+          {services.map((s, i) => (
+            <div
+              key={i}
+              className={`rounded-none overflow-hidden p-8 md:p-12 flex flex-col justify-between border border-gray-100 bg-white group hover:border-primary transition-all duration-500 shadow-sm ${
+                i === 0 ? "lg:col-span-12" : "lg:col-span-6"
+              }`}
+            >
+              <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
+                <div className="space-y-6 md:space-y-8 flex-grow">
+                  <div className="flex items-center gap-4 md:gap-6">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 text-primary rounded-none flex items-center justify-center">
+                      {s.icon}
+                    </div>
+                    <span className="text-xs font-bold text-[#9a9a9a] uppercase tracking-widest">
+                      {s.id}
+                    </span>
+                  </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-6 md:pt-8">
-                         {s.features.map((f, j) => (
-                           <div key={j} className="flex items-center gap-2 md:gap-3 text-secondary font-medium text-sm md:text-base">
-                              <div className="w-5 h-5 md:w-6 md:h-6 bg-primary/20 rounded-none flex items-center justify-center text-primary shrink-0">
-                                 <Check size={10} md:size={14} strokeWidth={3} />
-                              </div>
-                              <span>{f}</span>
-                           </div>
-                         ))}
+                  <div className="space-y-3 md:space-y-4">
+                    <h3
+                      className={`font-display font-bold text-secondary tracking-tight ${
+                        i === 0
+                          ? "text-3xl md:text-4xl lg:text-6xl"
+                          : "text-2xl md:text-3xl lg:text-5xl"
+                      }`}
+                    >
+                      {s.title}
+                    </h3>
+                    <p className="text-on-surface-variant text-base md:text-lg font-normal max-w-xl">
+                      {s.description}
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 pt-6 md:pt-8">
+                    {s.features.map((f, j) => (
+                      <div
+                        key={j}
+                        className="flex items-center gap-2 md:gap-3 text-secondary font-medium text-sm md:text-base"
+                      >
+                        <div className="w-5 h-5 md:w-6 md:h-6 bg-primary/20 rounded-none flex items-center justify-center text-primary shrink-0">
+                          <Check size={10} md:size={14} strokeWidth={3} />
+                        </div>
+                        <span>{f}</span>
                       </div>
-                   </div>
-                   
-                   {i === 0 && (
-                     <div className="w-full md:w-[300px] aspect-square bg-secondary-container rounded-none md:rounded-none flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity shrink-0">
-                        <Coffee size={80} className="text-primary" strokeWidth={1} />
-                     </div>
-                   )}
+                    ))}
+                  </div>
                 </div>
-                
-                <div className="pt-6 md:pt-8 flex justify-end gap-3">
-                   <Link 
-                     to={`/services/${s.slug}`}
-                     className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
-                     aria-label={`Learn more about ${s.title}`}
-                   >
-                      Details <ChevronRight size={16} md:size={18} aria-hidden="true" />
-                   </Link>
-                   <Link 
-                     to="/contact" 
-                     className="btn-m3-filled text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
-                     aria-label={`Inquire about ${s.title} services`}
-                   >
-                      Inquire <ChevronRight size={16} md:size={18} aria-hidden="true" />
-                   </Link>
-                </div>
-             </div>
-           ))}
+
+                {i === 0 && (
+                  <div className="w-full md:w-[300px] aspect-square bg-secondary-container rounded-none md:rounded-none flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity shrink-0">
+                    <Coffee
+                      size={80}
+                      className="text-primary"
+                      strokeWidth={1}
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="pt-6 md:pt-8 flex justify-end gap-3">
+                <Link
+                  to={`/services/${s.slug}`}
+                  className="btn-m3-tonal text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
+                  aria-label={`Learn more about ${s.title}`}
+                >
+                  Details{" "}
+                  <ChevronRight size={16} md:size={18} aria-hidden="true" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="btn-m3-filled text-sm md:text-base focus-visible:ring-4 focus-visible:ring-primary/20"
+                  aria-label={`Inquire about ${s.title} services`}
+                >
+                  Inquire{" "}
+                  <ChevronRight size={16} md:size={18} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -222,41 +320,74 @@ export default function Services() {
       <section className="py-24 md:py-40 bg-secondary text-white rounded-none md:rounded-none mx-4 sm:mx-6 md:mx-12 mb-12">
         <div className="section-container">
           <div className="mb-12 md:mb-20 space-y-4 md:space-y-6">
-             <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-[#cccccc]">Built For Real Event Pressure.</h2>
-             <p className="text-[#999999] text-lg md:text-xl font-light">We focus on the details that affect event day: confirmation, punctuality, presentation, communication, and guest experience.</p>
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-display font-bold text-[#cccccc]">
+              Built For Real Event Pressure.
+            </h2>
+            <p className="text-[#999999] text-lg md:text-xl font-light">
+              We focus on the details that affect event day: confirmation,
+              punctuality, presentation, communication, and guest experience.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-             {[
-               { title: 'Clear Briefing', desc: 'Staff arrive briefed on venue, call time, uniform, role, and reporting line.' },
-               { title: 'Flexible Team Mix', desc: 'Scale from a small private event team to larger activation and festival crews.' },
-               { title: 'Hospitality Ready', desc: 'Bartenders, waiters, baristas, runners, and support teams for guest-facing service.' },
-               { title: 'Brand-Facing Talent', desc: 'Ambassadors, hosts, models, and promoters for polished public interactions.' },
-               { title: 'Setup Support', desc: 'Equipment, bar tools, glassware, table settings, setup, and breakdown support.' },
-               { title: 'Gauteng Coverage', desc: 'Coverage across Johannesburg, Randburg, Sandton, Fourways, Midrand, Pretoria, and surrounds.' }
-             ].map((item, i) => (
-               <div key={i} className="bg-white/5 border border-white/5 rounded-none md:rounded-none p-6 md:p-10 space-y-4 md:space-y-6 hover:bg-primary hover:text-secondary transition-all duration-500 group">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-none flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-primary">
-                     <Check size={20} md:size={24} />
-                  </div>
-                  <div className="space-y-1 md:space-y-2">
-                     <h3 className="text-xl md:text-2xl font-display font-bold text-white group-hover:text-secondary transition-colors">{item.title}</h3>
-                     <p className="text-[#999999] group-hover:text-secondary/70 text-sm md:text-base leading-relaxed transition-colors">{item.desc}</p>
-                  </div>
-               </div>
-             ))}
+            {[
+              {
+                title: "Clear Briefing",
+                desc: "Staff arrive briefed on venue, call time, uniform, role, and reporting line.",
+              },
+              {
+                title: "Flexible Team Mix",
+                desc: "Scale from a small private event team to larger activation and festival crews.",
+              },
+              {
+                title: "Hospitality Ready",
+                desc: "Bartenders, waiters, baristas, runners, and support teams for guest-facing service.",
+              },
+              {
+                title: "Brand-Facing Talent",
+                desc: "Ambassadors, hosts, models, and promoters for polished public interactions.",
+              },
+              {
+                title: "Setup Support",
+                desc: "Equipment, bar tools, glassware, table settings, setup, and breakdown support.",
+              },
+              {
+                title: "Gauteng Coverage",
+                desc: "Coverage across Johannesburg, Randburg, Sandton, Fourways, Midrand, Pretoria, and surrounds.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white/5 border border-white/5 rounded-none md:rounded-none p-6 md:p-10 space-y-4 md:space-y-6 hover:bg-primary hover:text-secondary transition-all duration-500 group"
+              >
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-none flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-primary">
+                  <Check size={20} md:size={24} />
+                </div>
+                <div className="space-y-1 md:space-y-2">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-white group-hover:text-secondary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#999999] group-hover:text-secondary/70 text-sm md:text-base leading-relaxed transition-colors">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-40 md:py-60 section-container text-center">
-         <h2 className="text-4xl md:text-6xl lg:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-none mb-8 md:mb-12">
-           Ready to <span className="text-primary">Book?</span>
-         </h2>
-         <Link to="/contact" className="btn-m3-filled !px-12 md:!px-20 !py-5 md:!py-6 text-base md:text-xl focus-visible:ring-4 focus-visible:ring-primary/20">
-            Request a Quote
-         </Link>
+        <h2 className="text-4xl md:text-6xl lg:text-[8vw] font-display font-bold tracking-tighter text-secondary leading-none mb-8 md:mb-12">
+          Ready to <span className="text-primary">Book?</span>
+        </h2>
+        <Link
+          to="/contact"
+          className="btn-m3-filled !px-12 md:!px-20 !py-5 md:!py-6 text-base md:text-xl focus-visible:ring-4 focus-visible:ring-primary/20"
+        >
+          Request a Quote
+        </Link>
       </section>
     </div>
   );

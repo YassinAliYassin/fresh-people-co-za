@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Tag } from 'lucide-react';
-import { motion } from 'motion/react';
-import SEO from '../components/SEO';
-import { getPostById } from '../data/blogPosts';
+import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { motion } from "motion/react";
+import SEO from "../components/SEO";
+import { getPostById } from "../data/blogPosts";
+import { assetUrl } from "../lib/utils";
 
 function renderInlineMarkdown(text) {
   // Light support for **bold** in paragraphs and list items
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
+    if (part.startsWith("**") && part.endsWith("**")) {
       return (
         <strong key={i} className="font-semibold text-secondary">
           {part.slice(2, -2)}
@@ -27,31 +28,31 @@ export default function BlogPost() {
   // Inject Article structured data
   useEffect(() => {
     if (!post) return;
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Article',
+      "@context": "https://schema.org",
+      "@type": "Article",
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,
       dateModified: post.date,
       author: {
-        '@type': 'Organization',
-        name: 'Fresh People',
+        "@type": "Organization",
+        name: "Fresh People",
       },
       publisher: {
-        '@type': 'Organization',
-        name: 'Fresh People',
+        "@type": "Organization",
+        name: "Fresh People",
         logo: {
-          '@type': 'ImageObject',
-          url: 'https://fresh-people.co.za/images/logo.svg',
+          "@type": "ImageObject",
+          url: "https://fresh-people.co.za/images/logo.svg",
         },
       },
       image: `https://fresh-people.co.za${post.image}`,
       mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://fresh-people.co.za/blog/${post.id}`,
+        "@type": "WebPage",
+        "@id": `https://fresh-people.co.za/blog/${post.id}`,
       },
     });
     document.head.appendChild(script);
@@ -65,8 +66,13 @@ export default function BlogPost() {
       <div className="min-h-screen bg-[#FBFBF9] flex items-center justify-center">
         <SEO title="Post Not Found | Fresh People Blog" />
         <div className="text-center space-y-6">
-          <h1 className="text-4xl font-display font-bold text-[#0a0a0a]">Post Not Found</h1>
-          <Link to="/blog" className="text-[#A4C71D] hover:underline inline-flex items-center gap-2">
+          <h1 className="text-4xl font-display font-bold text-[#0a0a0a]">
+            Post Not Found
+          </h1>
+          <Link
+            to="/blog"
+            className="text-[#A4C71D] hover:underline inline-flex items-center gap-2"
+          >
             <ArrowLeft size={16} /> Back to Blog
           </Link>
         </div>
@@ -75,7 +81,7 @@ export default function BlogPost() {
   }
 
   // Split content into sections
-  const contentSections = post.content.split('\n\n');
+  const contentSections = post.content.split("\n\n");
 
   return (
     <motion.div
@@ -84,10 +90,16 @@ export default function BlogPost() {
       transition={{ duration: 0.8 }}
       className="pt-32 pb-20 bg-[#FBFBF9]"
     >
-      <SEO title={`${post.title} | Fresh People Blog`} description={post.excerpt} />
+      <SEO
+        title={`${post.title} | Fresh People Blog`}
+        description={post.excerpt}
+      />
       <div className="max-w-4xl mx-auto px-6 sm:px-12">
         {/* Back Link */}
-        <Link to="/blog" className="inline-flex items-center gap-2 text-[#A4C71D] hover:underline mb-8">
+        <Link
+          to="/blog"
+          className="inline-flex items-center gap-2 text-[#A4C71D] hover:underline mb-8"
+        >
           <ArrowLeft size={16} /> Back to Blog
         </Link>
 
@@ -111,7 +123,9 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#0a0a0a] mb-6">
             {post.title}
           </h1>
-          <p className="text-lg text-on-surface/60 mb-8 max-w-3xl">{post.excerpt}</p>
+          <p className="text-lg text-on-surface/60 mb-8 max-w-3xl">
+            {post.excerpt}
+          </p>
         </motion.div>
 
         {/* Featured Image */}
@@ -122,7 +136,7 @@ export default function BlogPost() {
           className="aspect-[2/1] overflow-hidden bg-gray-100 rounded-none mb-12"
         >
           <img
-            src={post.image}
+            src={assetUrl(post.image)}
             alt={post.title}
             className="w-full h-full object-cover"
             loading="lazy"
@@ -141,21 +155,26 @@ export default function BlogPost() {
             const trimmed = section.trim();
             if (!trimmed) return null;
 
-            if (trimmed.startsWith('## ')) {
+            if (trimmed.startsWith("## ")) {
               return (
-                <h2 key={index} className="text-2xl font-display font-bold text-[#0a0a0a] mt-12 mb-6">
-                  {trimmed.replace('## ', '')}
+                <h2
+                  key={index}
+                  className="text-2xl font-display font-bold text-[#0a0a0a] mt-12 mb-6"
+                >
+                  {trimmed.replace("## ", "")}
                 </h2>
               );
             }
 
-            if (trimmed.startsWith('- ')) {
-              const items = trimmed.split('\n').filter((line) => line.trim().startsWith('- '));
+            if (trimmed.startsWith("- ")) {
+              const items = trimmed
+                .split("\n")
+                .filter((line) => line.trim().startsWith("- "));
               return (
                 <ul key={index} className="list-disc pl-6 mb-6 space-y-2">
                   {items.map((item, i) => (
                     <li key={i} className="text-on-surface/80">
-                      {renderInlineMarkdown(item.replace(/^-\s+/, ''))}
+                      {renderInlineMarkdown(item.replace(/^-\s+/, ""))}
                     </li>
                   ))}
                 </ul>
@@ -163,12 +182,14 @@ export default function BlogPost() {
             }
 
             if (/^\d+\.\s/.test(trimmed)) {
-              const items = trimmed.split('\n').filter((line) => /^\d+\.\s/.test(line.trim()));
+              const items = trimmed
+                .split("\n")
+                .filter((line) => /^\d+\.\s/.test(line.trim()));
               return (
                 <ol key={index} className="list-decimal pl-6 mb-6 space-y-2">
                   {items.map((item, i) => (
                     <li key={i} className="text-on-surface/80">
-                      {renderInlineMarkdown(item.replace(/^\d+\.\s+/, ''))}
+                      {renderInlineMarkdown(item.replace(/^\d+\.\s+/, ""))}
                     </li>
                   ))}
                 </ol>
@@ -176,7 +197,10 @@ export default function BlogPost() {
             }
 
             return (
-              <p key={index} className="text-on-surface/80 leading-relaxed mb-6">
+              <p
+                key={index}
+                className="text-on-surface/80 leading-relaxed mb-6"
+              >
                 {renderInlineMarkdown(trimmed)}
               </p>
             );
@@ -190,8 +214,12 @@ export default function BlogPost() {
           transition={{ delay: 0.6 }}
           className="mt-16 pt-12 border-t border-gray-200 text-center"
         >
-          <h3 className="text-2xl font-display font-bold text-[#0a0a0a] mb-4">Ready to Work With Us?</h3>
-          <p className="text-on-surface/60 mb-8">Join our team or book staff for your next event.</p>
+          <h3 className="text-2xl font-display font-bold text-[#0a0a0a] mb-4">
+            Ready to Work With Us?
+          </h3>
+          <p className="text-on-surface/60 mb-8">
+            Join our team or book staff for your next event.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="btn-m3-filled">
               Contact Us

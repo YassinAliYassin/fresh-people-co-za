@@ -5,10 +5,10 @@
 export const blogPosts = [
   {
     id: 7,
-    title: 'How to Book Event Staff in Johannesburg: A Client Checklist',
-    date: '2026-07-11',
+    title: "How to Book Event Staff in Johannesburg: A Client Checklist",
+    date: "2026-07-11",
     excerpt:
-      'A practical checklist for planners, venues, and brands booking waiters, bartenders, ambassadors, and coordinators across Gauteng.',
+      "A practical checklist for planners, venues, and brands booking waiters, bartenders, ambassadors, and coordinators across Gauteng.",
     content: `Booking the right event team should be simple. Whether you are planning a corporate launch in Sandton, a wedding in Fourways, or a brand activation in Rosebank, a clear brief gets you a faster quote and a better team.
 
 ## Start With the Essentials
@@ -43,16 +43,16 @@ Once we have your brief, we confirm availability, recommend the right team mix, 
 ## Ready to Get a Quote?
 
 Email us at info@fresh-people.co.za or use the contact form with your date, venue, and staff needs. We will respond with practical options tailored to your event.`,
-    category: 'Client Tips',
-    image: '/images/page-image-new1.jpg',
-    readTime: '5 min read',
+    category: "Client Tips",
+    image: "images/page-image-new1.jpg",
+    readTime: "5 min read",
   },
   {
     id: 1,
-    title: 'All Black Dress Code Guide',
-    date: '2026-05-20',
+    title: "All Black Dress Code Guide",
+    date: "2026-05-20",
     excerpt:
-      'Everything you need to know about our signature all-black event dress code, including approved footwear and accessories.',
+      "Everything you need to know about our signature all-black event dress code, including approved footwear and accessories.",
     content: `At Fresh People, our signature all-black dress code represents professionalism, elegance, and uniformity across all events. This comprehensive guide covers everything your team needs to know.
 
 ## Why All Black?
@@ -76,14 +76,14 @@ The all-black uniform creates a sleek, professional appearance that works across
 ## Grooming Standards
 
 All staff must arrive with neat, professional grooming. Hair should be clean and styled conservatively. Makeup should be natural and professional.`,
-    category: 'Staff Tips',
-    image: '/images/page-image-1.jpg',
-    readTime: '5 min read',
+    category: "Staff Tips",
+    image: "images/page-image-1.jpg",
+    readTime: "5 min read",
   },
   {
     id: 2,
-    title: 'New Staff Onboarding Process',
-    date: '2026-05-15',
+    title: "New Staff Onboarding Process",
+    date: "2026-05-15",
     excerpt:
       "Welcome to our team! Here's how we assign event roles, arrival times, and what to expect on your first event.",
     content: `Welcome to the Fresh People team! We're excited to have you on board. This guide walks you through our onboarding process and what to expect as you start your journey with us.
@@ -113,16 +113,16 @@ You'll receive event details 24-48 hours before the event, including:
 ## Your First Event
 
 Arrive 15 minutes early, check in with the coordinator, and remember - guest experience is our top priority!`,
-    category: 'Operations',
-    image: '/images/page-image-2.jpg',
-    readTime: '4 min read',
+    category: "Operations",
+    image: "images/page-image-2.jpg",
+    readTime: "4 min read",
   },
   {
     id: 3,
-    title: 'Event ICS Calendar Integration',
-    date: '2026-05-10',
+    title: "Event ICS Calendar Integration",
+    date: "2026-05-10",
     excerpt:
-      'We now auto-generate .ics calendar files for all confirmed events, compatible with iPhone, Outlook, and Gmail.',
+      "We now auto-generate .ics calendar files for all confirmed events, compatible with iPhone, Outlook, and Gmail.",
     content: `Fresh People now automatically generates .ics calendar files for all confirmed events! This means you can easily add your shifts to your preferred calendar app.
 
 ## How It Works
@@ -149,16 +149,16 @@ Once your event is confirmed, you'll receive:
 - Share your availability with family/friends
 
 Calendar invites are sent 48 hours after event confirmation.`,
-    category: 'Tech Updates',
-    image: '/images/page-image-3.jpg',
-    readTime: '3 min read',
+    category: "Tech Updates",
+    image: "images/page-image-3.jpg",
+    readTime: "3 min read",
   },
   {
     id: 4,
-    title: 'Client Success: Corporate Gala 2026',
-    date: '2026-05-05',
+    title: "Client Success: Corporate Gala 2026",
+    date: "2026-05-05",
     excerpt:
-      'How we staffed and executed a 500-guest corporate gala with our signature all-black team.',
+      "How we staffed and executed a 500-guest corporate gala with our signature all-black team.",
     content: `In May 2026, Fresh People was proud to staff the annual corporate gala for a leading Johannesburg company. Here's how we delivered excellence for 500 VIP guests.
 
 ## The Brief
@@ -188,16 +188,16 @@ The event ran flawlessly. Our team arrived 3 hours early for setup, briefing, an
 "The Fresh People team was exceptional. Professional, attentive, and truly elevated our event." - Client, Corporate Gala 2026
 
 We're proud to be the trusted staffing partner for Johannesburg's corporate events.`,
-    category: 'Case Study',
-    image: '/images/extra1.jpg',
-    readTime: '6 min read',
+    category: "Case Study",
+    image: "images/extra1.jpg",
+    readTime: "6 min read",
   },
   {
     id: 5,
-    title: 'Staff Shortage Management Tips',
-    date: '2026-04-28',
+    title: "Staff Shortage Management Tips",
+    date: "2026-04-28",
     excerpt:
-      'Best practices for managing event staffing when demand exceeds available team members.',
+      "Best practices for managing event staffing when demand exceeds available team members.",
     content: `Event staffing shortages happen. Here are our proven strategies for managing high-demand periods while maintaining service quality.
 
 ## Prevention Strategies
@@ -219,16 +219,16 @@ We're proud to be the trusted staffing partner for Johannesburg's corporate even
 Fresh People guarantees replacement staff within 2 hours. We maintain a standby team specifically for emergencies.
 
 The key is proactive planning and honest communication with clients.`,
-    category: 'Operations',
-    image: '/images/extra2.jpg',
-    readTime: '7 min read',
+    category: "Operations",
+    image: "images/extra2.jpg",
+    readTime: "7 min read",
   },
   {
     id: 6,
-    title: 'The Fresh People Legacy: 12 Years Strong',
-    date: '2026-04-15',
+    title: "The Fresh People Legacy: 12 Years Strong",
+    date: "2026-04-15",
     excerpt:
-      'Celebrating twelve years of delivering premium event staffing across South Africa.',
+      "Celebrating twelve years of delivering premium event staffing across South Africa.",
     content: `2026 marks 12 years of Fresh People! What started as a small Johannesburg staffing agency has grown into the region's premier event staffing partner.
 
 ## Our Journey
@@ -252,9 +252,9 @@ The key is proactive planning and honest communication with clients.`,
 To our clients, staff, and partners - thank you for 12 incredible years. Here's to the next chapter!
 
 Interested in joining our team? Contact us today.`,
-    category: 'Company News',
-    image: '/images/extra3.jpg',
-    readTime: '8 min read',
+    category: "Company News",
+    image: "images/extra3.jpg",
+    readTime: "8 min read",
   },
 ];
 

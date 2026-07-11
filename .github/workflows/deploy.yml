@@ -3,6 +3,8 @@ name: Deploy React App to fresh-people.co.za
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -23,7 +25,9 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      # Only deploy when pushing to main, never from a PR (secrets + prod FTP).
       - name: Deploy to FTP
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: zada136.webway.host

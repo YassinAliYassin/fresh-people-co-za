@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, Tag } from 'lucide-react';
-import { motion } from 'motion/react';
-import SEO from '../components/SEO';
-import { blogPosts } from '../data/blogPosts';
+import { Link } from "react-router-dom";
+import { ArrowRight, Calendar, Tag } from "lucide-react";
+import { motion } from "motion/react";
+import SEO from "../components/SEO";
+import { blogPosts } from "../data/blogPosts";
+import { assetUrl } from "../lib/utils";
 
 export default function Blog() {
   return (
@@ -23,7 +24,8 @@ export default function Blog() {
             Fresh <span className="text-primary">Blog</span>
           </h1>
           <p className="text-on-surface/60 max-w-2xl mx-auto">
-            Event tips, staff updates, company news, and industry insights from the Fresh People team.
+            Event tips, staff updates, company news, and industry insights from
+            the Fresh People team.
           </p>
         </div>
 
@@ -39,7 +41,7 @@ export default function Blog() {
             >
               <div className="aspect-[16/10] overflow-hidden bg-gray-100">
                 <img
-                  src={post.image}
+                  src={assetUrl(post.image)}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -60,7 +62,9 @@ export default function Blog() {
                 <h2 className="text-xl font-display font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
                   {post.title}
                 </h2>
-                <p className="text-on-surface/60 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                <p className="text-on-surface/60 text-sm mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
                 <Link
                   to={`/blog/${post.id}`}
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
@@ -74,8 +78,13 @@ export default function Blog() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-on-surface/60 mb-6">Want to work with us or join our team?</p>
-          <Link to="/contact" className="btn-m3-filled inline-flex items-center gap-2">
+          <p className="text-on-surface/60 mb-6">
+            Want to work with us or join our team?
+          </p>
+          <Link
+            to="/contact"
+            className="btn-m3-filled inline-flex items-center gap-2"
+          >
             Contact Us <ArrowRight size={18} />
           </Link>
         </div>

@@ -1,0 +1,48 @@
+name: Deploy GitHub Pages mirror
+
+# Builds the site with the correct GitHub Pages subpath (`/fresh-people-co-za/`)
+# and publishes it to the gh-pages branch, which serves the repo's Pages mirror.
+# The production site (fresh-people.co.za) is deployed separately via FTP in
+# deploy.yml and is unaffected by this workflow.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with GitHub Pages base
+        run: npm run build
+        env:
+          GITHUB_PAGES: 'true'
+
+      # SPA client-side routing fallback so deep links don't 404 on Pages.
+      - name: Add SPA fallback
+        run: printf 'RewriteEngine On\nRewriteBase /fresh-people-co-za/\nRewriteCond %%{REQUEST_FILENAME} !-f\nRewriteCond %%{REQUEST_FILENAME} !-d\nRewriteRule ^ index.html [L]\n' > dist/.htaccess
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          commit_message: "chore: publish gh-pages build ${{ github.sha }}"

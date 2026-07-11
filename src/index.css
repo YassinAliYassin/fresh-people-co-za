@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --font-display: "Playfair Display", serif;
+  --font-sans: "Ubuntu", system-ui, sans-serif;
+  --font-display: "Ubuntu", system-ui, sans-serif;
+  --font-logo: "Ubuntu", system-ui, sans-serif;
   
   --color-primary: #a4c71d;
   --color-on-primary: #ffffff;
@@ -39,7 +40,7 @@
   
   h1, h2, h3, h4 {
     @apply font-display font-medium text-on-surface tracking-tight leading-[1.05];
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
   }
   
   h1 {
@@ -53,6 +54,14 @@
   h3 {
     @apply text-2xl md:text-3xl;
   }
+}
+
+/* Wordmark / brand logo text */
+.logo-wordmark {
+  font-family: var(--font-logo);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
 }
 
 .btn-m3-filled {

@@ -14,8 +14,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto space-y-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-4 space-y-10">
-            <Link to="/" className="group inline-block">
-              <span className="text-xl font-medium tracking-[0.08em] text-gray-600" style={{fontFamily: 'Montserrat, sans-serif'}}>
+            <Link to="/" className="group inline-block" aria-label="Fresh People home">
+              <span className="logo-wordmark text-xl text-gray-400">
                 Fresh<span className="text-primary">People</span>
               </span>
             </Link>

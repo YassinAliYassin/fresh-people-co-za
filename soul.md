@@ -82,7 +82,7 @@ South Africa's premier talent agency. We refine the human brand interaction for 
 
 ## Design Language
 - **Colors**: Primary `#A4C71D` (green), Secondary `#0a0a0a` (near-black)
-- **Font**: Inter (clean, minimal)
+- **Font**: Ubuntu (body, headings, and logo wordmark)
 - **Style**: X-style minimalism, Tailwind utility-first
 - **Tone**: Professional, reliable, premium but accessible
 

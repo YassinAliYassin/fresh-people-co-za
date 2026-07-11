@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fresh-people.co.za/sitemap.xml

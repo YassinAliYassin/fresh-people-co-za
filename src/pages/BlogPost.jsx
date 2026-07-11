@@ -1,74 +1,28 @@
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
 import SEO from '../components/SEO';
+import { getPostById } from '../data/blogPosts';
 
-const posts = [
-  {
-    id: 1,
-    title: 'All Black Dress Code Guide',
-    date: '2026-05-20',
-    excerpt: 'Everything you need to know about our signature all-black event dress code, including approved footwear and accessories.',
-    content: 'At Fresh People, our signature all-black dress code represents professionalism, elegance, and uniformity across all events. This comprehensive guide covers everything your team needs to know.\n\n## Why All Black?\n\nThe all-black uniform creates a sleek, professional appearance that works across all event types - from corporate galas to weddings, festivals to VIP activations. It\'s timeless, photogenic, and allows your brand or event theme to take center stage.\n\n## Approved Footwear\n\n- Black leather shoes (closed toe)\n- Black formal heels (max 3-inch heel)\n- Black dress shoes with minimal branding\n- Non-slip soles required for safety\n\n## Accessories\n\n- Minimal silver or black jewelry only\n- Fresh People name badge (provided)\n- Black belt if wearing trousers\n- No visible tattoos or piercings during service\n\n## Grooming Standards\n\nAll staff must arrive with neat, professional grooming. Hair should be clean and styled conservatively. Makeup should be natural and professional.',
-    category: 'Staff Tips',
-    image: '/images/page-image-1.jpg',
-    readTime: '5 min read'
-  },
-  {
-    id: 2,
-    title: 'New Staff Onboarding Process',
-    date: '2026-05-15',
-    excerpt: 'Welcome to our team! Here\'s how we assign event roles, arrival times, and what to expect on your first event.',
-    content: 'Welcome to the Fresh People team! We\'re excited to have you on board. This guide walks you through our onboarding process and what to expect as you start your journey with us.\n\n## Registration & Vetting\n\nAll staff undergo a comprehensive vetting process including ID verification, reference checks, and behavioral assessment. This ensures we maintain our high standards.\n\n## Event Assignment\n\nEvents are assigned based on:\n- Your skills and certifications\n- Availability and location\n- Client preferences and event requirements\n- Your performance history\n\n## Arrival & Briefing\n\nYou\'ll receive event details 24-48 hours before the event, including:\n- Venue address and parking info\n- Call time and uniform requirements\n- Point of contact details\n- Special instructions or VIP guest alerts\n\n## Your First Event\n\nArrive 15 minutes early, check in with the coordinator, and remember - guest experience is our top priority!',
-    category: 'Operations',
-    image: '/images/page-image-2.jpg',
-    readTime: '4 min read'
-  },
-  {
-    id: 3,
-    title: 'Event ICS Calendar Integration',
-    date: '2026-05-10',
-    excerpt: 'We now auto-generate .ics calendar files for all confirmed events, compatible with iPhone, Outlook, and Gmail.',
-    content: 'Fresh People now automatically generates .ics calendar files for all confirmed events! This means you can easily add your shifts to your preferred calendar app.\n\n## How It Works\n\nOnce your event is confirmed, you\'ll receive:\n1. An email confirmation with event details\n2. A downloadable .ics file attached\n3. Option to add directly to Google Calendar\n\n## Compatible Apps\n\n- Google Calendar\n- Outlook (desktop & mobile)\n- Apple Calendar (iPhone & Mac)\n- Samsung Calendar\n- Any app that supports .ics files\n\n## Benefits\n\n- Never miss a shift with automatic reminders\n- See your work schedule alongside personal events\n- Sync across all your devices\n- Share your availability with family/friends\n\nCalendar invites are sent 48 hours after event confirmation.',
-    category: 'Tech Updates',
-    image: '/images/page-image-3.jpg',
-    readTime: '3 min read'
-  },
-  {
-    id: 4,
-    title: 'Client Success: Corporate Gala 2026',
-    date: '2026-05-05',
-    excerpt: 'How we staffed and executed a 500-guest corporate gala with our signature all-black team.',
-    content: 'In May 2026, Fresh People was proud to staff the annual corporate gala for a leading Johannesburg company. Here\'s how we delivered excellence for 500 VIP guests.\n\n## The Brief\n\n- 500 corporate guests\n- Black-tie dress code\n- 3-course plated dinner\n- Cocktail reception before dinner\n- After-dinner entertainment\n\n## Our Team\n\nWe deployed:\n- 25 waiters (all-black uniform)\n- 8 RSA-certified bartenders\n- 4 event coordinators\n- 6 kitchen support staff\n- 2 coffee baristas for after-dinner service\n\n## Execution\n\nThe event ran flawlessly. Our team arrived 3 hours early for setup, briefing, and uniform checks. Service was timed to perfection, with all 500 guests served within 45 minutes.\n\n## Client Feedback\n\n"The Fresh People team was exceptional. Professional, attentive, and truly elevated our event." - Client, Corporate Gala 2026\n\nWe\'re proud to be the trusted staffing partner for Johannesburg\'s corporate events.',
-    category: 'Case Study',
-    image: '/images/extra1.jpg',
-    readTime: '6 min read'
-  },
-  {
-    id: 5,
-    title: 'Staff Shortage Management Tips',
-    date: '2026-04-28',
-    excerpt: 'Best practices for managing event staffing when demand exceeds available team members.',
-    content: 'Event staffing shortages happen. Here are our proven strategies for managing high-demand periods while maintaining service quality.\n\n## Prevention Strategies\n\n- Maintain a roster of 2x your average event size\n- Cross-train staff across multiple roles\n- Build relationships with reliable freelancers\n- Offer incentives for last-minute availability\n\n## When Shortages Occur\n\n1. **Prioritize roles** - Keep essential positions (bartenders, waiters) filled first\n2. **Merge roles** - A bartender can also handle simple wine service\n3. **Call in backups** - We maintain a list of on-call staff\n4. **Communicate early** - Tell the client immediately so they can adjust expectations\n\n## Emergency Protocol\n\nFresh People guarantees replacement staff within 2 hours. We maintain a standby team specifically for emergencies.\n\nThe key is proactive planning and honest communication with clients.',
-    category: 'Operations',
-    image: '/images/extra2.jpg',
-    readTime: '7 min read'
-  },
-  {
-    id: 6,
-    title: 'The Fresh People Legacy: 12 Years Strong',
-    date: '2026-04-15',
-    excerpt: 'Celebrating twelve years of delivering premium event staffing across South Africa.',
-    content: '2026 marks 12 years of Fresh People! What started as a small Johannesburg staffing agency has grown into the region\'s premier event staffing partner.\n\n## Our Journey\n\n**2014** - Founded with 10 staff members\n**2016** - Expanded to 50+ vetted staff\n**2018** - First major corporate clients\n**2020** - Launched equipment & logistics division\n**2023** - 1,000+ events staffed\n**2026** - 500+ active staff, 1,500+ events completed\n\n## What Sets Us Apart\n\n- **Vetting** - Every staff member is identity-verified and behaviorally assessed\n- **Training** - RSA certification, etiquette training, and role-specific skills\n- **Reliability** - 99% on-time rate, 2-hour replacement guarantee\n- **Coverage** - Johannesburg, Sandton, Randburg, Pretoria, and surrounds\n\n## Thank You\n\nTo our clients, staff, and partners - thank you for 12 incredible years. Here\'s to the next chapter!\n\nInterested in joining our team? Contact us today.',
-    category: 'Company News',
-    image: '/images/extra3.jpg',
-    readTime: '8 min read'
-  }
-];
+function renderInlineMarkdown(text) {
+  // Light support for **bold** in paragraphs and list items
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={i} className="font-semibold text-secondary">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
 
 export default function BlogPost() {
   const { id } = useParams();
-  const post = posts.find(p => p.id === Number(id));
+  const post = getPostById(id);
 
   // Inject Article structured data
   useEffect(() => {
@@ -76,32 +30,34 @@ export default function BlogPost() {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": post.title,
-      "description": post.excerpt,
-      "datePublished": post.date,
-      "dateModified": post.date,
-      "author": {
-        "@type": "Organization",
-        "name": "Fresh People"
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: {
+        '@type': 'Organization',
+        name: 'Fresh People',
       },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Fresh People",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://fresh-people.co.za/images/fresh-people-logo-vector-01.webp"
-        }
+      publisher: {
+        '@type': 'Organization',
+        name: 'Fresh People',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://fresh-people.co.za/images/logo.svg',
+        },
       },
-      "image": `https://fresh-people.co.za${post.image}`,
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": `https://fresh-people.co.za/blog/${post.id}`
-      }
+      image: `https://fresh-people.co.za${post.image}`,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://fresh-people.co.za/blog/${post.id}`,
+      },
     });
     document.head.appendChild(script);
-    return () => { document.head.removeChild(script); };
+    return () => {
+      document.head.removeChild(script);
+    };
   }, [post]);
 
   if (!post) {
@@ -155,6 +111,7 @@ export default function BlogPost() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-[#0a0a0a] mb-6">
             {post.title}
           </h1>
+          <p className="text-lg text-on-surface/60 mb-8 max-w-3xl">{post.excerpt}</p>
         </motion.div>
 
         {/* Featured Image */}
@@ -181,28 +138,48 @@ export default function BlogPost() {
           className="prose prose-lg max-w-none"
         >
           {contentSections.map((section, index) => {
-            if (section.startsWith('## ')) {
+            const trimmed = section.trim();
+            if (!trimmed) return null;
+
+            if (trimmed.startsWith('## ')) {
               return (
                 <h2 key={index} className="text-2xl font-display font-bold text-[#0a0a0a] mt-12 mb-6">
-                  {section.replace('## ', '')}
+                  {trimmed.replace('## ', '')}
                 </h2>
               );
-            } else if (section.startsWith('- ')) {
-              const items = section.split('\n').filter(line => line.trim());
+            }
+
+            if (trimmed.startsWith('- ')) {
+              const items = trimmed.split('\n').filter((line) => line.trim().startsWith('- '));
               return (
                 <ul key={index} className="list-disc pl-6 mb-6 space-y-2">
                   {items.map((item, i) => (
-                    <li key={i} className="text-on-surface/80">{item.replace('- ', '')}</li>
+                    <li key={i} className="text-on-surface/80">
+                      {renderInlineMarkdown(item.replace(/^-\s+/, ''))}
+                    </li>
                   ))}
                 </ul>
               );
-            } else {
+            }
+
+            if (/^\d+\.\s/.test(trimmed)) {
+              const items = trimmed.split('\n').filter((line) => /^\d+\.\s/.test(line.trim()));
               return (
-                <p key={index} className="text-on-surface/80 leading-relaxed mb-6">
-                  {section}
-                </p>
+                <ol key={index} className="list-decimal pl-6 mb-6 space-y-2">
+                  {items.map((item, i) => (
+                    <li key={i} className="text-on-surface/80">
+                      {renderInlineMarkdown(item.replace(/^\d+\.\s+/, ''))}
+                    </li>
+                  ))}
+                </ol>
               );
             }
+
+            return (
+              <p key={index} className="text-on-surface/80 leading-relaxed mb-6">
+                {renderInlineMarkdown(trimmed)}
+              </p>
+            );
           })}
         </motion.div>
 
@@ -213,12 +190,8 @@ export default function BlogPost() {
           transition={{ delay: 0.6 }}
           className="mt-16 pt-12 border-t border-gray-200 text-center"
         >
-          <h3 className="text-2xl font-display font-bold text-[#0a0a0a] mb-4">
-            Ready to Work With Us?
-          </h3>
-          <p className="text-on-surface/60 mb-8">
-            Join our team or book staff for your next event.
-          </p>
+          <h3 className="text-2xl font-display font-bold text-[#0a0a0a] mb-4">Ready to Work With Us?</h3>
+          <p className="text-on-surface/60 mb-8">Join our team or book staff for your next event.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="btn-m3-filled">
               Contact Us

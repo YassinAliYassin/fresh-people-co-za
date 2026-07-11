@@ -6,7 +6,7 @@ export default function Footer() {
 
   const socialLinks = [
     { iconClass: 'fab fa-instagram', url: "https://www.instagram.com/we_are_fresh_people?igsh=MWNkcmg4aXduNHNteQ%3D%3D&utm_source=qr" },
-    { iconClass: 'fab fa-facebook-f', url: "Https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
+    { iconClass: 'fab fa-facebook-f', url: "https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
   ];
 
   return (
@@ -39,12 +39,13 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] mb-10 text-primary">Protocol</h4>
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] mb-10 text-primary">Explore</h4>
             <ul className="space-y-6 text-[#999999] font-medium text-sm">
               <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Inquiry</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">Get a Quote</Link></li>
             </ul>
           </div>
 

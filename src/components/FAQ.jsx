@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
 const faqs = [
@@ -114,13 +115,13 @@ export default function FAQ() {
           className="mt-12 text-center"
         >
           <p className="text-gray-600 mb-4">Still have questions?</p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[#a4c71d] text-white px-6 py-3 rounded-none hover:bg-[#8fb018] transition-colors"
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 bg-[#a4c71d] text-white px-6 py-3 rounded-none hover:bg-[#8fb018] transition-colors font-semibold"
           >
             Contact Our Team
-            <ChevronDown size={16} className="rotate-270" />
-          </a>
+            <i className="fas fa-arrow-right text-sm" aria-hidden="true"></i>
+          </Link>
         </motion.div>
       </div>
     </section>

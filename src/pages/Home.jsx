@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import FAQ from '../components/FAQ';
 
 export default function Home() {
   const talentCategories = [
@@ -23,6 +24,24 @@ export default function Home() {
     { step: 1, title: 'Send Event Details', desc: 'Share the date, venue, staff count, service type, and any equipment needs.' },
     { step: 2, title: 'Receive a Plan', desc: 'We confirm the right team mix, availability, and pricing for your brief.' },
     { step: 3, title: 'Run the Event', desc: 'Fresh People handles arrival, briefing, service delivery, and close-out.' }
+  ];
+
+  const testimonials = [
+    {
+      quote: 'Fresh People delivered a polished team for our product launch. Guests noticed the service — we noticed the reliability.',
+      name: 'Event Director',
+      company: 'Johannesburg Brand Activation',
+    },
+    {
+      quote: 'From quote to close-out, communication was clear and the staff arrived briefed and uniform-ready. We book them again for every major function.',
+      name: 'Venue Manager',
+      company: 'Sandton Corporate Venue',
+    },
+    {
+      quote: 'Our wedding service ran seamlessly. Waitstaff and bartenders were professional, warm, and on top of every guest request.',
+      name: 'Couple',
+      company: 'Private Wedding, Fourways',
+    },
   ];
 
   return (
@@ -81,7 +100,7 @@ export default function Home() {
                 <i className="fas fa-star text-2xl"></i>
              </div>
              <div className="space-y-2">
-                <div className="text-7xl font-display font-bold">10+</div>
+                <div className="text-7xl font-display font-bold">12+</div>
                 <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">Years of excellence</p>
              </div>
           </div>
@@ -137,9 +156,35 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
+      <section className="section-padding section-container">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-6xl font-display font-bold italic">What Clients Say</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+            Trusted by planners, venues, brands, and couples across Gauteng.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <motion.blockquote
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white border border-gray-100 p-8 md:p-10 rounded-none shadow-sm flex flex-col justify-between"
+            >
+              <p className="text-on-surface-variant leading-relaxed text-lg mb-8">“{t.quote}”</p>
+              <footer>
+                <cite className="not-italic font-display font-bold text-secondary block">{t.name}</cite>
+                <span className="text-sm text-on-surface-variant/70">{t.company}</span>
+              </footer>
+            </motion.blockquote>
+          ))}
+        </div>
+      </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding section-container">
+      <section className="section-padding section-container bg-white">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-display font-bold italic">Why Choose Fresh People</h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">A dependable partner when presentation, timing, guest experience, and service standards matter.</p>
@@ -157,6 +202,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQ />
+
       {/* CTA Section */}
       <section className="py-24 bg-primary/5">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-8">
@@ -166,8 +214,8 @@ export default function Home() {
             <Link to="/contact" className="btn-m3-filled text-lg px-10 py-5">
               Request a Quote <i className="fas fa-arrow-right ml-2"></i>
             </Link>
-            <a href="tel:+27672961272" className="btn-m3-outlined text-lg px-10 py-5">
-              <i className="fas fa-phone mr-2" aria-hidden="true"></i> +27 67 296 1272
+            <a href="mailto:info@fresh-people.co.za" className="btn-m3-outlined text-lg px-10 py-5">
+              <i className="fas fa-envelope mr-2" aria-hidden="true"></i> Email Us
             </a>
           </div>
         </div>

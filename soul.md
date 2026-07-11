@@ -4,8 +4,7 @@
 - **Business**: Fresh People - Premier Talent & Events Staffing Johannesburg
 - **Ownership**: Black-owned South African business
 - **Location**: Johannesburg, Gauteng, South Africa
-- **Phone**: +27 67 296 1272
-- **Email**: info@fresh-people.co.za
+- **Email**: info@fresh-people.co.za (phone/WhatsApp removed from public site)
 - **Website**: https://fresh-people.co.za
 
 ## Mission

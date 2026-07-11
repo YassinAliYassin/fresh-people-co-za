@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ShieldCheck, UserCheck, Star, Award, Users, MapPin, Phone, Mail } from 'lucide-react';
+import { ShieldCheck, UserCheck, Star, Award, Users, MapPin, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
@@ -117,20 +117,22 @@ export default function About() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-none flex items-center justify-center text-primary shrink-0">
-                  <Phone size={24} />
+                  <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-secondary mb-2">+27 67 296 1272</h3>
-                  <p className="text-on-surface-variant text-sm">WhatsApp & phone support available 7 days a week.</p>
+                  <h3 className="font-bold text-secondary mb-2">
+                    <a href="mailto:info@fresh-people.co.za" className="hover:text-primary transition-colors">info@fresh-people.co.za</a>
+                  </h3>
+                  <p className="text-on-surface-variant text-sm">Usually respond within 2 hours during business hours.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-none flex items-center justify-center text-primary shrink-0">
-                  <Mail size={24} />
+                  <Clock size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-secondary mb-2">info@fresh-people.co.za</h3>
-                  <p className="text-on-surface-variant text-sm">Usually respond within 2 hours during business hours.</p>
+                  <h3 className="font-bold text-secondary mb-2">Mon–Fri, 08:00–17:00</h3>
+                  <p className="text-on-surface-variant text-sm">Email inquiries welcome anytime — we reply on the next business day outside hours.</p>
                 </div>
               </div>
             </div>

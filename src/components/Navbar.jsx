@@ -60,7 +60,7 @@ export default function Navbar() {
             ))}
           </div>
           <Link to="/contact" className="btn-m3-filled !py-2.5 !px-6 text-xs focus-visible:ring-4 focus-visible:ring-primary/20">
-            Inquiry Protocol
+            Get a Quote
           </Link>
         </div>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
           </div>
           <div className="pt-12 border-t border-gray-100">
              <Link to="/contact" className="btn-m3-filled w-full">
-               Request Protocol <ChevronRight size={20} />
+               Get a Quote <ChevronRight size={20} />
              </Link>
           </div>
         </div>

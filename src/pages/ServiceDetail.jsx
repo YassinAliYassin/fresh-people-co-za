@@ -387,7 +387,7 @@ export default function ServiceDetail() {
           "addressRegion": "Gauteng",
           "addressCountry": "ZA"
         },
-        "telephone": "+27 67 296 1272",
+        "email": "info@fresh-people.co.za",
         "url": "https://fresh-people.co.za"
       },
       "areaServed": ["Johannesburg", "Randburg", "Sandton", "Pretoria", "Gauteng"],

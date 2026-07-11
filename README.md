@@ -30,4 +30,4 @@ npm run build
 - gh-pages branch updated for consistency
 
 ## Contact
-+27 67 296 1272 | Randburg, Gauteng
+info@fresh-people.co.za | Randburg, Gauteng

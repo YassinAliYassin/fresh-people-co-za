@@ -14,3 +14,10 @@ updates:
       - "YassinAliYassin"
     open-pull-requests-limit: 10
     target-branch: "main"
+    # Group all npm updates into a single PR so they stop fighting over
+    # package-lock.json (previously produced 8 mutually-unmergeable PRs).
+    # The build gate (npm run build) validates the combined bump.
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"

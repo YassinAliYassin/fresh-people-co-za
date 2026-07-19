@@ -1,16 +1,17 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { Crown, Coffee, Martini, Utensils, Truck, ClipboardCheck, ArrowRight, ChevronRight, Star, Check, Mail } from 'lucide-react';
 import SEO from '../components/SEO';
 import FAQ from '../components/FAQ';
 
 export default function Home() {
   const talentCategories = [
-    { name: 'Brand Ambassadors', slug: 'brand-ambassadors', icon: 'fas fa-crown', desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
-    { name: 'Coffee Baristas', slug: 'coffee-baristas', icon: 'fas fa-coffee', desc: 'Specialty coffee service with skilled baristas for corporate events, weddings, and activations.' },
-    { name: 'Cocktail Bartenders', slug: 'cocktail-bartenders', icon: 'fas fa-glass-martini-alt', desc: 'RSA-certified bartenders crafting premium cocktails and beverage service for all events.' },
-    { name: 'Hospitality Staff', slug: 'hospitality-staff', icon: 'fas fa-utensils', desc: 'Professional waitstaff, butlers, and commis chefs for seamless food service at events.' },
-    { name: 'Event Logistics', slug: 'event-logistics', icon: 'fas fa-truck', desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
-    { name: 'Event Coordinators', slug: 'event-coordinators', icon: 'fas fa-clipboard-check', desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' },
+    { name: 'Brand Ambassadors', slug: 'brand-ambassadors', icon: Crown, desc: 'Expert talent for luxury activations, product launches, and VIP events. Charismatic representation that elevates your brand.' },
+    { name: 'Coffee Baristas', slug: 'coffee-baristas', icon: Coffee, desc: 'Specialty coffee service with skilled baristas for corporate events, weddings, and activations.' },
+    { name: 'Cocktail Bartenders', slug: 'cocktail-bartenders', icon: Martini, desc: 'RSA-certified bartenders crafting premium cocktails and beverage service for all events.' },
+    { name: 'Hospitality Staff', slug: 'hospitality-staff', icon: Utensils, desc: 'Professional waitstaff, butlers, and commis chefs for seamless food service at events.' },
+    { name: 'Event Logistics', slug: 'event-logistics', icon: Truck, desc: 'Equipment rental, bar stock, glassware, table settings, and end-to-end event coordination.' },
+    { name: 'Event Coordinators', slug: 'event-coordinators', icon: ClipboardCheck, desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' },
   ];
 
   const whyChoose = [
@@ -68,10 +69,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link to="/contact" className="btn-m3-filled text-center justify-center text-base">
-                Get a Quote <i className="fas fa-arrow-right ml-2"></i>
+                Get a Quote <ArrowRight size={18} className="ml-2" aria-hidden="true" />
               </Link>
               <Link to="/services" className="btn-m3-tonal text-center justify-center text-base">
-                View Services <i className="fas fa-chevron-right ml-2"></i>
+                View Services <ChevronRight size={18} className="ml-2" aria-hidden="true" />
               </Link>
             </div>
           </motion.div>
@@ -97,7 +98,7 @@ export default function Home() {
 
           <div className="md:col-span-4 bg-secondary text-white rounded-none p-8 md:p-12 flex flex-col justify-between items-start">
              <div className="p-4 bg-primary rounded-none text-on-primary shadow-lg shadow-primary/20">
-                <i className="fas fa-star text-2xl"></i>
+                <Star size={24} aria-hidden="true" />
              </div>
              <div className="space-y-2">
                 <div className="text-7xl font-display font-bold">12+</div>
@@ -108,12 +109,12 @@ export default function Home() {
           {talentCategories.map((cat, i) => (
             <Link key={i} to={`/services/${cat.slug}`} className="md:col-span-3 bg-white p-8 rounded-none border border-gray-100 hover:bg-primary-container/20 transition-all duration-600 group block">
               <div className="w-14 h-14 bg-secondary-container rounded-none flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-                <i className={`${cat.icon} text-2xl`}></i>
+                <cat.icon size={24} aria-hidden="true" />
               </div>
               <h3 className="text-xl font-display font-bold text-secondary mb-2">{cat.name}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{cat.desc}</p>
               <div className="mt-4 text-primary font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                Learn more <i className="fas fa-arrow-right text-xs"></i>
+                Learn more <ArrowRight size={14} aria-hidden="true" />
               </div>
             </Link>
           ))}
@@ -193,7 +194,7 @@ export default function Home() {
           {whyChoose.map((item, i) => (
             <div key={i} className="card-m3-elevated text-center">
               <div className="w-12 h-12 bg-primary-container rounded-none flex items-center justify-center text-primary mx-auto mb-6">
-                <i className="fas fa-check text-xl"></i>
+                <Check size={20} aria-hidden="true" />
               </div>
               <h3 className="text-xl font-display font-bold text-secondary mb-2">{item.title}</h3>
               <p className="text-on-surface-variant text-sm leading-relaxed">{item.desc}</p>
@@ -212,10 +213,10 @@ export default function Home() {
           <p className="text-xl text-on-surface-variant leading-relaxed">Send the event details and we will come back with a tailored staffing and support quote.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/contact" className="btn-m3-filled text-lg px-10 py-5">
-              Request a Quote <i className="fas fa-arrow-right ml-2"></i>
+              Request a Quote <ArrowRight size={20} className="ml-2" aria-hidden="true" />
             </Link>
             <a href="mailto:info@fresh-people.co.za" className="btn-m3-outlined text-lg px-10 py-5">
-              <i className="fas fa-envelope mr-2" aria-hidden="true"></i> Email Us
+              <Mail size={18} className="mr-2" aria-hidden="true" /> Email Us
             </a>
           </div>
         </div>

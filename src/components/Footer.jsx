@@ -1,12 +1,30 @@
 import { Star, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// lucide-react dropped brand/logo marks (trademark reasons), so these two
+// social glyphs are small local SVGs rather than pulling in a second icon
+// library for two icons.
+function InstagramIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.5.5.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z" />
+    </svg>
+  );
+}
+function FacebookIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M14 13.5h2.5l1-4H14V7.5c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.95 2 14.66 2 11.98 2 10 3.66 10 6.7v2.8H7v4h3V22h4v-8.5Z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { iconClass: 'fab fa-instagram', url: "https://www.instagram.com/we_are_fresh_people?igsh=MWNkcmg4aXduNHNteQ%3D%3D&utm_source=qr" },
-    { iconClass: 'fab fa-facebook-f', url: "https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
+    { icon: InstagramIcon, label: 'Instagram', url: "https://www.instagram.com/we_are_fresh_people?igsh=MWNkcmg4aXduNHNteQ%3D%3D&utm_source=qr" },
+    { icon: FacebookIcon, label: 'Facebook', url: "https://www.facebook.com/share/16a2HPGeW8/?mibextid=wwXIfr" },
   ];
 
   return (
@@ -29,10 +47,10 @@ export default function Footer() {
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  aria-label={social.iconClass.includes('instagram') ? 'Follow Fresh People on Instagram' : 'Follow Fresh People on Facebook'}
+                  aria-label={`Follow Fresh People on ${social.label}`}
                   className="w-12 h-12 bg-[#1a1a1a] rounded-none flex items-center justify-center text-[#999999] hover:bg-primary hover:text-secondary transition-all duration-300"
                 >
-                  <i className={`${social.iconClass} text-lg`} aria-hidden="true"></i>
+                  <social.icon className="w-[18px] h-[18px]" />
                 </a>
               ))}
             </div>

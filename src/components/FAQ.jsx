@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
 
 const faqs = [
   {
@@ -117,10 +117,10 @@ export default function FAQ() {
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-[#a4c71d] text-white px-6 py-3 rounded-none hover:bg-[#8fb018] transition-colors font-semibold"
+            className="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-none hover:opacity-90 transition-opacity font-semibold"
           >
             Contact Our Team
-            <i className="fas fa-arrow-right text-sm" aria-hidden="true"></i>
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </motion.div>
       </div>

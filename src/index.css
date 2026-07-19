@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap');
 @import "tailwindcss";
 
+/* Ubuntu carries the body copy — a deliberate nod to the South African concept
+   of ubuntu ("I am because we are"), fitting for a people-first staffing brand.
+   Fraunces gives headlines a warm, editorial voice with a real italic — the
+   site already leans on italic emphasis throughout, this is where it earns it. */
 @theme {
   --font-sans: "Ubuntu", system-ui, sans-serif;
-  --font-display: "Ubuntu", system-ui, sans-serif;
+  --font-display: "Fraunces", "Ubuntu", system-ui, serif;
   --font-logo: "Ubuntu", system-ui, sans-serif;
   
   --color-primary: #a4c71d;
@@ -40,7 +44,17 @@
   
   h1, h2, h3, h4 {
     @apply font-display font-medium text-on-surface tracking-tight leading-[1.05];
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
+    font-optical-sizing: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
   
   h1 {

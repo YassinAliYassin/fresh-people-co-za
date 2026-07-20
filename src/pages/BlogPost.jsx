@@ -144,6 +144,31 @@ export default function BlogPost() {
           />
         </motion.div>
 
+        {/* Gallery */}
+        {post.gallery && post.gallery.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-12"
+          >
+            {post.gallery.map((img, i) => (
+              <div
+                key={i}
+                className="aspect-[4/5] overflow-hidden bg-gray-100 rounded-none"
+              >
+                <img
+                  src={assetUrl(img.src)}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </motion.div>
+        )}
+
         {/* Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

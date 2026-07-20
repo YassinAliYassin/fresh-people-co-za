@@ -4,6 +4,47 @@
  */
 export const blogPosts = [
   {
+    id: 8,
+    title: "Behind the Bar: Crafting the Beverage Experience at Fresh People Events",
+    date: "2026-07-20",
+    excerpt:
+      "From a single Glenfiddich 18 pour to a full activation bar, here's how our bartenders and baristas turn drinks service into part of the show.",
+    content: `A great bar does more than serve drinks — it sets the tone for the whole event. Our bartenders and baristas are trained to work with precision and presence, whether they're behind a single premium spirits station or running a full activation bar for a brand.
+
+## The Premium Pour
+
+For VIP receptions and product showcases, presentation matters as much as the drink itself. A clean pour, a confident stance, and a well-dressed glass tell guests they are somewhere special before they even take a sip. Our bartenders are trained on premium spirits service, including whisky presentations for brands like Glenfiddich, so every pour reads as considered rather than rushed.
+
+## Full Activation Bars
+
+Brand activations call for a different kind of energy. Coffee stations, syrup bars, and high-volume service lines need staff who can keep pace without losing warmth toward guests. We staff these with baristas and bar assistants who move fast, stay organized, and keep smiling through the rush — the kind of energy you saw at our recent Sandton activation.
+
+## Craft Cocktails, Consistently
+
+Signature cocktails only work if every glass looks and tastes the same as the last. Our teams build cocktails to spec — same rim, same garnish, same pour — so a line of drinks looks as sharp as a single showcase glass, no matter how many guests are in queue.
+
+## Book Your Bar Team
+
+Whether you need one bartender for a boardroom tasting or a full beverage team for a 500-guest activation, we match the skill set to the brief. Email info@fresh-people.co.za or use the contact form with your event date, guest count, and beverage concept.`,
+    category: "Case Study",
+    image: "images/craft-cocktail-lineup.jpg",
+    gallery: [
+      {
+        src: "images/glenfiddich-pour.jpg",
+        alt: "Fresh People bartender pouring a premium Glenfiddich 18 whisky cocktail",
+      },
+      {
+        src: "images/beverage-bar-team.jpg",
+        alt: "Fresh People baristas running a coffee and syrup bar at a Sandton brand activation",
+      },
+      {
+        src: "images/craft-cocktail-lineup.jpg",
+        alt: "Row of chili-salt rimmed craft cocktails garnished with citrus, ready for service",
+      },
+    ],
+    readTime: "4 min read",
+  },
+  {
     id: 7,
     title: "How to Book Event Staff in Johannesburg: A Client Checklist",
     date: "2026-07-11",

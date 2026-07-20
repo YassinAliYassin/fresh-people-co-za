@@ -131,8 +131,8 @@ export default function Services() {
             {/* Top right */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img
-                src={assetUrl("/images/page-image-new2.jpg")}
-                alt="Hospitality Staff"
+                src={assetUrl("/images/beverage-bar-team.jpg")}
+                alt="Fresh People bar and coffee staff at a Sandton brand activation"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 style={{ objectPosition: "center 10%" }}
               />
@@ -152,8 +152,8 @@ export default function Services() {
             {/* Extra images */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img
-                src={assetUrl("/images/extra1.jpg")}
-                alt="Event Equipment"
+                src={assetUrl("/images/craft-cocktail-lineup.jpg")}
+                alt="Craft cocktails with spiced salt rims, ready for guest service"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 style={{ objectPosition: "center 10%" }}
               />

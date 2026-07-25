@@ -107,7 +107,7 @@ The all-black uniform creates a sleek, professional appearance that works across
 
 All staff must arrive with neat, professional grooming. Hair should be clean and styled conservatively. Makeup should be natural and professional.`,
     category: "Staff Tips",
-    image: "images/page-image-1.jpg",
+    image: "images/beverage-bar-team.jpg",
     readTime: "5 min read",
   },
   {
@@ -219,7 +219,7 @@ The event ran flawlessly. Our team arrived 3 hours early for setup, briefing, an
 
 We're proud to be the trusted staffing partner for Johannesburg's corporate events.`,
     category: "Case Study",
-    image: "images/extra1.jpg",
+    image: "images/gallery-screening-corporate.jpg",
     readTime: "6 min read",
   },
   {
@@ -283,7 +283,7 @@ To our clients, staff, and partners - thank you for 12 incredible years. Here's 
 
 Interested in joining our team? Contact us today.`,
     category: "Company News",
-    image: "images/extra3.jpg",
+    image: "images/private-dining-tablescape.jpg",
     readTime: "8 min read",
   },
 ];

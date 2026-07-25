@@ -185,72 +185,70 @@ Calendar invites are sent 48 hours after event confirmation.`,
   },
   {
     id: 4,
-    title: "Client Success: Corporate Gala 2026",
+    title: "Client Success: An Art Gallery Opening, Done Right",
     date: "2026-05-05",
     excerpt:
-      "How we staffed and executed a 500-guest corporate gala with our signature all-black team.",
-    content: `In May 2026, Fresh People was proud to staff the annual corporate gala for a leading Johannesburg company. Here's how we delivered excellence for 500 VIP guests.
+      "How we staffed an intimate gallery opening and film screening — ushers, hosts, and refined hospitality for a cultural, camera-ready crowd.",
+    content: `In May 2026, Fresh People staffed an art exhibition opening and special film screening for a Johannesburg gallery. Here's how we delivered a calm, well-hosted evening for guests, press, and the artist's circle.
 
 ## The Brief
 
-- 500 corporate guests
-- Black-tie dress code
-- 3-course plated dinner
-- Cocktail reception before dinner
-- After-dinner entertainment
+- 120 guests: collectors, press, and invited public
+- Gallery walkthrough followed by a seated film screening
+- Standing wine and canapé reception
+- Quiet, unobtrusive service that never competes with the art
 
 ## Our Team
 
 We deployed:
 
-- 25 waiters (all-black uniform)
-- 8 RSA-certified bartenders
-- 4 event coordinators
-- 6 kitchen support staff
-- 2 coffee baristas for after-dinner service
+- 6 hosts for check-in, seating, and guest flow
+- 4 hospitality staff for wine and canapé service
+- 1 event coordinator managing AV handover and screening timing
+- 1 coat and bag check attendant
 
 ## Execution
 
-The event ran flawlessly. Our team arrived 3 hours early for setup, briefing, and uniform checks. Service was timed to perfection, with all 500 guests served within 45 minutes.
+Our team arrived 2 hours early to walk the space with the gallery's curators, confirm the screening run sheet, and align on where service could and couldn't move during the film. Guests were seated on time with zero disruption to the screening.
 
 ## Client Feedback
 
-"The Fresh People team was exceptional. Professional, attentive, and truly elevated our event." - Client, Corporate Gala 2026
+"The team understood the room. Service was there when we needed it and invisible when we didn't." - Client, Gallery Opening 2026
 
-We're proud to be the trusted staffing partner for Johannesburg's corporate events.`,
+We're proud to be a staffing partner galleries and cultural venues trust with their openings.`,
     category: "Case Study",
     image: "images/gallery-screening-corporate.jpg",
     readTime: "6 min read",
   },
   {
     id: 5,
-    title: "Staff Shortage Management Tips",
+    title: "Staff Shortage Management: When Your Mixologists Are Fully Booked",
     date: "2026-04-28",
     excerpt:
-      "Best practices for managing event staffing when demand exceeds available team members.",
-    content: `Event staffing shortages happen. Here are our proven strategies for managing high-demand periods while maintaining service quality.
+      "Mixologists are the hardest role to backfill on short notice. Here's how we manage bar staffing shortages without dropping service quality.",
+    content: `Bartenders and mixologists are usually the first role to sell out during peak season - weddings, festivals, and corporate year-end functions often land on the same weekends. Here's how we manage it.
 
 ## Prevention Strategies
 
-- Maintain a roster of 2x your average event size
-- Cross-train staff across multiple roles
-- Build relationships with reliable freelancers
-- Offer incentives for last-minute availability
+- Maintain a roster of RSA-certified mixologists at 2x our average weekend bar bookings
+- Cross-train waiters on basic wine and beer service so mixologists stay focused on the bar
+- Build relationships with reliable freelance mixologists ahead of peak season
+- Offer incentives for last-minute mixologist availability during high-demand weekends
 
-## When Shortages Occur
+## When a Mixologist Cancels or Is Double-Booked
 
-1. **Prioritize roles** - Keep essential positions (bartenders, waiters) filled first
-2. **Merge roles** - A bartender can also handle simple wine service
-3. **Call in backups** - We maintain a list of on-call staff
-4. **Communicate early** - Tell the client immediately so they can adjust expectations
+1. **Prioritize the bar** - A short-staffed bar is the most visible gap at any event, so mixologist slots get backfilled first
+2. **Pair a junior with a senior mixologist** - Keeps pour speed and presentation consistent while training continues
+3. **Call in standby mixologists** - We keep an on-call list specifically for bar roles
+4. **Communicate early** - Tell the client immediately if a specific mixologist they booked has changed, so expectations stay aligned
 
 ## Emergency Protocol
 
-Fresh People guarantees replacement staff within 2 hours. We maintain a standby team specifically for emergencies.
+Fresh People guarantees a replacement mixologist within 2 hours. We maintain a standby bar team specifically for emergencies, so a cancellation never becomes the client's problem.
 
 The key is proactive planning and honest communication with clients.`,
     category: "Operations",
-    image: "images/extra2.jpg",
+    image: "images/cocktail-lineup-2.jpg",
     readTime: "7 min read",
   },
   {
@@ -276,6 +274,10 @@ The key is proactive planning and honest communication with clients.`,
 - **Training** - RSA certification, etiquette training, and role-specific skills
 - **Reliability** - 99% on-time rate, 2-hour replacement guarantee
 - **Coverage** - Johannesburg, Sandton, Randburg, Pretoria, and surrounds
+
+## Fine Dining, Start to Finish
+
+Twelve years in, we don't just supply waitstaff - we run the room. For private dinners and fine dining events, our teams handle table styling and place settings, glassware and cutlery layout, course timing with the kitchen, and plated service through to clearing and reset. One team, accountable for the whole table from setup to the last course served.
 
 ## Thank You
 

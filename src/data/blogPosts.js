@@ -180,7 +180,7 @@ Once your event is confirmed, you'll receive:
 
 Calendar invites are sent 48 hours after event confirmation.`,
     category: "Tech Updates",
-    image: "images/page-image-3.jpg",
+    image: "images/calendar-integration.jpg",
     readTime: "3 min read",
   },
   {

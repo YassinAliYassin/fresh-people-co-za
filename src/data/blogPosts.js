@@ -144,7 +144,7 @@ You'll receive event details 24-48 hours before the event, including:
 
 Arrive 15 minutes early, check in with the coordinator, and remember - guest experience is our top priority!`,
     category: "Operations",
-    image: "images/page-image-2.jpg",
+    image: "images/staff-onboarding.jpg",
     readTime: "4 min read",
   },
   {

@@ -181,26 +181,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Strip - proof of real events, not stock */}
-      <section className="py-6 md:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 h-[180px] md:h-[260px]">
-          {[
-            { src: '/images/craft-cocktail-lineup.jpg', alt: 'Craft cocktails prepared for guest service at a Fresh People event' },
-            { src: '/images/decor-styling.jpg', alt: 'Fresh People event styling and decor detail' },
-            { src: '/images/gallery-screening-corporate.jpg', alt: 'Fresh People staffing a corporate gallery event' },
-            { src: '/images/private-dining-tablescape.jpg', alt: 'Fresh People private dining tablescape setup' },
-          ].map((img, i) => (
-            <div key={i} className="relative overflow-hidden rounded-none group">
-              <img
-                src={assetUrl(img.src)}
-                alt={img.alt}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Testimonials */}
       <section className="section-padding section-container">
         <div className="text-center mb-16 space-y-4">

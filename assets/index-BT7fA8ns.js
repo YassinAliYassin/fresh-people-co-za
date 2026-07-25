@@ -141,7 +141,7 @@ Once your event is confirmed, you'll receive:
 - Sync across all your devices
 - Share your availability with family/friends
 
-Calendar invites are sent 48 hours after event confirmation.`,category:`Tech Updates`,image:`images/page-image-3.jpg`,readTime:`3 min read`},{id:4,title:`Client Success: An Art Gallery Opening, Done Right`,date:`2026-05-05`,excerpt:`How we staffed an intimate gallery opening and film screening — ushers, hosts, and refined hospitality for a cultural, camera-ready crowd.`,content:`In May 2026, Fresh People staffed an art exhibition opening and special film screening for a Johannesburg gallery. Here's how we delivered a calm, well-hosted evening for guests, press, and the artist's circle.
+Calendar invites are sent 48 hours after event confirmation.`,category:`Tech Updates`,image:`images/calendar-integration.jpg`,readTime:`3 min read`},{id:4,title:`Client Success: An Art Gallery Opening, Done Right`,date:`2026-05-05`,excerpt:`How we staffed an intimate gallery opening and film screening — ushers, hosts, and refined hospitality for a cultural, camera-ready crowd.`,content:`In May 2026, Fresh People staffed an art exhibition opening and special film screening for a Johannesburg gallery. Here's how we delivered a calm, well-hosted evening for guests, press, and the artist's circle.
 
 ## The Brief
 

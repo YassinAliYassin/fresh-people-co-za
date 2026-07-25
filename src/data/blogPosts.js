@@ -107,7 +107,7 @@ The all-black uniform creates a sleek, professional appearance that works across
 
 All staff must arrive with neat, professional grooming. Hair should be clean and styled conservatively. Makeup should be natural and professional.`,
     category: "Staff Tips",
-    image: "images/page-image-1.jpg",
+    image: "images/beverage-bar-team.jpg",
     readTime: "5 min read",
   },
   {

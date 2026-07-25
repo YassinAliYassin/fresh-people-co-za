@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Crown, Coffee, Martini, Utensils, Truck, ClipboardCheck, ArrowRight, ChevronRight, Star, Check, Mail } from 'lucide-react';
 import SEO from '../components/SEO';
 import FAQ from '../components/FAQ';
+import { assetUrl } from '../lib/utils';
 
 export default function Home() {
   const talentCategories = [
@@ -48,23 +49,23 @@ export default function Home() {
   return (
     <div className="bg-surface min-h-screen">
       <SEO title="Fresh People | Premier Talent & Events Staffing Johannesburg" description="Elevate your brand with South Africa's premier talent agency. Brand ambassadors, bartenders, hospitality staff, event logistics. Based in Randburg, serving all Johannesburg events." />
-      {/* Hero Section - Talent First */}
-      <section className="relative hero-padding px-4 sm:px-6 md:px-12 overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-8 md:gap-16 items-center relative z-10">
+      {/* Hero Section - Real photography, split layout */}
+      <section className="relative overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center relative z-10 pt-32 md:pt-44 lg:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="space-y-8 md:space-y-12"
+            className="space-y-8 md:space-y-10 px-4 sm:px-6 lg:px-0 lg:pr-16 lg:py-32"
           >
             <div className="inline-flex items-center gap-2 px-6 py-2 rounded-none bg-primary-container text-on-primary-container text-xs font-semibold uppercase tracking-wider">
                Johannesburg Event Staffing
             </div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold tracking-tighter leading-[1.05] text-secondary italic">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl font-display font-bold tracking-tighter leading-[1.05] text-secondary italic">
               Staff Your Event With <br /> 
               <span className="text-primary not-italic">Fresh, Reliable People.</span>
             </h1>
-            <p className="text-lg md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-2xl lg:text-xl xl:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
               Fresh People supplies brand ambassadors, hosts, models, bartenders, waiters, baristas, marshals, event crews, and equipment support across Johannesburg and Gauteng.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -76,23 +77,47 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 1.03 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="relative h-[420px] sm:h-[520px] lg:h-[calc(100vh-4rem)] lg:min-h-[640px] w-full"
+          >
+            <img
+              src={assetUrl('/images/page-image-new1.jpg')}
+              alt="Fresh People waitstaff serving at a Johannesburg event"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center 15%' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-white/10 lg:via-transparent lg:to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-auto bg-white/95 backdrop-blur-sm px-6 py-4 flex items-center gap-4 shadow-m3-2">
+              <div className="text-4xl font-display font-bold text-primary">12+</div>
+              <p className="text-xs text-on-surface-variant uppercase tracking-widest font-bold leading-tight">Years staffing<br />Gauteng events</p>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-
 
       {/* Services Grid - Talent First */}
       <section className="section-padding section-container">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 bg-white rounded-none p-8 md:p-12 border border-gray-100 flex flex-col justify-between group overflow-hidden shadow-sm">
+          <div className="md:col-span-8 relative rounded-none overflow-hidden group min-h-[360px] flex flex-col justify-between p-8 md:p-12">
+            <img
+              src={assetUrl('/images/beverage-bar-team.jpg')}
+              alt="Fresh People bar and coffee staff at a brand activation"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              style={{ objectPosition: 'center 20%' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/50 to-secondary/10" />
             <div className="space-y-6 relative z-10">
-              <h2 className="text-4xl md:text-6xl font-display font-bold text-secondary">Staffing, <br /> <span className="text-primary">Hospitality & Events.</span></h2>
-              <p className="text-on-surface-variant text-lg max-w-md leading-relaxed">A practical partner for activations, weddings, corporate events, launches, conferences, exhibitions, festivals, and private functions.</p>
+              <h2 className="text-4xl md:text-6xl font-display font-bold text-white">Staffing, <br /> <span className="text-primary">Hospitality & Events.</span></h2>
+              <p className="text-white/80 text-lg max-w-md leading-relaxed">A practical partner for activations, weddings, corporate events, launches, conferences, exhibitions, festivals, and private functions.</p>
             </div>
-<div className="flex flex-wrap gap-8 pt-20 grayscale opacity-30">
-   {['Brand Ambassadors', 'Hospitality Staff', 'Event Logistics', 'Gauteng Coverage'].map(b => (
-     <span key={b} className="text-2xl font-bold tracking-tighter">{b}</span>
-   ))}
+            <div className="relative z-10">
+              <Link to="/services" className="inline-flex items-center gap-2 text-white font-semibold text-sm uppercase tracking-wider hover:text-primary transition-colors">
+                See all services <ArrowRight size={16} aria-hidden="true" />
+              </Link>
             </div>
           </div>
 
@@ -153,6 +178,26 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Photo Strip - proof of real events, not stock */}
+      <section className="py-6 md:py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 h-[180px] md:h-[260px]">
+          {[
+            { src: '/images/craft-cocktail-lineup.jpg', alt: 'Craft cocktails prepared for guest service at a Fresh People event' },
+            { src: '/images/decor-styling.jpg', alt: 'Fresh People event styling and decor detail' },
+            { src: '/images/gallery-screening-corporate.jpg', alt: 'Fresh People staffing a corporate gallery event' },
+            { src: '/images/private-dining-tablescape.jpg', alt: 'Fresh People private dining tablescape setup' },
+          ].map((img, i) => (
+            <div key={i} className="relative overflow-hidden rounded-none group">
+              <img
+                src={assetUrl(img.src)}
+                alt={img.alt}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          ))}
         </div>
       </section>
 

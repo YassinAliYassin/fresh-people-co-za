@@ -152,8 +152,8 @@ export default function Services() {
             {/* Extra images */}
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img
-                src={assetUrl("/images/craft-cocktail-lineup.jpg")}
-                alt="Craft cocktails with spiced salt rims, ready for guest service"
+                src={assetUrl("/images/extra4.jpg")}
+                alt="Bar stock, spirits, and garnish prep ready for event service"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 style={{ objectPosition: "center 10%" }}
               />
@@ -212,18 +212,18 @@ export default function Services() {
 
             <div className="relative overflow-hidden rounded-none group cursor-pointer">
               <img
-                src={assetUrl("/images/extra4.jpg")}
-                alt="Your Event Partner"
+                src={assetUrl("/images/craft-cocktail-lineup.jpg")}
+                alt="Craft cocktails with spiced salt rims, ready for guest service"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
                 <div>
                   <p className="text-white text-xl font-display font-bold">
-                    Your Partner
+                    Craft Cocktails
                   </p>
                   <p className="text-white/80 text-xs mt-1">
-                    Ready for your next event
+                    Signature drinks, made to order
                   </p>
                 </div>
               </div>

@@ -7,7 +7,7 @@ export default function About() {
   const stats = [
     { label: 'Established', value: '2014' },
     { label: 'Events Hosted', value: '1.5k+' },
-    { label: 'Vetted Talent', value: '500+' },
+    { label: 'Active Staff', value: '50' },
     { label: 'Satisfaction', value: '99%' }
   ];
 
@@ -54,7 +54,7 @@ export default function About() {
 
   return (
     <div className="bg-surface min-h-screen">
-      <SEO title="About Us | Fresh People | 12 Years of Event Staffing Excellence" description="Fresh People is Johannesburg's premier event staffing agency since 2014. 500+ vetted staff, 1,500+ events delivered. Based in Randburg, serving all of Gauteng." />
+      <SEO title="About Us | Fresh People | 12 Years of Event Staffing Excellence" description="Fresh People is Johannesburg's premier event staffing agency since 2014. 50 active staff, 500+ trained and placed, 1,500+ events delivered. Based in Randburg, serving all of Gauteng." />
       {/* Hero Section */}
       <section className="pt-64 pb-24 section-container relative">
         <motion.div
@@ -97,7 +97,7 @@ export default function About() {
                 Fresh People was founded in 2014 with a simple mission: provide Johannesburg events with reliable, professional, and well-trained staffing solutions.
               </p>
               <p>
-                What started as a small team of 10 hospitality professionals has grown into Gauteng's premier event staffing agency, with over 500 vetted staff members and 1,500+ successful events completed.
+                What started as a small team of 10 hospitality professionals has grown into Gauteng's premier event staffing agency, with 1,500+ successful events completed. We run an active roster of 50 vetted staff, and we've trained over 500 people since 2014 — many of whom we've since placed into permanent roles with our clients.
               </p>
               <p>
                 We don't just fill shifts. We carefully match people to each event based on venue requirements, guest profiles, service standards, and brand expectations. Every team member is vetted, trained, and briefed before arrival.

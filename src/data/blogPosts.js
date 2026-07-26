@@ -266,7 +266,7 @@ The key is proactive planning and honest communication with clients.`,
 **2018** - First major corporate clients
 **2020** - Launched equipment & logistics division
 **2023** - 1,000+ events staffed
-**2026** - 500+ active staff, 1,500+ events completed
+**2026** - 50 active staff, 500+ trained and placed, 1,500+ events completed
 
 ## What Sets Us Apart
 

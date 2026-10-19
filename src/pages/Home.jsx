@@ -16,13 +16,6 @@ export default function Home() {
     { name: 'Event Coordinators', slug: 'event-coordinators', icon: ClipboardCheck, desc: 'On-site coordinators to manage timelines, vendors, and ensure flawless execution of your event vision.' },
   ];
 
-  const stats = [
-    { value: '12+', label: 'Years staffing Gauteng events' },
-    { value: '6', label: 'Talent categories on call' },
-    { value: '7', label: 'Gauteng regions covered' },
-    { value: '1', label: 'Booking for staff, supplies & coordination' },
-  ];
-
   const whyChoose = [
     { title: 'Vetted People', desc: 'Staff selected for presentation, communication, reliability, and event experience' },
     { title: 'Gauteng Coverage', desc: 'Coverage across Randburg, Sandton, Rosebank, Fourways, Midrand, Pretoria, and Johannesburg' },
@@ -37,9 +30,9 @@ export default function Home() {
   ];
 
   const vetted = [
-    { icon: ShieldCheck, label: 'Identity verified' },
-    { icon: UserCheck, label: 'Behavioural checked' },
-    { icon: BadgeCheck, label: 'RSA certified' },
+    { icon: BadgeCheck, label: 'RSA-certified bartenders' },
+    { icon: ShieldCheck, label: 'Trained for formal and casual environments' },
+    { icon: UserCheck, label: 'Selected for presentation and reliability' },
   ];
 
   const testimonials = [
@@ -103,12 +96,20 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white/45">
-              <span>Randburg</span>
-              <span className="text-primary">·</span>
-              <span>Gauteng</span>
-              <span className="text-primary">·</span>
-              <span className="text-primary">fresh-people.co.za</span>
+            <div className="flex flex-wrap items-center gap-4 pt-6">
+              <div className="inline-flex items-baseline gap-3 border border-white/15 px-5 py-3">
+                <span className="text-3xl font-display font-bold text-primary leading-none">12+</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/55 leading-tight">
+                  Years staffing<br />Gauteng events
+                </span>
+              </div>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/45">
+                <span>Randburg</span>
+                <span className="text-primary">·</span>
+                <span>Gauteng</span>
+                <span className="text-primary">·</span>
+                <span className="text-primary">fresh-people.co.za</span>
+              </div>
             </div>
           </motion.div>
 
@@ -127,20 +128,6 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-secondary/30 lg:hidden" />
             <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-secondary via-secondary/25 to-transparent" />
           </motion.div>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------ Stat bar */}
-      <section className="bg-secondary text-white border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
-            {stats.map((s, i) => (
-              <div key={i} className="py-8 md:py-10 pr-4 pl-5 first:pl-0">
-                <div className="text-3xl md:text-5xl font-display font-bold text-primary leading-none">{s.value}</div>
-                <p className="mt-3 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50 leading-relaxed">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -193,9 +180,9 @@ export default function Home() {
       <section className="px-6 pt-2 pb-20 md:pb-28 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-stretch">
           <div className="panel-tint p-8 md:p-12 flex flex-col justify-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-on-surface mb-4">How we select staff</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-on-surface mb-4">Are your staff trained and vetted?</h3>
             <p className="text-muted leading-relaxed">
-              We match people to the event environment, guest profile, service standard and brand expectation. Teams are briefed on call time, uniform, role, guest interaction and on-site conduct before arrival.
+              Every team member undergoes thorough screening, background checks, and professional training. We ensure all staff are experienced, reliable, and represent your brand with excellence.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
               {vetted.map((v, i) => (
@@ -217,55 +204,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* -------------------------------------------------------- Dark vetting */}
-      <section className="panel-dark px-6 py-14 md:py-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-[240px_1fr] gap-8 md:gap-14 items-start">
-          <p className="eyebrow eyebrow--on-dark">Vetting standards</p>
-          <div className="grid sm:grid-cols-2 gap-8 md:gap-14">
-            <div className="flex items-start gap-4">
-              <ShieldCheck size={26} className="text-primary flex-none mt-1" aria-hidden="true" />
-              <p className="text-white/70 leading-relaxed">
-                Every team member undergoes thorough screening, background checks and professional training.
-              </p>
-            </div>
-            <div className="flex items-start gap-4">
-              <UserCheck size={26} className="text-primary flex-none mt-1" aria-hidden="true" />
-              <p className="text-white/70 leading-relaxed">
-                Behavioural checks and etiquette evaluation are performed for every inquiry before talent allocation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ------------------------------------------------------- How it works */}
-      <section className="section-padding section-container">
-        <div className="max-w-3xl space-y-5 mb-14">
-          <p className="eyebrow">02 · How it works</p>
-          <h2 className="font-bold text-on-surface">
-            A simple <span className="accent">booking flow.</span>
-          </h2>
-          <p className="text-lg text-muted leading-relaxed">
-            Built for event planners, agencies, venues, couples, and corporate teams.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {howItWorks.map((step, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="card-line card-line--flat"
-            >
-              <div className="flex h-12 w-12 items-center justify-center bg-primary text-on-primary text-xl font-bold">
-                {step.step}
-              </div>
-              <h3 className="text-xl font-bold text-on-surface mt-6 mb-3">{step.title}</h3>
-              <p className="text-muted leading-relaxed">{step.desc}</p>
-            </motion.div>
-          ))}
+      <section className="panel-dark px-6 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl space-y-5 mb-14">
+            <p className="eyebrow eyebrow--on-dark">02 · How it works</p>
+            <h2 className="font-bold text-white">
+              A simple <span className="accent">booking flow.</span>
+            </h2>
+            <p className="text-lg text-white/60 leading-relaxed">
+              Built for event planners, agencies, venues, couples, and corporate teams.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {howItWorks.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/[0.04] border border-white/10 p-8 md:p-10"
+              >
+                <div className="flex h-12 w-12 items-center justify-center bg-primary text-on-primary text-xl font-bold">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-bold text-white mt-6 mb-3">{step.title}</h3>
+                <p className="text-white/60 leading-relaxed">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

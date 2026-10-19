@@ -283,7 +283,7 @@ export default function Services() {
                 </div>
 
                 {i === 0 && (
-                  <div className="w-full md:w-[300px] aspect-square bg-secondary-container rounded-none md:rounded-none flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity shrink-0">
+                  <div className="w-full md:w-[300px] aspect-square bg-tint border border-line flex items-center justify-center shrink-0">
                     <Coffee
                       size={80}
                       className="text-primary"

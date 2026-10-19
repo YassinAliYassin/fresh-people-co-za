@@ -2,6 +2,16 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
+import Logo from './Logo';
+
+const NAV_ITEMS = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'About', path: '/about' },
+  { name: 'Blog', path: '/blog' },
+];
+
+const MOBILE_ITEMS = [...NAV_ITEMS, { name: 'Contact', path: '/contact' }];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -9,10 +19,9 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -20,92 +29,109 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 sm:px-12 py-6',
-        scrolled ? 'py-4' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300',
+        scrolled ? 'shadow-[0_1px_0_0_#e4e4e4,0_8px_24px_-16px_rgba(0,0,0,0.25)]' : 'border-b border-line',
       )}
     >
-      <div className={cn(
-        "max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-none",
-        scrolled ? "bg-white/90 backdrop-blur-xl border border-gray-100 px-8 py-3 shadow-md translate-y-2" : "px-4"
-      )}>
-        <Link to="/" className="group flex items-center gap-3" aria-label="Fresh People home">
-          <span className="logo-wordmark text-xl text-gray-600">
-            Fresh<span className="text-primary">People</span>
-          </span>
-          <div className="w-1.5 h-1.5 bg-primary rounded-none opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-[0_0_10px_rgba(164,199,29,0.5)]" />
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+        <Link to="/" className="flex items-center" aria-label="Fresh People home">
+          <Logo tone="dark" size="sm" />
         </Link>
 
-        <div className="hidden md:flex items-center gap-12">
-          <div className="flex items-center gap-8">
-            {[
-              { name: 'Home', path: '/' },
-              { name: 'Services', path: '/services' },
-              { name: 'About', path: '/about' },
-              { name: 'Blog', path: '/blog' },
-            ].map((item) => (
+        <div className="hidden md:flex items-center gap-10">
+          <div className="flex items-center gap-9">
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 aria-current={location.pathname === item.path ? 'page' : undefined}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-none',
-                  location.pathname === item.path ? 'text-primary' : 'text-on-surface/60'
+                  'relative text-[13px] font-bold uppercase tracking-[0.14em] transition-colors hover:text-primary',
+                  location.pathname === item.path ? 'text-on-surface' : 'text-muted',
                 )}
               >
                 {item.name}
+                {location.pathname === item.path && (
+                  <span className="absolute -bottom-2 left-0 right-0 h-[3px] bg-primary" />
+                )}
               </Link>
             ))}
           </div>
-          <Link to="/contact" className="btn-m3-filled !py-2.5 !px-6 text-xs focus-visible:ring-4 focus-visible:ring-primary/20">
+          <Link to="/contact" className="btn-m3-filled !py-3 !px-6 !text-[12px]">
             Get a Quote
           </Link>
         </div>
 
         <button
-          className="md:hidden text-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-none p-2"
+          className="md:hidden text-secondary p-2 -mr-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
         >
-          {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+          {mobileMenuOpen ? <X size={26} aria-hidden="true" /> : <Menu size={26} aria-hidden="true" />}
         </button>
       </div>
 
       {mobileMenuOpen && (
-        <div 
+        <div
           id="mobile-menu"
-          className="fixed inset-0 top-0 left-0 w-full h-screen bg-surface z-40 md:hidden p-8 flex flex-col justify-center gap-12"
+          className="fixed inset-0 w-full h-[100dvh] bg-white z-40 md:hidden flex flex-col"
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
         >
-          <div className="space-y-8">
-            {[
-              { name: 'Home', path: '/' },
-              { name: 'Services', path: '/services' },
-              { name: 'About', path: '/about' },
-              { name: 'Blog', path: '/blog' },
-              { name: 'Contact', path: '/contact' },
-            ].map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                aria-current={location.pathname === item.path ? 'page' : undefined}
-                className="block text-5xl font-display font-bold text-secondary hover:text-primary transition-colors focus-visible:text-primary outline-none"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="h-20 px-5 flex items-center justify-between border-b border-line flex-none">
+            <Logo tone="dark" size="sm" />
+            <button
+              className="text-secondary p-2 -mr-2"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X size={26} aria-hidden="true" />
+            </button>
           </div>
-          <div className="pt-12 border-t border-gray-100">
-             <Link to="/contact" className="btn-m3-filled w-full">
-               Get a Quote <ChevronRight size={20} />
-             </Link>
+          <div className="flex-1 overflow-y-auto px-5 py-10 flex flex-col justify-between gap-12">
+            <div className="flex flex-col">
+              {MOBILE_ITEMS.map((item, i) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
+                  className={cn(
+                    'flex items-center justify-between border-b border-line py-5 text-2xl font-display font-bold transition-colors',
+                    location.pathname === item.path ? 'text-primary' : 'text-secondary',
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="flex items-baseline gap-3">
+                    <span className="text-[11px] font-bold tracking-[0.2em] text-muted">
+                      0{i + 1}
+                    </span>
+                    {item.name}
+                  </span>
+                  <ChevronRight size={20} aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+            <div className="space-y-4">
+              <Link to="/contact" className="btn-m3-filled w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get a Quote <ChevronRight size={18} aria-hidden="true" />
+              </Link>
+              <a href="mailto:info@fresh-people.co.za" className="btn-m3-outlined w-full">
+                info@fresh-people.co.za
+              </a>
+            </div>
           </div>
         </div>
       )}

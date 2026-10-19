@@ -1,5 +1,6 @@
 import { Star, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 // lucide-react dropped brand/logo marks (trademark reasons), so these two
 // social glyphs are small local SVGs rather than pulling in a second icon
@@ -33,9 +34,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-4 space-y-10">
             <Link to="/" className="group inline-block" aria-label="Fresh People home">
-              <span className="logo-wordmark text-xl text-gray-400">
-                Fresh<span className="text-primary">People</span>
-              </span>
+              <Logo tone="light" size="md" withTagline />
             </Link>
             <p className="text-[#999999] text-lg leading-relaxed max-w-xs font-light">
               South Africa's premier talent agency. We refine the human brand interaction for a luxury era.

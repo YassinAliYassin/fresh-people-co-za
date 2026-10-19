@@ -3,27 +3,28 @@ import { motion } from 'motion/react';
 interface HeroProps {
   title: string;
   subtitle: string;
-  image?: string;
+  eyebrow?: string;
 }
 
-export default function PageHero({ title, subtitle }: HeroProps) {
+/**
+ * Interior page header — mirrors the company profile's interior pages:
+ * a label eyebrow, a large two-tone headline over a thin green rule.
+ * A page can pass `title` with a trailing segment wrapped in <span className="accent">.
+ */
+export default function PageHero({ title, subtitle, eyebrow }: HeroProps) {
   return (
-    <section className="relative pt-40 pb-24 overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-2/3 bg-brand-green/5 blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-brand-dark/5 blur-3xl -z-10" />
-
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section className="bg-white border-b border-line">
+      <div className="section-container pt-16 md:pt-24 pb-12 md:pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-3xl space-y-6"
         >
-          <h1 className="text-5xl md:text-7xl font-display font-black text-brand-dark mb-6 leading-[1.1]">
-            {title}
-          </h1>
-          <p className="text-xl text-brand-dark/60 max-w-2xl mx-auto font-medium">
-            {subtitle}
-          </p>
+          {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+          <h1 className="text-4xl md:text-6xl font-bold text-on-surface leading-[1.05]">{title}</h1>
+          <div className="brand-rule w-20" aria-hidden="true" />
+          <p className="text-lg md:text-xl text-muted leading-relaxed">{subtitle}</p>
         </motion.div>
       </div>
     </section>

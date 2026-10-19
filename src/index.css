@@ -1,51 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
 
-/* Ubuntu carries the body copy — a deliberate nod to the South African concept
-   of ubuntu ("I am because we are"), fitting for a people-first staffing brand.
-   Fraunces gives headlines a warm, editorial voice with a real italic — the
-   site already leans on italic emphasis throughout, this is where it earns it. */
+/* Ubuntu carries the whole brand: the company profile sets headlines and body in
+   Ubuntu, and the name nods to the South African concept of ubuntu
+   ("I am because we are") — fitting for a people-first staffing brand. */
 @theme {
   --font-sans: "Ubuntu", system-ui, sans-serif;
-  --font-display: "Fraunces", "Ubuntu", system-ui, serif;
+  --font-display: "Ubuntu", system-ui, sans-serif;
   --font-logo: "Ubuntu", system-ui, sans-serif;
-  
+
   --color-primary: #a4c71d;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #d9e7ad;
+  --color-primary-dark: #8bab14;
+  --color-on-primary: #14210a;
+  --color-primary-container: #dbe8b0;
   --color-on-primary-container: #1a1e00;
-  
-  --color-secondary: #0a0a0a;
+  --color-tint: #f2f6e3;
+  --color-line: #e4e4e4;
+
+  --color-secondary: #232323;
   --color-on-secondary: #ffffff;
   --color-secondary-container: #f1f3f4;
-  
-  --color-surface: #fbfbf9;
+
+  --color-surface: #ffffff;
   --color-on-surface: #1c1b1f;
   --color-surface-variant: #e1e2ec;
-  --color-on-surface-variant: #44474e;
-  
+  --color-on-surface-variant: #5a5a5a;
+  --color-muted: #6f6f6f;
+
+  /* Brand is deliberately squared-off: sharp corners everywhere except the
+     logo lockup, which is the one rounded element in the system. */
   --radius-xs: 0px;
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
   --radius-xl: 0px;
-  
-  --shadow-m3-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
-  --shadow-m3-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.08), 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+
+  --shadow-m3-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.06), 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+  --shadow-m3-2: 0px 6px 20px -6px rgba(20, 33, 10, 0.18), 0px 2px 6px -2px rgba(0, 0, 0, 0.10);
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-surface text-on-surface font-sans antialiased;
     line-height: 1.7;
-    font-weight: 300;
-    scroll-behavior: smooth;
+    font-weight: 400;
+    overflow-x: hidden;
   }
-  
+
   h1, h2, h3, h4 {
-    @apply font-display font-medium text-on-surface tracking-tight leading-[1.05];
-    letter-spacing: -0.01em;
-    font-optical-sizing: auto;
+    @apply font-display font-bold text-on-surface;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -56,53 +71,135 @@
       scroll-behavior: auto !important;
     }
   }
-  
+
   h1 {
-    @apply text-5xl md:text-7xl;
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
-  
+
   h2 {
-    @apply text-4xl md:text-6xl;
+    @apply text-3xl md:text-5xl;
   }
-  
+
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl md:text-2xl;
   }
 }
 
-/* Wordmark / brand logo text */
+/* ---------------------------------------------------------------------------
+   Brand lockup — the FP square + wordmark from the company profile.
+   The only rounded element in the design system.
+   --------------------------------------------------------------------------- */
 .logo-wordmark {
   font-family: var(--font-logo);
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
-.btn-m3-filled {
-  @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary rounded-none text-sm font-semibold transition-all duration-600 hover:shadow-m3-2 active:scale-95;
+.logo-mark {
+  border-radius: 10px;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   Section labelling — "01 · WHO WE ARE" style eyebrow with a green rule.
+   --------------------------------------------------------------------------- */
+.eyebrow {
+  @apply inline-flex items-center gap-3 text-[11px] font-bold uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-on-surface);
+}
+
+.eyebrow::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--color-primary);
+  flex: none;
+}
+
+.eyebrow--plain {
+  letter-spacing: 0.22em;
+  @apply text-[11px] font-bold uppercase text-muted;
+}
+
+.eyebrow--on-dark {
+  color: #d4d4d4;
+}
+
+.eyebrow--on-dark::before {
+  background: var(--color-primary);
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------------- */
+.btn-m3-filled,
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-on-primary rounded-none text-sm font-bold uppercase transition-all duration-300 hover:bg-primary-dark hover:shadow-m3-2 active:scale-[0.98];
+  letter-spacing: 0.08em;
 }
 
 .btn-m3-tonal {
-  @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-on-primary-container rounded-none text-sm font-semibold transition-all duration-600 hover:shadow-m3-1 active:scale-95;
+  @apply inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary-container text-on-primary-container rounded-none text-sm font-bold uppercase transition-all duration-300 hover:bg-primary hover:text-on-primary active:scale-[0.98];
+  letter-spacing: 0.08em;
 }
 
-.btn-m3-outlined {
-  @apply inline-flex items-center justify-center gap-2 px-8 py-4 border border-on-surface-variant text-primary rounded-none text-sm font-semibold transition-all duration-600 hover:bg-primary/5 active:scale-95;
+.btn-m3-outlined,
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-4 border border-on-surface/25 text-on-surface rounded-none text-sm font-bold uppercase transition-all duration-300 hover:border-on-surface hover:bg-on-surface hover:text-white active:scale-[0.98];
+  letter-spacing: 0.08em;
 }
 
-.card-m3-elevated {
-  @apply bg-surface p-10 rounded-none shadow-m3-1 hover:shadow-m3-2 transition-all duration-600 border border-gray-100;
+.btn-on-dark {
+  @apply inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/30 text-white rounded-none text-sm font-bold uppercase transition-all duration-300 hover:bg-white hover:text-secondary active:scale-[0.98];
+  letter-spacing: 0.08em;
+}
+
+/* ---------------------------------------------------------------------------
+   Cards & surfaces
+   --------------------------------------------------------------------------- */
+.card-m3-elevated,
+.card-line {
+  @apply bg-white p-8 md:p-10 rounded-none border border-line transition-all duration-300 hover:border-primary hover:shadow-m3-2;
+}
+
+.card-line--flat:hover {
+  @apply shadow-none;
+}
+
+.panel-tint {
+  @apply bg-tint rounded-none;
+}
+
+.panel-dark {
+  @apply bg-secondary text-white rounded-none;
 }
 
 .section-container {
-  @apply max-w-7xl mx-auto px-6 sm:px-12;
+  @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
 }
 
-/* Premium spacing */
+/* Rhythm */
 .section-padding {
-  @apply py-24 md:py-40;
+  @apply py-20 md:py-32;
 }
 
 .hero-padding {
-  @apply pt-40 md:pt-64 pb-24 md:pb-40;
+  @apply pt-32 md:pt-40 pb-20 md:pb-28;
+}
+
+/* Keyword emphasis inside headlines — the profile's green two-tone split. */
+.accent {
+  color: var(--color-primary);
+}
+
+/* Thin brand rule used under interior page headers, per the profile. */
+.brand-rule {
+  height: 2px;
+  background: var(--color-primary);
 }
